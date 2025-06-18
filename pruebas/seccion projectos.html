@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/estilo_pruebas.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap" rel="stylesheet"> <!--Link League Gothic-->
+
+  <style>
+
+   *{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+body,html{ /*cuerpo de la pagina*/
+    min-width: 320px;
+    position: relative; /*posiciono para usar de referencia en el texto animado*/
+    scroll-behavior: smooth;
+    transition: background-color 0.5s 0.5s ease;
+}
+
+:root{ /*base (raiz)*/
+    font-family: "league gothic", sans-serif;
+    --font-family: "league gothic", sans-serif;
+    --height: 100vh;
+    --width: 100vh;
+    --color-1: rgb(255, 251, 36);
+    --color-2: ;
+}
+div.vertical-rule{ /*linea vertical amarilla (elemento decoracion)*/
+    background-color:var(--color-1);
+    position: absolute;
+    left: 40%;
+    width: 1.5pt;
+    animation: crecimiento 4s linear 1s forwards; /*crece de arriba a abajo con 1s de delay y se queda*/
+    z-index: -2;
+}
+
+/*---------------SECCION PROJECTOS---------------*/
+.projectos{
+  position: relative;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/*---------------FONDO PROJECTOS---------------*/
+.fondo_grid{ 
+    position: relative;
+    z-index: -3;
+    padding: 48px;
+}
+
+.frente_grid{
+    position: absolute;
+    text-align: right;
+    right: 0;
+    padding: 48px;
+}
+
+.fondo_grid.oraciones {
+    position: absolute;
+    width: 100%;
+    text-align: right;
+}
+
+.fondo_grid.oraciones.uno{
+    top: 5%;
+    border-bottom: 2pt solid rgb(255, 251, 36);
+}
+
+.fondo_grid.oraciones.dos{
+    top: 38%;
+    justify-self: center;
+}
+
+.fondo_grid.oraciones.tres{
+    top: 65%;
+    border-top: 2pt solid rgb(255, 251, 36);
+    text-align: left;
+}
+
+.descrip{
+    font-size: 8em;
+    text-transform: uppercase;
+    line-height: 0.9em;
+    mix-blend-mode: multiply;
+}
+
+.descrip-cabecera{
+    font-size: 10em;
+    color: var(--color-1);
+    line-height: 0.8em;
+    font-weight: 700;
+}
+
+.descrip span{
+    color: var(--color-1)
+}
+
+.blur{ /*texto borroso*/
+    filter:blur(4px);
+}
+
+/*---------------GALERIA PROJECTOS---------------*/
+.project-grid {
+    position:relative;
+    display: grid;
+    grid-template-rows: auto;
+    grid-auto-columns: 1fr;
+    grid-row-gap: 0em;
+    padding: 0 24px;
+}
+
+.element-grid {
+    margin-top: -3em;
+    position: relative;
+    overflow: hidden;
+    grid-area: span 1/span 4/span 1/span 4;
+    transition: color 0 1s ease-in-out;
+}
+
+.grid-img {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    align-self: center;
+    background-color: var(--color-1);
+}
+
+.grid-img img{
+  display: inline-block;
+  max-width: 100%;
+  vertical-align: middle;
+  mix-blend-mode: luminosity;
+}
+
+.grid-img img:hover{
+  mix-blend-mode: normal;
+}
+
+.grid-img-inner {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    filter: brightness(100%) contrast(100%);
+    transform: translate(0px, 0px);
+}
+
+.element-grid-caption {
+    padding-top: 12px;
+    padding-left: 12px;
+    transition: color 1s 1s ease;
+}
+
+.texto-none {
+  color: var(--color-1);
+}
+
+.element-grid-caption-none {
+    color: transparent;
+    padding: 0;
+    font-size: 0;
+}
+
+
+.texto-blanco {
+  position: fixed;
+  display: inline-block !important;
+  bottom: 0;
+  color: white;
+  font-size: 6em  !important;
+  text-align: center;
+  padding: 48px;
+  z-index: 40;
+}
+
+.element-grid:nth-child(1) {
+  margin-top: 0;
+}
+
+.element-grid:nth-child(2) {
+  grid-area: 2/5/3/11;
+}
+
+.element-grid:nth-child(3) {
+  grid-area: 3/2/4/5;
+}
+
+.element-grid:nth-child(4) {
+  grid-area: 4/5/5/8;
+}
+
+.element-grid:nth-child(5) {
+  grid-area: 5/8/6/12;
+}
+
+.element-grid:nth-child(6) {
+  grid-area: 6/3/7/8;
+}
+
+.element-grid-caption p{
+  font-size: 1.8em;
+}
+
+.project-grid.galeria{
+  background-color: var(--color-1);
+  color: #ffffff;
+}
+
+.descrip span.oculto{
+  color: white;
+}
+
+  </style>
+</head>
+
+<body>
+  <div class="vertical-rule"></div><!--línea decorativa que carga progresivamente-->
+
+    <!--seccion projectos-->
+  <div class="projectos">
+  <div class="projectos cabecera">
+    <div class="fondo_grid">
+    <p class="descrip blur"><span class="oculto">por qué lo hacemos</span></p>
+      <p class="descrip blur"><span>No sabemos</span> que hacemos</p>
+      <p class="descrip blur"><span>pero</span> seguimos <span class="oculto">intentándolo</span></p>
+    </div>
+    <div class="frente_grid">
+      <p class="descrip-cabecera">esto es,</p>
+      <p class="descrip-cabecera">esto somos</p>
+    </div>
+  </div>
+
+ <div class="projectos cuerpo">
+  <div class="fondo_grid oraciones uno">
+      <p class="descrip blur">La ternura</p>
+      <p class="descrip blur"><span class="oculto">pero </span>como <span>arma</span></p>
+    </div>
+    <div class="fondo_grid oraciones dos">
+      <p class="descrip blur"><span>El susurro </span></p>
+      <p class="descrip blur">al frente <span class="oculto"> el miedo </span></p>
+    </div>
+    <div class="fondo_grid oraciones tres">
+      <p class="descrip blur">La palabra</p>
+      <p class="descrip blur"><span class="oculto">pero </span>como <span>escudo</span></p>
+    </div>
+        <div class="project-grid">
+      <div class="element-grid">
+        <div class="grid-img">
+          <img class="grid-img-inner" loading="lazy" src="img/IMG_4308.jpg" alt="" href="#">
+        </div>
+        <div class="element-grid-caption">
+          <p class="p1 random-split text-prime" style="visibility: visible;">Descripción de la imagen</p>
+        </div>
+        <div class="element-grid-caption-none">
+          <p class="p1 random-split text-prime" style="visibility: visible;">Descripción de la imagen</p>
+        </div>
+      </div>
+      <div class="element-grid">
+        <div class="grid-img">
+          <img class="grid-img-inner" loading="lazy" src="img/IMG_4308.jpg" alt="" href="#">
+        </div>
+        <div class="element-grid-caption">
+          <p class="p1 random-split text-prime" style="visibility: visible;">Descripción de la imagen</p>
+        </div>
+      </div>
+      <div class="element-grid">
+        <div class="grid-img">
+          <img class="grid-img-inner" loading="lazy" src="img/IMG_4308.jpg" alt="" href="#">
+        </div>
+        <div class="element-grid-caption">
+          <p class="p1 random-split text-prime" style="visibility: visible;">Descripción de la imagen</p>
+        </div>
+      </div>
+      <div class="element-grid">
+        <div class="grid-img">
+          <img class="grid-img-inner" loading="lazy" src="img/IMG_4308.jpg" alt="" href="#">
+        </div>
+        <div class="element-grid-caption">
+          <p class="p1 random-split text-prime" style="visibility: visible;">Descripción de la imagen</p>
+        </div>
+      </div>
+            <div class="element-grid">
+        <div class="grid-img">
+          <img class="grid-img-inner" loading="lazy" src="img/IMG_4308.jpg" alt="" href="#">
+        </div>
+        <div class="element-grid-caption">
+          <p class="p1 random-split text-prime" style="visibility: visible;">Descripción de la imagen</p>
+        </div>
+      </div>
+            <div class="element-grid">
+        <div class="grid-img">
+          <img class="grid-img-inner" loading="lazy" src="img/IMG_4308.jpg" alt="" href="#">
+        </div>
+        <div class="element-grid-caption">
+          <p class="p1 random-split text-prime" style="visibility: visible;">Descripción de la imagen</p>
+        </div>
+      </div>
+      </div>
+
+  </div>
+  </div>
+
+  <div class="p-sec-intro">
+    <h2>Sobre mí</h2>
+    <p>Me apasiona crear experiencias web únicas y funcionales. Tengo experiencia en HTML, CSS, JavaScript y frameworks modernos.</p>
+  </div>
+
+
+
+  <script>
+
+
+/*function animateHorizontalRules() {
+    document.querySelectorAll('.vertical-rule').forEach((el) => {
+      gsap.set(el, { width: "0%", visibility: "visible" });
+      ScrollTrigger.create({
+        trigger: el,
+        start: "top bottom",
+        once: true,
+        onEnter: () => {
+          gsap.to(el, {
+            width: "100%",
+            duration: 3,
+            ease: "power4.out"
+          });
+        }
+      });
+    });
+  }*/
+  function initAnimations() {
+    revealTruthText();
+    revealLongTruthText();
+    revealBigLogoText();
+    animateHorizontalRules();
+    animateVerticalRules();
+    initGridAnimations();
+    revealRandomSplit();
+  }
+
+
+  function animateVerticalRules() {
+    document.querySelectorAll('.vertical-rule').forEach((el) => {
+      gsap.set(el, { height: "0%", visibility: "visible" });
+      ScrollTrigger.create({
+        trigger: el,
+        start: "top bottom",
+        once: true,
+        onEnter: () => {
+          gsap.to(el, {
+            height: "100%",
+            duration: 8,
+            ease: "power4.out"
+          });
+        }
+      });
+    });
+  }
+
+    const cargas = document.querySelectorAll(img);
+
+    window.addEventListener("scroll", () => {
+      cargas.forEach(carga => carga.style.height = window.innerHeight + "px");
+    });
+
+  /*------- CAMBIA FONDO A AMARILLO AL COLOCAR EL CURSOR SOBRE KA IMAGEN DE PROJECTOS -------*/
+    document.addEventListener('DOMContentLoaded', () => {
+    
+    const imgs = document.querySelectorAll();
+    //const descripcion = document.querySelector('.element-grid-caption');
+
+    imgs.forEach(img => {
+      let timeoutId;
+
+      img.addEventListener('mouseenter', () => {
+        document.body.style.backgroundColor = 'yellow';
+        //descripcion.setAtribute("style","visibility: hidden;");
+    
+      });
+
+      img.addEventListener('mouseleave', () => {
+        document.body.style.backgroundColor = 'white';
+        for (let i = 0; i < descripcion.length; i++) {
+          //descripcion[i].style.visibility = 'hidden';
+            }
+
+  });
+  });
+  });
+
+    const navegacion = document.querySelector("button .grid");
+    const botones = document.querySelectorAll("button");
+
+/*
+for(let i = 0; i < botones.length; i++){
+    botones[i].addEventListener("click", function(){
+        navegacion.className = i == 0 ? "desplegado" : "";
+    });
+}*/
+
+botones.forEach(boton => {
+    boton.addEventListener("click", () => navegacion.classList.toggle("desplegado"));
+    });
+
+console.log("mensaje de prueba");
+  </script>
+
+</body>
+</html>

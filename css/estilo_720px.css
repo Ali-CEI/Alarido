@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @media screen and (max-width: 720px) {
    
   /*PRIMERA SECCION DE LA PORTADA*/
@@ -39,4 +40,47 @@
 .fondo-grid, .frente-grid{
   padding: 24px
 }
+=======
+@media screen and (max-width: 720px) {
+   
+  /*PRIMERA SECCION DE LA PORTADA*/
+.primera-portada{ /*div global de la intro*/
+    width: 100%;
+    height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    z-index: -2;
+}  
+  
+  .texto-animado{
+    width: 100%;
+  }
+  
+  .texto-animado span {
+      font-size: clamp(32px, 18vw, 8em);
+      line-height: 1;
+    }
+
+.project-grid {
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 24px;
+}
+
+.element-grid {
+    margin-top: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.fondo-grid, .frente-grid{
+  padding: 24px
+}
+>>>>>>> netlify
         }
