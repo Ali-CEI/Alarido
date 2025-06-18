@@ -207,6 +207,7 @@ div.horizontal-rule:nth-child(1){ /*linea horizontal amarilla sec 2*/
     width: 100%;
     padding: 0 40px;
     position: relative;
+    
 }
 
 .frente_intro{
@@ -214,7 +215,6 @@ div.horizontal-rule:nth-child(1){ /*linea horizontal amarilla sec 2*/
     text-align: right;
     right: 0;
     padding-right: 48px;
-    mix-blend-mode: multiply;
 }
 
 .introduccion{
@@ -232,6 +232,7 @@ div.horizontal-rule:nth-child(1){ /*linea horizontal amarilla sec 2*/
     padding: 100px 0;
     margin-left: 40px;
     z-index: 2;
+    mix-blend-mode: multiply;
 }
 
 .p-sec-intro{
@@ -242,6 +243,7 @@ div.horizontal-rule:nth-child(1){ /*linea horizontal amarilla sec 2*/
     width: 100%;
     padding: 0 40px;
     position: relative;
+    margin: 100px 0;
 }
 
 .descrip.cabecera.peque{
@@ -249,7 +251,7 @@ div.horizontal-rule:nth-child(1){ /*linea horizontal amarilla sec 2*/
 }
 
 .img-sec-portada{
-    height: 80dvh;
+    height: 85dvh;
     width: 80%;
     object-fit: cover;
     margin-right: 48px;
