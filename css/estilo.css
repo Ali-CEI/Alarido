@@ -237,11 +237,12 @@ div.horizontal-rule:nth-child(1){ /*linea horizontal amarilla sec 2*/
     font-size: 6em;
 }
 
-.p-sec-portada{
+.img-sec-portada{
+    position: relative;
+    left: 0;
     height: 80dvh;
     width: 80%;
     object-fit: cover;
-    margin-left: 80px;
 }
 
 /*---------------SECCION PROJECTOS---------------*/
