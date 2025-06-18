@@ -199,11 +199,10 @@ div.horizontal-rule:nth-child(1){ /*linea horizontal amarilla sec 2*/
 }
 
 /*--------------- SECCION XX ---------------*/
-.p-sec-intro{
+.p-sec-intro:nth-first-child{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    /*flex-direction: column;*/
     height: 100dvh;
     width: 100%;
     padding: 0 40px;
@@ -215,6 +214,7 @@ div.horizontal-rule:nth-child(1){ /*linea horizontal amarilla sec 2*/
     text-align: right;
     right: 0;
     padding-right: 48px;
+    mix-blend-mode: multiply;
 }
 
 .introduccion{
@@ -231,6 +231,17 @@ div.horizontal-rule:nth-child(1){ /*linea horizontal amarilla sec 2*/
     text-align: left;
     padding: 100px 0;
     margin-left: 40px;
+    z-index: 2;
+}
+
+.p-sec-intro{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    height: 100dvh;
+    width: 100%;
+    padding: 0 40px;
+    position: relative;
 }
 
 .descrip.cabecera.peque{
@@ -238,11 +249,10 @@ div.horizontal-rule:nth-child(1){ /*linea horizontal amarilla sec 2*/
 }
 
 .img-sec-portada{
-    position: relative;
-    left: 0;
     height: 80dvh;
     width: 80%;
     object-fit: cover;
+    margin-right: 48px;
 }
 
 /*---------------SECCION PROJECTOS---------------*/
