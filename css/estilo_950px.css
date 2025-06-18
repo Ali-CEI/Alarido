@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 @media screen and (max-width: 950px) {
     
     .frente_grid{
@@ -15,21 +14,3 @@
 
 
 }
-=======
-@media screen and (max-width: 950px) {
-    
-    .frente_grid{
-    position: absolute;
-    text-align: right;
-    right: 0;
-    bottom: 0;
-    padding: 48px;
-}
-
-    .descrip {
-      font-size: 4em;
-    }
-
-
-}
->>>>>>> netlify
