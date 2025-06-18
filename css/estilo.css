@@ -291,7 +291,6 @@ div.horizontal-rule:nth-child(1){ /*linea horizontal amarilla sec 2*/
     overflow: hidden;
     grid-area: span 1/span 4/span 1/span 4;
     transition: color 0 1s ease-in-out;
-
 }
 
 .element-grid-img {
@@ -304,6 +303,10 @@ div.horizontal-rule:nth-child(1){ /*linea horizontal amarilla sec 2*/
     background-color: var(--color-1);
     transform-origin: top left; /*crecer desde esquina superior izquierda */
     transition: transform 0.1s linear;
+}
+
+.element-grid-img.plana{
+    height: 19.5em;
 }
 
 .element-grid-img img{
@@ -391,28 +394,27 @@ div.horizontal-rule:nth-child(1){ /*linea horizontal amarilla sec 2*/
 }
 
 .tarjeta.presentacion{
-    display: grid;
-    align-content: space-evenly;
+    display: flex;
+    flex-direction: column;
     width: 50%;
     height: 80dvh;
-    padding: 0 60px 20px;
+    padding: 20px 60px 40px;
     border-radius: 10%;
     background-color: white;
     box-shadow:  -6px 7px 10px 5px rgb(0, 0, 0, 0.4);
     overflow: hidden;
     z-index: 300;
+    justify-content: space-around;
 }
 
 .tarjeta p.biografia{
   color: black;
-  font-size: 1em;
+  font-size: 0.9em;
   font-family: monospace, "league-gothic", sans-serif;
-  text-align: justify;
-  margin: 0 20px 20px;
 }
 
 picture {
-  height: 50dvh;
+  height: 40dvh;
   overflow: hidden;
   background-position: center;
 }

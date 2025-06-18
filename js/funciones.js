@@ -63,6 +63,7 @@ imgs.forEach(img => {
 
 img.addEventListener('mouseenter', () => {
     document.body.style.backgroundColor = 'var(--color-1)';
+    img.style.backgroundColor = "white";
     
     textosDescrip.forEach(texto => {
         texto.style.color = "white";
@@ -79,6 +80,7 @@ img.addEventListener('mouseenter', () => {
 
 img.addEventListener('mouseleave', () => {
     document.body.style.backgroundColor = 'white';
+    img.style.backgroundColor = "var(--color-1)";
     textosDescrip.forEach(texto => {
         texto.style.color = "black";
     });
@@ -113,6 +115,7 @@ for (let i = 0; i < imagenes.length; i++) {
             parrafo.innerText = TextoParrafo;
         });
 
+    imagenes[1].preventDefault();
             
 
         });};  
