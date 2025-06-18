@@ -16,6 +16,20 @@
   <!--Link League Gothic-->
   <script defer src="js/funciones.js"></script> <!--Link java-->
 
+
+  <style>
+
+            .tarjeta canvas{
+            cursor: crosshair;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 100;
+        }
+
+  </style>
 </head>
 
 
@@ -182,8 +196,8 @@
         </div>
 
         <div class="element-grid"><!--foto 6-->
-            <div class="element-grid-img plana">
-              <img class="element-grid-img-int" alt="" href="#">
+            <div class="element-grid-img">
+                        <img class="element-grid-img-int" alt="" href="#"><canvas id="myCanvas"></canvas>
             </div>
           <div class="element-grid-texto">
             <p class="grid-texto">Descripción de la imagen</p>
@@ -207,5 +221,52 @@
       modernos.</p>
   </div>
 
+ <script>
+
+        const circulo = document.querySelector(".circulo")
+
+        window.addEventListener("mousemove", evento => {
+
+            circulo.style.top = evento.clientY + "px";
+            circulo.style.left = evento.clientX + "px";
+        });
+
+        const canvas = document.getElementById('myCanvas');
+  const ctx = canvas.getContext('2d');
+  let isDrawing = false;
+  let lastX = 0;
+  let lastY = 0;
+
+  // Ajustar el tamaño del canvas al tamaño de la ventana
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+  window.addEventListener('resize', resizeCanvas);
+  resizeCanvas();
+
+  canvas.addEventListener('mousedown', (e) => {
+    isDrawing = true;
+    [lastX, lastY] = [e.offsetX, e.offsetY];
+  });
+
+  canvas.addEventListener('mouseup', () => isDrawing = false);
+  canvas.addEventListener('mouseout', () => isDrawing = false);
+
+  canvas.addEventListener('mousemove', (e) => {
+    if (!isDrawing) return;
+    ctx.strokeStyle = '#298287';
+    ctx.lineJoin = 'round';
+    ctx.lineCap = 'round';
+    ctx.lineWidth = 5;
+
+    ctx.beginPath();
+    ctx.moveTo(lastX, lastY);
+    ctx.lineTo(e.offsetX, e.offsetY);
+    ctx.stroke();
+    [lastX, lastY] = [e.offsetX, e.offsetY];
+  });
+
+    </script>
 </body>
 </html>
