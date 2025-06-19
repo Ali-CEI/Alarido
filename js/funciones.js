@@ -54,6 +54,20 @@ document.addEventListener("selectionchange", () => {
             textoAnimado.classList.remove("seleccionado");}
 });
 
+const pocos = document.querySelector(".descrip.cabecera.peque span");
+const amores = document.querySelectorAll(".descrip.cabecera.peque");
+
+
+for (let a = 0; a < amores.length; a++) {
+    amores[a].addEventListener("mouseenter", () => {
+        amores[1].style.color = "var(--color-2)";
+        pocos.style.color = "var(--color-2)"; //Estoy segura de que hay una forma más práctica de agrupar esto
+        pocos.style.mixBlendMode = "normal";
+        amores[1].innerText = "¿nos quieres?";
+        amores[2].remove();
+    });
+};
+
 
                     /*----- JS DE LA SECCIÓN DE PROJECTOS -----*/
 const imagenes = document.querySelectorAll(".element-grid-img-int");
