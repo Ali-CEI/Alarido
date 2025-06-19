@@ -54,43 +54,8 @@ document.addEventListener("selectionchange", () => {
             textoAnimado.classList.remove("seleccionado");}
 });
 
+
                     /*----- JS DE LA SECCIÓN DE PROJECTOS -----*/
-  /*------- Cambia el fondo a color al colocar el cursor sobre las imagenes de projectos -------*/
-const imgs = document.querySelectorAll('.element-grid-img');
-
-imgs.forEach(img => {
-    let timeoutId;
-
-img.addEventListener('mouseenter', () => {
-    document.body.style.backgroundColor = 'var(--color-1)';
-    img.style.backgroundColor = "white";
-    
-    textosDescrip.forEach(texto => {
-        texto.style.color = "white";
-    });
-});
-
-    /*const gridItem = img.closest('.element-grid');
-        if (!gridItem) return;
-
-        const captionP = gridItem.querySelector('.element-grid-texto p');
-        const otroDiv = gridItem.querySelector('.element-grid-texto-none p');*/
-        
-
-
-img.addEventListener('mouseleave', () => {
-    document.body.style.backgroundColor = 'white';
-    img.style.backgroundColor = "var(--color-1)";
-    textosDescrip.forEach(texto => {
-        texto.style.color = "black";
-    });
-    
-    clearTimeout(timeoutId); // Cancelar si el usuario sale antes del segundo
-    });
-});
- 
-
-/**/
 const imagenes = document.querySelectorAll(".element-grid-img-int");
 const textosDescrip = document.querySelectorAll(".grid-texto");
 const contenedor = document.querySelector(".tarjeta");
@@ -100,8 +65,29 @@ const parrafo = document.querySelector(".tarjeta p");
 const bio = document.querySelectorAll(".element-grid-texto p.bio");
 
 for (let i = 0; i < imagenes.length; i++) {
+    
     imagenes[i].setAttribute('alt', textosDescrip[i].innerText); //asigna el texto de la descripción como atributo alt de la imagen
     
+      /*------- Cambia el fondo a color al colocar el cursor sobre las imagenes de projectos -------*/
+    imagenes[i].addEventListener('mouseenter', () => {
+        document.body.style.backgroundColor = 'var(--color-1)';
+        imagenes[5].style.backgroundColor = 'white';
+    
+        textosDescrip.forEach(texto => {
+            texto.style.color = "white";
+        });
+    });
+      
+    /*------- Vuelve el fondo a blanco -------*/
+    imagenes[i].addEventListener('mouseleave', () => {
+        document.body.style.backgroundColor = 'white';
+        imagenes[5].style.backgroundColor = 'var(--color-1)';
+        
+        textosDescrip.forEach(texto => {
+            texto.style.color = "black";
+        });
+    });
+
     imagenes[i].addEventListener("click", () => {
         let persona = imagenes[i].getAttribute("alt");
         textosDescrip[i].style.visibility = 'hidden';
@@ -114,9 +100,6 @@ for (let i = 0; i < imagenes.length; i++) {
             parrafo.innerText = TextoParrafo;            
         });};  
 
-    //titulos.forEach(titulo => {
-    //titulo.setAttribute('innerText', imagen.getAttribute("alt"));
-
     contenedor.addEventListener("click", () => {
         contenedor.classList.remove("visible");
       
@@ -126,5 +109,4 @@ for (let i = 0; i < imagenes.length; i++) {
 
   });
 
-contenedor
 console.log("¡Hola! Este es un mensaje de consola para verificar que el script se ha cargado correctamente.");

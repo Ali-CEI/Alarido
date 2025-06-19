@@ -60,6 +60,7 @@ nav a{ /*enlace de la navegación*/
 
 nav a:hover{
     cursor:pointer;
+    background-color: #E00085;
 }
 
       /*---------------PRIMERA SECCION DE LA PORTADA---------------*/
@@ -385,9 +386,10 @@ div.horizontal-rule:nth-child(1){ /*linea horizontal amarilla sec 2*/
     transition: transform 0.1s linear;
 }
 
-.element-grid-img.vacia{
+.element-grid-img-int.vacia{
     height: 35em;
     background-color: var(--color-1);
+    cursor: pointer;
 }
 
 .element-grid-img img{
