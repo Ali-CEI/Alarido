@@ -56,7 +56,7 @@ document.addEventListener("selectionchange", () => {
 
                     /*----- JS DE LA SECCIÓN DE PROJECTOS -----*/
   /*------- Cambia el fondo a color al colocar el cursor sobre las imagenes de projectos -------*/
-const imgs = document.querySelectorAll('.element-grid-img-int');
+const imgs = document.querySelectorAll('.element-grid-img');
 
 imgs.forEach(img => {
     let timeoutId;
@@ -93,7 +93,7 @@ img.addEventListener('mouseleave', () => {
 /**/
 const imagenes = document.querySelectorAll(".element-grid-img-int");
 const textosDescrip = document.querySelectorAll(".grid-texto");
-const ContenedorTarjetas = document.querySelectorAll(".tarjeta");
+const contenedor = document.querySelector(".tarjeta");
 const tarjeta = document.querySelector(".tarjeta img");
 const titulo = document.querySelector(".tarjeta h3");
 const parrafo = document.querySelector(".tarjeta p");
@@ -106,24 +106,16 @@ for (let i = 0; i < imagenes.length; i++) {
         let persona = imagenes[i].getAttribute("alt");
         textosDescrip[i].style.visibility = 'hidden';
 
-        ContenedorTarjetas.forEach(contenedor => {
             contenedor.classList.add("visible");
             tarjeta.setAttribute('src', imagenes[i].getAttribute("src"));
             titulo.innerText = persona;
 
             let TextoParrafo = bio[i].innerText; // Obtiene el texto del párrafo más cercano
-            parrafo.innerText = TextoParrafo;
-        });
-
-    imagenes[1].preventDefault();
-            
-
+            parrafo.innerText = TextoParrafo;            
         });};  
 
     //titulos.forEach(titulo => {
     //titulo.setAttribute('innerText', imagen.getAttribute("alt"));
-
-ContenedorTarjetas.forEach(contenedor => {
 
     contenedor.addEventListener("click", () => {
         contenedor.classList.remove("visible");
@@ -131,8 +123,8 @@ ContenedorTarjetas.forEach(contenedor => {
         textosDescrip.forEach(texto => {
             texto.style.visibility = 'visible'; //quiero que todas sean visibles
     });
+
   });
-});
 
-
+contenedor
 console.log("¡Hola! Este es un mensaje de consola para verificar que el script se ha cargado correctamente.");
