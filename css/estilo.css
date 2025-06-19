@@ -238,7 +238,7 @@ div.horizontal-rule:nth-child(1){ /*linea horizontal amarilla sec 2*/
     right: 0;
     z-index: 7;
     bottom: 0;
-    /*mix-blend-mode: multiply;*/
+    mix-blend-mode: multiply;
 }
 
 .frente.intro{
@@ -261,11 +261,6 @@ div.horizontal-rule:nth-child(1){ /*linea horizontal amarilla sec 2*/
 
 .p-sec.grupo{
     justify-content: end;
-}
-
-.descrip.cabecera.peque{
-    font-size: 6em;
-    mix-blend-mode: multiply;
 }
 
 .img-sec-portada{
