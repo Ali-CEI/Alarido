@@ -452,6 +452,8 @@ div.horizontal-rule:nth-child(1){ /*linea horizontal amarilla sec 2*/
     background-color: var(--color-1);
 }
 
+/*---------------POP-UP TARJETA---------------*/
+
 .tarjeta{
     position: fixed;
     display: none;
