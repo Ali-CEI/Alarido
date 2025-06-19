@@ -63,6 +63,7 @@ const tarjeta = document.querySelector(".tarjeta img");
 const titulo = document.querySelector(".tarjeta h3");
 const parrafo = document.querySelector(".tarjeta p");
 const bio = document.querySelectorAll(".element-grid-texto p.bio");
+const picture = document.querySelector("picture");
 
 for (let i = 0; i < imagenes.length; i++) {
     
@@ -89,8 +90,16 @@ for (let i = 0; i < imagenes.length; i++) {
     });
 
     imagenes[i].addEventListener("click", () => {
-        let persona = imagenes[i].getAttribute("alt");
         textosDescrip[i].style.visibility = 'hidden';
+
+        if(i == 5){
+            contenedor.classList.add("visible");
+            tarjeta.innerHTML = "<canvas></canvas>";
+            titulo.innerText = "Pulsa para dibujar"
+            picture.remove();
+
+        }else{
+        let persona = imagenes[i].getAttribute("alt");
 
             contenedor.classList.add("visible");
             tarjeta.setAttribute('src', imagenes[i].getAttribute("src"));
@@ -98,7 +107,8 @@ for (let i = 0; i < imagenes.length; i++) {
 
             let TextoParrafo = bio[i].innerText; // Obtiene el texto del párrafo más cercano
             parrafo.innerText = TextoParrafo;            
-        });};  
+        }});
+};  
 
     contenedor.addEventListener("click", () => {
         contenedor.classList.remove("visible");
