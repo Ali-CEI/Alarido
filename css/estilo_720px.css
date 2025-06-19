@@ -21,6 +21,11 @@
       line-height: 1;
     }
 
+.p-sec-intro{
+    flex-direction: column;
+    margin: 50px 0;
+}
+
 .project-grid {
     position:relative;
     display: flex;
@@ -38,5 +43,6 @@
 
 .fondo-grid, .frente-grid{
   padding: 24px
+
 }
         }
