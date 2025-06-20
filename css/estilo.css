@@ -482,6 +482,7 @@ div.horizontal-rule:nth-child(1){ /*linea horizontal amarilla sec 2*/
 .tarjeta .grafico{
     height: 80%;
 }
+
 picture {
   height: 80%;
   overflow: hidden;
@@ -513,3 +514,24 @@ picture img{
             width: 100%;
             height: 100%;
         }
+
+
+@media screen and (max-width: 1440px) {
+
+.descrip{
+    font-size: 8em;
+}
+
+.fondo_grid.oraciones.uno{
+    top: 2%;
+}
+
+.fondo_grid.oraciones.dos{
+    top: 35%;
+}
+
+.fondo_grid.oraciones.tres{
+    top: 60%;
+}
+
+}
