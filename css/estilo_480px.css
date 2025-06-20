@@ -38,10 +38,6 @@
     font-family: "roboto", Helvetica, sans-serif, sans-serif;
 }
 
-.frente.grupo{
-    position: relative;
-    padding: 0;
-}
 
 .img-sec-portada{
     width: calc(100% + 40px);
