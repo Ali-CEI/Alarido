@@ -90,4 +90,8 @@
     margin: 0 auto;
 }
 
+.tarjeta p.biografia{
+    padding-top: 10px;
+  font-size: 0.7em;
+}
         }

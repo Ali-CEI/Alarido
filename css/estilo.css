@@ -279,48 +279,41 @@ div.horizontal-rule:nth-child(1){ /*linea horizontal amarilla sec 2*/
 }
 
 /*---------------FONDO PROJECTOS---------------*/
-.fondo_grid{ 
+.fondo.grid{ 
     position: relative;
-    z-index: -2;
+    z-index: -4;
     padding: 48px;
 }
 
 .frente.grid{
-    position: absolute;
-    text-align: right;
-    right: 0;
     padding: 48px;
-    z-index: 7;
-    bottom: 0;
+    mix-blend-mode: normal;
 }
 
-.fondo_grid.oraciones {
+.fondo.grid.oraciones {
     position: absolute;
     width: 100%;
-}
-
-.fondo_grid.oraciones.uno{
     text-align: right;
-    top: 5%;
     border-bottom: 2pt solid var(--color-2);
 }
 
-.fondo_grid.oraciones.dos{
-    top: 38%;
-    justify-self: center;
-    text-align: right;
+.fondo.grid.oraciones.uno{
+    top: 5%;
 }
 
-.fondo_grid.oraciones.tres{
+.fondo.grid.oraciones.dos{
+    top: 38%;
+}
+
+.fondo.grid.oraciones.tres{
     top: 65%;
-    border-top: 2pt solid var(--color-2);
+    text-align: left;
 }
 
 .descrip{
     font-size: 10em;
     text-transform: uppercase;
     line-height: 0.8em;
-    /*mix-blend-mode: multiply;*/
 }
 
 .descrip.cabecera{
@@ -477,6 +470,7 @@ div.horizontal-rule:nth-child(1){ /*linea horizontal amarilla sec 2*/
   color: black;
   font-size: 0.9em;
   font-family: monospace, "league-gothic", sans-serif;
+  padding-top: 20px;
 }
 
 .tarjeta .grafico{
@@ -519,19 +513,20 @@ picture img{
 @media screen and (max-width: 1440px) {
 
 .descrip{
-    font-size: 8em;
+    font-size: 9em;
 }
 
-.fondo_grid.oraciones.uno{
+.fondo.grid.oraciones.uno{
     top: 2%;
 }
 
-.fondo_grid.oraciones.dos{
+.fondo.grid.oraciones.dos{
     top: 35%;
 }
 
-.fondo_grid.oraciones.tres{
+.fondo.grid.oraciones.tres{
     top: 60%;
 }
+
 
 }
