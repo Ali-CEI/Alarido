@@ -80,6 +80,11 @@ const parrafo = document.querySelector(".tarjeta p");
 const bio = document.querySelectorAll(".element-grid-texto p.bio");
 const picture = document.querySelector("picture");
 const nav = document.querySelector("nav")
+const cuadro = document.querySelector(".element-grid-img-int.vacia")
+
+console.log(imagenes[4].getAttribute("height"));
+
+//cuadro.style.height = .style.height; //el cuadro sin imagen es del mismo tamaño uque la imagen 4
 
 for (let i = 0; i < imagenes.length; i++) {
     
