@@ -166,7 +166,7 @@ nav a:hover{
 
       /*---------------LÍNEAS DECORATIVAS---------------*/
 div.vertical-rule{ /*linea vertical color (elemento decoracion)*/
-    background-color:var(--color-2);
+    background-color:var(--color-1);
     position: absolute;
     left: 40%;
     width: 1.5pt;
@@ -177,7 +177,7 @@ div.horizontal-rule{ /*linea horizontal color (elemento decoracion)*/
     position: relative;
     left: 0;
     height: 6em;
-    border-bottom: 2pt solid var(--color-2);
+    border-bottom: 2pt solid var(--color-1);
     animation: movimiento 2s linear 1s forwards; /*crece de izquierda a derecha con 1s de delay y se queda*/
     opacity: 0;
 }
@@ -316,7 +316,7 @@ div.horizontal-rule:nth-child(1){ /*linea horizontal amarilla sec 2*/
 }
 
 .descrip.cabecera{
-    color: var(--color-2);
+    color: var(--color-1);
     font-weight: 700;
     text-transform: lowercase;
     text-shadow: 1px 2px 3px #ffffff;
