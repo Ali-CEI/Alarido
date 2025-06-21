@@ -380,10 +380,6 @@ div.horizontal-rule:nth-child(1){ /*linea horizontal amarilla sec 2*/
   grid-area: 6/3/7/8;
 }
 
-.element-grid-texto p{
-  font-size: 1.8em;
-}
-
 .element-grid-img {
     width: 100%;
     position: relative;
@@ -428,6 +424,7 @@ div.horizontal-rule:nth-child(1){ /*linea horizontal amarilla sec 2*/
     padding-top: 12px;
     padding-left: 12px;
     transition: color 1s 1s ease;
+    font-size: 1.8em;
 }
 
 .desplegado{
