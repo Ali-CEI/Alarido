@@ -356,7 +356,7 @@ div.horizontal-rule:nth-child(1){ /*linea horizontal amarilla sec 2*/
     position: relative;
     overflow: hidden;
     grid-area: span 1/span 4/span 1/span 4;
-    transition: color 1s ease-in-out;
+    transition: color 0s 1s ease-in-out;
 }
 
 .element-grid:nth-child(1) {
