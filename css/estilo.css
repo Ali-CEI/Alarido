@@ -34,12 +34,12 @@ header{
     position: sticky;
     top:0;
     z-index: 9;
+    padding: 20px 40px;
 }
     
 nav{ /*barra de navegacion*/
     display: flex;
     justify-content: space-between;
-    padding: 20px 40px;
     font-size: 1.5em;
 }
 
@@ -57,6 +57,8 @@ li{ /*elemento de la lista*/
 nav a{ /*enlace de la navegación*/
     cursor:pointer;
     position: fixed;
+    text-decoration: none;
+    color: black;
 }
 
 nav a:hover{
@@ -191,10 +193,11 @@ div.horizontal-rule{ /*linea horizontal color (elemento decoracion)*/
         to { height:100%; }}
 
 
-p.text-p{ /*parrafos primera seccion*/
+h4{ /*parrafos primera seccion*/
   font-family: "League Gothic", sans-serif;
   font-size:  1.5em;
   animation: opacidad 2s forwards;
+  font-weight: normal;
 }
 
 @keyframes opacidad {
@@ -202,7 +205,7 @@ p.text-p{ /*parrafos primera seccion*/
   100% { opacity: 1; }
 }
 
-p.text-p span.sub:hover{ /*tachado palabras primera seccion*/
+h4.text-p span.sub:hover{ /*tachado palabras primera seccion*/
   text-decoration-line: line-through;
   color: var(--color-1);
 }
@@ -419,7 +422,7 @@ div.horizontal-rule:nth-child(1){ /*linea horizontal amarilla sec 2*/
     transform: translate(0px, 0px);
 }
 
-.element-grid-texto {
+.element-grid-texto h4{
     display: block;
     padding-top: 12px;
     padding-left: 12px;
@@ -472,6 +475,7 @@ div.horizontal-rule:nth-child(1){ /*linea horizontal amarilla sec 2*/
   font-size: 0.9em;
   font-family: monospace, "league-gothic", sans-serif;
   padding-top: 20px;
+  text-align: justify;
 }
 
 .tarjeta .grafico{
