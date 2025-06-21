@@ -75,8 +75,9 @@
     background-color: white;
     box-shadow:  -6px 7px 10px 5px rgb(0, 0, 0, 0.4);
     overflow: hidden;
-    z-index: 10;
     justify-content: space-around;
+    z-index: 10;
+
 }
 
 .tarjeta{
@@ -88,6 +89,7 @@
     height: 100dvh;
     width: 100%;
     margin: 0 auto;
+    
 }
 
 .tarjeta p.biografia{

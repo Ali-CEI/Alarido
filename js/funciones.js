@@ -61,7 +61,7 @@ const amores = FGrupo.querySelectorAll(".descrip.cabecera");
 
 //for (let a = 0; a < amores.length; a++) {
     pocos.addEventListener("mouseenter", () => {
-        pocos.style.color = "var(--color-2)"; //Estoy segura de que hay una forma más práctica de agrupar esto
+        pocos.style.color = "white"; //Estoy segura de que hay una forma más práctica de agrupar esto
         amores[1].style.color = "var(--color-2)";
         pocos.style.mixBlendMode = "normal";
         amores[1].innerText = "¿nos quieres?";
@@ -79,6 +79,7 @@ const titulo = document.querySelector(".tarjeta h3");
 const parrafo = document.querySelector(".tarjeta p");
 const bio = document.querySelectorAll(".element-grid-texto p.bio");
 const picture = document.querySelector("picture");
+const nav = document.querySelector("nav")
 
 for (let i = 0; i < imagenes.length; i++) {
     
@@ -106,6 +107,7 @@ for (let i = 0; i < imagenes.length; i++) {
 
     imagenes[i].addEventListener("click", () => {
         textosDescrip[i].style.visibility = 'hidden';
+        nav.style.visibility = "hidden";
 
         if(i == 5){
             contenedor.classList.add("visible");
@@ -127,7 +129,9 @@ for (let i = 0; i < imagenes.length; i++) {
 
     contenedor.addEventListener("click", () => {
         contenedor.classList.remove("visible");
-      
+        nav.style.visibility = "visible";
+
+
         textosDescrip.forEach(texto => {
             texto.style.visibility = 'visible'; //quiero que todas sean visibles
     });
