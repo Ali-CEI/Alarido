@@ -300,15 +300,15 @@ div.horizontal-rule:nth-child(1){ /*linea horizontal amarilla sec 2*/
 }
 
 .fondo.grid.oraciones.uno{
-    top: 5%;
+    top: 5%; /*cambiar esto para que sea la mitad de una de las imgs*/
 }
 
 .fondo.grid.oraciones.dos{
-    top: 38%;
+    top: 38%; /*rt*/
 }
 
 .fondo.grid.oraciones.tres{
-    top: 65%;
+    top: 65%; /*rt 2*/
     text-align: left;
 }
 
