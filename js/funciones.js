@@ -80,7 +80,6 @@ const parrafo = document.querySelector(".tarjeta p");
 const bio = document.querySelectorAll(".element-grid-texto p.bio");
 const picture = document.querySelector("picture");
 const nav = document.querySelector("nav")
-const cuadro = document.querySelector(".element-grid-img-int.vacia")
 
 for (let i = 0; i < imagenes.length; i++) {
     
@@ -140,12 +139,30 @@ for (let i = 0; i < imagenes.length; i++) {
 
   });
 
-       const oraciones = document.querySelectorAll(".fondo.grid.oraciones") 
-        //let posicionFrase = imagenes[2].getBoundingClientRect();
-        let medidasCuadro = imagenes[4].getBoundingClientRect();
-        console.log(medidasCuadro);
+  /*----- Modifica el cuadro final y las oraciones de la seccion de projectos"*/
+const cuadro = document.querySelector(".element-grid-img-int.vacia")
+const oraciones = document.querySelectorAll(".fondo.grid.oraciones") 
+const projectos = document.querySelector(".projectos")
 
-        cuadro.style.height = medidasCuadro.height + "px";
+let frase = projectos.getBoundingClientRect();
+let medidasCuadro = imagenes[4].getBoundingClientRect();
+
+function getCoords(projectos) {
+  let posicionFrase = projectos.getBoundingClientRect();
+  console.log(posicionFrase);
+
+    return {
+    top: posicionFrase.top + window.pageYOffset,
+    right: posicionFrase.right + window.pageXOffset,
+    bottom: posicionFrase.bottom + window.pageYOffset,
+    left: posicionFrase.left + window.pageXOffset
+  };
+
+
+}
+
+cuadro.style.height = medidasCuadro.height + "px";
+//oraciones[2].style.top = posicionFrase.top + "px";
         //oraciones[2].style.top = medidasCuadro.top + "px"; //no queda donde quiero
 
 
