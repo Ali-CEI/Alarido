@@ -82,10 +82,6 @@ const picture = document.querySelector("picture");
 const nav = document.querySelector("nav")
 const cuadro = document.querySelector(".element-grid-img-int.vacia")
 
-console.log(imagenes[4].getAttribute("height"));
-
-//cuadro.style.height = .style.height; //el cuadro sin imagen es del mismo tamaño uque la imagen 4
-
 for (let i = 0; i < imagenes.length; i++) {
     
     imagenes[i].setAttribute('alt', textosDescrip[i].innerText); //asigna el texto de la descripción como atributo alt de la imagen
@@ -130,6 +126,7 @@ for (let i = 0; i < imagenes.length; i++) {
             let TextoParrafo = bio[i].innerText; // Obtiene el texto del párrafo más cercano
             parrafo.innerText = TextoParrafo;            
         }});
+
 };  
 
     contenedor.addEventListener("click", () => {
@@ -142,5 +139,15 @@ for (let i = 0; i < imagenes.length; i++) {
     });
 
   });
+
+       const oraciones = document.querySelectorAll(".fondo.grid.oraciones") 
+        //let posicionFrase = imagenes[2].getBoundingClientRect();
+        let medidasCuadro = imagenes[4].getBoundingClientRect();
+        console.log(medidasCuadro);
+
+        cuadro.style.height = medidasCuadro.height + "px";
+        //oraciones[2].style.top = medidasCuadro.top + "px"; //no queda donde quiero
+
+
 
 console.log("¡Hola! Este es un mensaje de consola para verificar que el script se ha cargado correctamente.");

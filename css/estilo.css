@@ -525,10 +525,6 @@ picture img{
     top: 35%;
 }
 
-.fondo.grid.oraciones.tres{
-    top: 60%;
-}
-
 .element-grid-img-int.vacia{
     background-color: var(--color-1);
     cursor: pointer;
