@@ -140,31 +140,35 @@ for (let i = 0; i < imagenes.length; i++) {
   });
 
   /*----- Modifica el cuadro final y las oraciones de la seccion de projectos"*/
-const cuadro = document.querySelector(".element-grid-img-int.vacia")
-const oraciones = document.querySelectorAll(".fondo.grid.oraciones") 
-const projectos = document.querySelector(".projectos")
+const cuadro = document.querySelector(".element-grid-img-int.vacia");
+const oraciones = document.querySelectorAll(".fondo.grid.oraciones");
+const projectos = document.querySelector(".projectos");
 
-let frase = projectos.getBoundingClientRect();
-let medidasCuadro = imagenes[4].getBoundingClientRect();
+const frase = projectos.getBoundingClientRect();
+const medidasCuadro = imagenes[4].getBoundingClientRect();
 
 function getCoords(projectos) {
   let posicionFrase = projectos.getBoundingClientRect();
   console.log(posicionFrase);
-
-    return {
-    top: posicionFrase.top + window.pageYOffset,
-    right: posicionFrase.right + window.pageXOffset,
-    bottom: posicionFrase.bottom + window.pageYOffset,
-    left: posicionFrase.left + window.pageXOffset
-  };
-
-
 }
 
-cuadro.style.height = medidasCuadro.height + "px";
-//oraciones[2].style.top = posicionFrase.top + "px";
-        //oraciones[2].style.top = medidasCuadro.top + "px"; //no queda donde quiero
+function ancho() {
+    const altoCuadro = medidasCuadro.height;
+    const anchoCuadro = medidasCuadro.width;
+    const widthCuadro = cuadro.getBoundingClientRect();
+    const anchoRect = widthCuadro.width;
 
+    if (window.innerWidth < 720) {
+        cuadro.style.height = medidasCuadro.height + "px";
+        cuadro.style.width = medidasCuadro.width + "px";
 
+    } else {
+        const x = altoCuadro * anchoRect / anchoCuadro; //variable para que sea proporcional el alto del cuadro
+        cuadro.style.height = x + "px";
+        cuadro.style.width = "100%";
+    }    
+}
+
+ancho();
 
 console.log("¡Hola! Este es un mensaje de consola para verificar que el script se ha cargado correctamente.");

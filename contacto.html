@@ -17,6 +17,53 @@
   <!--Link League Gothic-->
   <script defer src="js/funciones.js"></script> <!--Link java-->
 
+
+  <style>
+    .form-contacto {
+  max-width: 600px;
+  margin: 80px auto;
+  padding: 24px;
+  text-align: center;
+  background: #111;
+  color: var(--color-1, yellow);
+  border: 2px solid var(--color-1, yellow);
+  border-radius: 16px;
+  font-family: 'League Gothic', sans-serif;
+}
+
+.form-contacto h2 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.form-contacto input,
+.form-contacto textarea {
+  width: 100%;
+  margin: 12px 0;
+  padding: 12px;
+  font-size: 1.2em;
+  background: black;
+  border: 2px solid var(--color-1, yellow);
+  color: white;
+  font-family: inherit;
+}
+
+.form-contacto button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 1.2em;
+  background: var(--color-1, yellow);
+  border: none;
+  color: black;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.form-contacto button:hover {
+  background: white;
+}
+
+  </style>
 </head>
 <body>
 
@@ -35,9 +82,21 @@
     <h1></h1>
     <p></p>
 
-    <form action="">
+<section id="contacto" class="form-contacto">
+  <h2>Contacto</h2>
+  <form action="https://formsubmit.co/TU_CORREO@EMAIL.COM" method="POST">
+    <input type="text" name="nombre" placeholder="Tu nombre" required>
+    <input type="email" name="email" placeholder="Tu correo" required>
+    <textarea name="mensaje" rows="5" placeholder="Tu mensaje" required></textarea>
+    
+    <!-- Ocultar captcha + redirigir después del envío -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://alarido.netlify.app/gracias.html">
 
-    </form>
+    <button type="submit">Enviar</button>
+  </form>
+</section>
+
     
 </body>
 </html>
