@@ -28,13 +28,13 @@ if (localStorage.getItem('oscuro') === 'activado') {
   modoOscuro.innerHTML = "modo: &#x263C;";
 }else {
   desactivarOscuro();
-  modoOscuro.innerHTML = "modo: &#9790;";
+  modoOscuro.innerHTML = "modo: &#9679;";
 }
 
 modoOscuro.addEventListener('click', () => {
   if (body.classList.contains('dark')) {
     desactivarOscuro();
-    modoOscuro.innerHTML = "modo: &#9790;";
+    modoOscuro.innerHTML = "modo: &#9679;";
   } else {
     activarOscuro();
     modoOscuro.innerHTML = "modo: &#x263C;";

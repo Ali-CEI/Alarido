@@ -46,16 +46,20 @@ body.dark{ /*cuerpo de la pagina*/
 
       /*---------------CABECERA---------------*/
 header{
-    width: 100%;
     position: sticky;
     top:0;
     z-index: 9;
     padding: 20px 40px;
-    color: inherit;
-    display: flex;
+    display:flex;
     justify-content: space-between;
+    align-items:center;
+}
+
+header a{ /*enlace de la navegación*/
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
     font-size: 1.5em;
-    align-items: start;
 }
 
 header h1{
@@ -63,37 +67,24 @@ header h1{
     padding-right: clamp(40px);
 }
 
-nav{ /*barra de navegacion*/
-    width: calc(100% - (100% / 4));
-}
-
-ul.navegador{
-    display: flex;
-    justify-content: space-between;    
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:2rem;
 }
 
 ul.rrss{ /*lista de redes sociales*/
     display: flex;
     justify-content: space-around;
-    flex-basis: 10%;
 }
 
-.navegador li{ /*elemento de la lista*/
+nav li{ /*elemento de la lista*/
     text-decoration: none;
     list-style: none;
-    flex-grow: 1;
+    display: inline-block;
 }
 
-.rrss li{
-        flex-grow: 0;
-}
 
-header a{ /*enlace de la navegación*/
-    cursor: pointer;
-    position: fixed; /*para la animacion del hover*/
-    text-decoration: none;
-    color: inherit;
-}
 
 header a:hover, nav button:hover{
     cursor:pointer;
@@ -125,7 +116,7 @@ header button{
     font-family: "league gothic", sans-serif;
     background-color: transparent;
     border: none;
-    font-size: inherit;
+    font-size: 1.5em;
     color: inherit;
 }
 
