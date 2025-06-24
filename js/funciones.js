@@ -1,4 +1,45 @@
     /**/
+/*programa el modo oscuro*/
+const modoOscuro = document.getElementById('modoOscuro');
+const body = document.body;
+
+const activarOscuro = () => {
+  body.classList.add('dark');
+  localStorage.setItem('oscuro', 'activado');
+  actualizarFondo(); 
+};
+
+const desactivarOscuro = () => {
+  body.classList.remove('dark');
+  localStorage.setItem('oscuro', 'desactivado');
+  actualizarFondo(); 
+};
+
+function actualizarFondo() {
+  if (body.classList.contains('dark')) {
+    body.style.backgroundColor = '#000';
+  } else {
+    body.style.backgroundColor = '#fff';
+  }
+}
+
+if (localStorage.getItem('oscuro') === 'activado') {
+  activarOscuro();
+  modoOscuro.innerHTML = "modo: &#x263C;";
+}else {
+  desactivarOscuro();
+  modoOscuro.innerHTML = "modo: &#9790;";
+}
+
+modoOscuro.addEventListener('click', () => {
+  if (body.classList.contains('dark')) {
+    desactivarOscuro();
+    modoOscuro.innerHTML = "modo: &#9790;";
+  } else {
+    activarOscuro();
+    modoOscuro.innerHTML = "modo: &#x263C;";
+  }
+});
 
 
     /*Cambia el nombre de la página en función de si está activa o no*/
@@ -87,21 +128,28 @@ for (let i = 0; i < imagenes.length; i++) {
     
       /*------- Cambia el fondo a color al colocar el cursor sobre las imagenes de projectos -------*/
     imagenes[i].addEventListener('mouseenter', () => {
-        document.body.style.backgroundColor = 'var(--color-1)';
-        imagenes[5].style.backgroundColor = 'white';
+
+        body.style.backgroundColor = 'var(--color-1)'; //cambia el fondo del body al color de la variable
+        imagenes[5].style.backgroundColor = 'inherit'; 
     
         textosDescrip.forEach(texto => {
-            texto.style.color = "white";
+            texto.style.color = "var(--texto-1)";
         });
     });
       
     /*------- Vuelve el fondo a blanco -------*/
     imagenes[i].addEventListener('mouseleave', () => {
-        document.body.style.backgroundColor = 'white';
+
+        if (body.classList.contains('dark')) {
+            body.style.backgroundColor = '#000'; //si está en modo oscuro, el fondo vuelve a ser el del body
+            
+        } else {
+            body.style.backgroundColor = '#ffffff'; //añado esto porque inherit no funciona bien en el modo claro
+        }
+
         imagenes[5].style.backgroundColor = 'var(--color-1)';
-        
         textosDescrip.forEach(texto => {
-            texto.style.color = "black";
+            texto.style.color = "inherit";
         });
     });
 
@@ -170,5 +218,6 @@ function ancho() {
 }
 
 ancho();
+
 
 console.log("¡Hola! Este es un mensaje de consola para verificar que el script se ha cargado correctamente.");

@@ -10,22 +10,42 @@
             width: 3px;
         }
 
-body,html{ /*cuerpo de la pagina*/
-    min-width: 320px;
-    position: relative; /*posiciono para usar de referencia en el texto animado*/
-    scroll-behavior: smooth;
-    transition: background-color 0.5s ease;
-}
-
 :root{ /*base (raiz)*/
     font-family: "league gothic", sans-serif;
     --font-family: "league gothic", sans-serif;
     --height: 100dvh;
     --color-1: #298287;
     --color-2: #00D0E0;
-    --color-3: #E00085;
-    --color-4: #fffb24;
-    --color-5: #E0C30A;
+    --texto-1: #000;
+    --texto-2: #fff;
+}
+
+body, html{ /*cuerpo de la pagina*/
+    min-width: 320px;
+    position: relative; /*posiciono para usar de referencia en el texto animado*/
+    scroll-behavior: smooth;
+    transition: background-color 0.5s ease;
+    background-color: #ffffff;
+    color: black;
+
+    /*variables*/
+    --color-1: #298287;
+    --color-2: #00D0E0;
+    --texto-1: #000;
+    --texto-2: #fff;
+}
+
+body.dark, html{ /*cuerpo de la pagina*/
+    min-width: 320px;
+    position: relative; /*posiciono para usar de referencia en el texto animado*/
+    scroll-behavior: smooth;
+    transition: background-color 0.5s ease;
+    background-color: #222;
+    color: white;
+    --color-1: #00D0E0;
+    --color-2: #298287;
+    --texto-1: #fff;
+    --texto-2: #000;
 }
 
       /*---------------CABECERA---------------*/
@@ -35,6 +55,7 @@ header{
     top:0;
     z-index: 9;
     padding: 20px 40px;
+    color: inherit;
 }
     
 nav{ /*barra de navegacion*/
@@ -58,13 +79,14 @@ nav a{ /*enlace de la navegación*/
     cursor:pointer;
     position: fixed;
     text-decoration: none;
-    color: black;
+    color: inherit;
 }
 
 nav a:hover{
     cursor:pointer;
     background-color: var(--color-2);
     animation: nav 1.5s;
+    color: black;
 }
 
 @keyframes nav{
@@ -86,6 +108,13 @@ nav a:hover{
     }
 }
 
+header button{
+    font-family: "league gothic", sans-serif;
+    background-color: transparent;
+    border: none;
+    font-size: inherit;
+    color: inherit;
+}
 
       /*---------------PRIMERA SECCION DE LA PORTADA---------------*/
 .primera-portada{ /*div global de la intro*/
@@ -157,12 +186,12 @@ nav a:hover{
       @keyframes parpadeo {
           0%, 100% {
           background-color: var(--color-1);
-          color: #ffffff;
+          color: var(--texto-2);
           }
           50% {
           background-color: rgb(173, 173, 173);
           opacity: 0.5;
-          color: white;
+          color: var(--texto-2);
           }
       }
 
@@ -316,17 +345,18 @@ div.horizontal-rule:nth-child(1){ /*linea horizontal amarilla sec 2*/
     font-size: 10em;
     text-transform: uppercase;
     line-height: 0.8em;
+    color: var(--color-1);
 }
 
 .descrip.cabecera{
-    color: var(--color-1);
+    color:var(--color-1);
     font-weight: 700;
     text-transform: lowercase;
     text-shadow: 1px 2px 3px #ffffff;
 }
 
 .frente.intro .descrip.cabecera{
-    color: var(--color-1);
+    color:var(--color-1);
 }
 
 .descrip span{ 
