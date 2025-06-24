@@ -67,23 +67,34 @@ header h1{
     padding-right: clamp(40px);
 }
 
+nav{
+    width: 60%;
+}
+
 nav ul{
     list-style:none;
     display:flex;
+    justify-content: space-between;
     gap:2rem;
-}
-
-ul.rrss{ /*lista de redes sociales*/
-    display: flex;
-    justify-content: space-around;
+    text-align: center;
 }
 
 nav li{ /*elemento de la lista*/
     text-decoration: none;
     list-style: none;
     display: inline-block;
+    width: 25%;
 }
 
+ul.rrss{ /*lista de redes sociales*/
+    display: flex;
+    justify-content: end;
+    width: 25%;
+}
+
+.rrss li{
+    width: 15%;
+}
 
 
 header a:hover, nav button:hover{
