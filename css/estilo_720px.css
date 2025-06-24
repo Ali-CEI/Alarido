@@ -1,10 +1,5 @@
 @media screen and (max-width: 720px) {
    
-    ul{
-        justify-content: space-between;
-        flex-basis: 15%;
-    }
-
   /*PRIMERA SECCION DE LA PORTADA*/
 .primera-portada{ /*div global de la intro*/
     width: 100%;
@@ -24,6 +19,7 @@
   .texto-animado span {
       font-size: clamp(32px, 18vw, 8em);
       line-height: 1;
+    font-weight: 900;
     }
 
 .p-sec{
