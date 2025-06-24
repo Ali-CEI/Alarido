@@ -54,6 +54,7 @@ document.addEventListener("visibilitychange", () => { //extrae del documento
     }
 });
 
+
     /*Hace aparecer el "logo" de la página en la sección de introducción*/
 const textoAnimado = document.querySelector(".texto-animado");
 const spans = textoAnimado.querySelectorAll("span");
@@ -79,10 +80,12 @@ function animarTextoAleatorio() {
 
 document.addEventListener('DOMContentLoaded', animarTextoAleatorio); //funciona al cargar el documento
 
+
     /*Al hacer doble click sobre el logo se subraya y parpadea*/
 textoAnimado.addEventListener("dblclick", () => {
     textoAnimado.classList.add("seleccionado"); //funciona por la clase "seleccionado"
 });
+
 
     /*Quitar clase al perder selección*/
 document.addEventListener("selectionchange", () => {
@@ -95,12 +98,12 @@ document.addEventListener("selectionchange", () => {
             textoAnimado.classList.remove("seleccionado");}
 });
 
+/*cambia la frase de la segunda seccion al pasar el cursor*/
 const pocos = document.querySelector(".descrip.cabecera span");
 const FGrupo = document.querySelector(".frente.grupo");
 const amores = FGrupo.querySelectorAll(".descrip.cabecera");
 
 
-//for (let a = 0; a < amores.length; a++) {
     pocos.addEventListener("mouseenter", () => {
         pocos.style.color = "white"; //Estoy segura de que hay una forma más práctica de agrupar esto
         amores[1].style.color = "var(--color-2)";
@@ -108,8 +111,6 @@ const amores = FGrupo.querySelectorAll(".descrip.cabecera");
         amores[1].innerText = "¿nos quieres?";
         amores[2].remove();
     });
-//};
-
 
                     /*----- JS DE LA SECCIÓN DE PROJECTOS -----*/
 const imagenes = document.querySelectorAll(".element-grid-img-int");
@@ -129,11 +130,11 @@ for (let i = 0; i < imagenes.length; i++) {
       /*------- Cambia el fondo a color al colocar el cursor sobre las imagenes de projectos -------*/
     imagenes[i].addEventListener('mouseenter', () => {
 
-        body.style.backgroundColor = 'var(--color-1)'; //cambia el fondo del body al color de la variable
+        document.body.style.backgroundColor = 'var(--color-1)'; //cambia el fondo del body al color de la variable
         imagenes[5].style.backgroundColor = 'inherit'; 
     
         textosDescrip.forEach(texto => {
-            texto.style.color = "var(--texto-1)";
+            texto.style.color = "var(--texto-2)";
         });
     });
       

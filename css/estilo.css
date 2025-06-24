@@ -4,27 +4,27 @@
     padding: 0;
     box-sizing:border-box;
 }
+
 ::-webkit-scrollbar {
-            display: none;
-            color: #298287;
-            width: 3px;
-        }
+    display: none;
+    color: #298287;
+    width: 3px;
+}
 
 :root{ /*base (raiz)*/
     font-family: "league gothic", sans-serif;
     --font-family: "league gothic", sans-serif;
     --height: 100dvh;
-    --color-1: #298287;
-    --color-2: #00D0E0;
-    --texto-1: #000;
-    --texto-2: #fff;
 }
 
 body, html{ /*cuerpo de la pagina*/
     min-width: 320px;
     position: relative; /*posiciono para usar de referencia en el texto animado*/
     scroll-behavior: smooth;
-    transition: background-color 0.5s ease;
+    transition: all 1s ease;
+}
+
+body{
     background-color: #ffffff;
     color: black;
 
@@ -35,11 +35,7 @@ body, html{ /*cuerpo de la pagina*/
     --texto-2: #fff;
 }
 
-body.dark, html{ /*cuerpo de la pagina*/
-    min-width: 320px;
-    position: relative; /*posiciono para usar de referencia en el texto animado*/
-    scroll-behavior: smooth;
-    transition: background-color 0.5s ease;
+body.dark{ /*cuerpo de la pagina*/
     background-color: #222;
     color: white;
     --color-1: #00D0E0;
@@ -76,8 +72,8 @@ li{ /*elemento de la lista*/
 }
 
 nav a{ /*enlace de la navegación*/
-    cursor:pointer;
-    position: fixed;
+    cursor: pointer;
+    position: fixed; /*para la animacion del hover*/
     text-decoration: none;
     color: inherit;
 }
@@ -345,11 +341,10 @@ div.horizontal-rule:nth-child(1){ /*linea horizontal amarilla sec 2*/
     font-size: 10em;
     text-transform: uppercase;
     line-height: 0.8em;
-    color: var(--color-1);
 }
 
 .descrip.cabecera{
-    color:var(--color-1);
+    color: var(--color-1);
     font-weight: 700;
     text-transform: lowercase;
     text-shadow: 1px 2px 3px #ffffff;
@@ -364,7 +359,7 @@ div.horizontal-rule:nth-child(1){ /*linea horizontal amarilla sec 2*/
 }
 
 .descrip span.oculto{ /*palabras que se muestran al volverse de color el fondo*/
-    color: white;
+    color: var(--texto-2);
 }
 
 .blur{ /*texto borroso*/
@@ -489,7 +484,7 @@ div.horizontal-rule:nth-child(1){ /*linea horizontal amarilla sec 2*/
     height: 80dvh;
     padding: 20px 60px 40px;
     border-radius: 10%;
-    background-color: white;
+    background-color: var(--texto-2);
     box-shadow:  -6px 7px 10px 5px rgb(0, 0, 0, 0.4);
     overflow: hidden;
     z-index: 10;
@@ -497,7 +492,7 @@ div.horizontal-rule:nth-child(1){ /*linea horizontal amarilla sec 2*/
 }
 
 .tarjeta p.biografia{
-  color: black;
+  color: var(--texto-1);
   font-size: 0.9em;
   font-family: monospace, "league-gothic", sans-serif;
   padding-top: 20px;
