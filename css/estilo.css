@@ -52,33 +52,50 @@ header{
     z-index: 9;
     padding: 20px 40px;
     color: inherit;
-}
-    
-nav{ /*barra de navegacion*/
     display: flex;
     justify-content: space-between;
     font-size: 1.5em;
+    align-items: start;
 }
 
-ul { /*lista de redes sociales*/
+header h1{
+    font-size: inherit;
+    padding-right: clamp(40px);
+}
+
+nav{ /*barra de navegacion*/
+    width: calc(100% - (100% / 4));
+}
+
+ul.navegador{
+    display: flex;
+    justify-content: space-between;    
+}
+
+ul.rrss{ /*lista de redes sociales*/
     display: flex;
     justify-content: space-around;
     flex-basis: 10%;
 }
 
-li{ /*elemento de la lista*/
+.navegador li{ /*elemento de la lista*/
     text-decoration: none;
     list-style: none;
+    flex-grow: 1;
 }
 
-nav a{ /*enlace de la navegación*/
+.rrss li{
+        flex-grow: 0;
+}
+
+header a{ /*enlace de la navegación*/
     cursor: pointer;
     position: fixed; /*para la animacion del hover*/
     text-decoration: none;
     color: inherit;
 }
 
-nav a:hover{
+header a:hover, nav button:hover{
     cursor:pointer;
     background-color: var(--color-2);
     animation: nav 1.5s;
@@ -347,7 +364,7 @@ div.horizontal-rule:nth-child(1){ /*linea horizontal amarilla sec 2*/
     color: var(--color-1);
     font-weight: 700;
     text-transform: lowercase;
-    text-shadow: 1px 2px 3px #ffffff;
+    text-shadow: 1px 2px 3px var(--texto-2);
 }
 
 .frente.intro .descrip.cabecera{
