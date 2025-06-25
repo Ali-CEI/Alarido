@@ -1,6 +1,18 @@
 @media screen and (max-width: 720px) {
    
+header{
+    padding: 10px 40px;
+    display:flex;
+    justify-content: space-between;
+    align-items:baseline;
+}
+
+header a, header button{ /*enlace de la navegación*/
+    font-size: 1em;
+}
+
   /*PRIMERA SECCION DE LA PORTADA*/
+  
 .primera-portada{ /*div global de la intro*/
     width: 100%;
     height: calc(100vh - 80px);

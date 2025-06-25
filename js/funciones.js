@@ -25,21 +25,20 @@ function actualizarFondo() {
 
 if (localStorage.getItem('oscuro') === 'activado') {
   activarOscuro();
-  modoOscuro.innerHTML = "modo: &#x263C;";
+    modoOscuro.innerHTML = window.innerWidth < 720 ? "&#x263C;" : "modo: &#x263C;";
 }else {
   desactivarOscuro();
-  modoOscuro.innerHTML = "modo: &#9679;";
-}
+    modoOscuro.innerHTML = window.innerWidth < 720 ? "&#9679;" : "modo: &#9679;";
+};
 
 modoOscuro.addEventListener('click', () => {
   if (body.classList.contains('dark')) {
     desactivarOscuro();
-    modoOscuro.innerHTML = "modo: &#9679;";
+    modoOscuro.innerHTML = window.innerWidth < 720 ? "&#9679;" : "modo: &#9679;";
   } else {
     activarOscuro();
-    modoOscuro.innerHTML = "modo: &#x263C;";
-  }
-});
+    modoOscuro.innerHTML = window.innerWidth < 720 ? "&#x263C;" : "modo: &#x263C;";
+    }});
 
 
     /*Cambia el nombre de la página en función de si está activa o no*/
