@@ -573,5 +573,22 @@ picture img{
     background-color: var(--color-1);
     cursor: pointer;
 }
+}
 
+@media screen and (max-width: 1080px) {
+
+.p-sec{
+    flex-direction: column-reverse;
+    padding: 0 20px;
+    justify-content: space-evenly;
+    min-height: auto;
+}
+
+.p-sec.grupo {
+    justify-content: start;
+}
+
+.img-sec-portada{
+    width: calc(100% + 40px);
+}
 }
