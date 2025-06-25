@@ -131,7 +131,7 @@ for (let i = 0; i < imagenes.length; i++) {
     imagenes[i].addEventListener('mouseenter', () => {
 
         document.body.style.backgroundColor = 'var(--color-1)'; //cambia el fondo del body al color de la variable
-        imagenes[5].style.backgroundColor = 'inherit'; 
+        imagenes[5].style.backgroundColor = 'var(--color-2)'; //cambia el fondo de la imagen del canvas al color de la variable
     
         textosDescrip.forEach(texto => {
             texto.style.color = "var(--texto-2)";
@@ -145,7 +145,7 @@ for (let i = 0; i < imagenes.length; i++) {
             body.style.backgroundColor = '#000'; //si está en modo oscuro, el fondo vuelve a ser el del body
             
         } else {
-            body.style.backgroundColor = '#ffffff'; //añado esto porque inherit no funciona bien en el modo claro
+            body.style.backgroundColor = '#ffffff';
         }
 
         imagenes[5].style.backgroundColor = 'var(--color-1)';
@@ -162,7 +162,6 @@ for (let i = 0; i < imagenes.length; i++) {
             contenedor.classList.add("visible");
             tarjeta.innerHTML = "<canvas></canvas>";
             titulo.innerText = "Pulsa para dibujar"
-            picture.remove();
 
         }else{
         let persona = imagenes[i].getAttribute("alt");
@@ -180,7 +179,6 @@ for (let i = 0; i < imagenes.length; i++) {
     contenedor.addEventListener("click", () => {
         contenedor.classList.remove("visible");
         nav.style.visibility = "visible";
-
 
         textosDescrip.forEach(texto => {
             texto.style.visibility = 'visible'; //quiero que todas sean visibles

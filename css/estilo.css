@@ -64,7 +64,7 @@ header a{ /*enlace de la navegación*/
 
 header h1{
     font-size: inherit;
-    padding-right: clamp(40px);
+    font-weight: normal;
 }
 
 nav{
