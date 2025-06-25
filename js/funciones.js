@@ -25,19 +25,19 @@ function actualizarFondo() {
 
 if (localStorage.getItem('oscuro') === 'activado') {
   activarOscuro();
-    modoOscuro.innerHTML = window.innerWidth < 720 ? "&#x263C;" : "modo: &#x263C;";
+    modoOscuro.innerHTML = window.innerWidth < 770 ? "&#x263C;" : "modo: &#x263C;";
 }else {
   desactivarOscuro();
-    modoOscuro.innerHTML = window.innerWidth < 720 ? "&#9679;" : "modo: &#9679;";
+    modoOscuro.innerHTML = window.innerWidth < 770 ? "&#9679;" : "modo: &#9679;";
 };
 
 modoOscuro.addEventListener('click', () => {
   if (body.classList.contains('dark')) {
     desactivarOscuro();
-    modoOscuro.innerHTML = window.innerWidth < 720 ? "&#9679;" : "modo: &#9679;";
+    modoOscuro.innerHTML = window.innerWidth < 770 ? "&#9679;" : "modo: &#9679;";
   } else {
     activarOscuro();
-    modoOscuro.innerHTML = window.innerWidth < 720 ? "&#x263C;" : "modo: &#x263C;";
+    modoOscuro.innerHTML = window.innerWidth < 770 ? "&#x263C;" : "modo: &#x263C;";
     }});
 
 

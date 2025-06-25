@@ -1,3 +1,21 @@
+@media screen and (max-width: 770px) {
+
+.p-sec{
+    flex-direction: column-reverse;
+    padding: 0 20px;
+    justify-content: space-evenly;
+    min-height: auto;
+}
+
+.p-sec.grupo {
+    justify-content: start;
+}
+
+.img-sec-portada{
+    width: calc(100% + 40px);
+}
+}
+
 @media screen and (max-width: 720px) {
    
 header{
@@ -24,25 +42,17 @@ header a, header button{ /*enlace de la navegación*/
     z-index: -2;
 }  
   
-  .texto-animado{
+.texto-animado{
     width: 100%;
-  }
+}
   
-  .texto-animado span {
-      font-size: clamp(32px, 18vw, 8em);
-      line-height: 1;
+.texto-animado span {
+    font-size: clamp(8em);
+    line-height: 1;
     font-weight: 900;
-    }
-
-.p-sec{
-    flex-direction: column-reverse;
-    padding: 0 20px;
-    justify-content: space-evenly;
 }
 
-.p-sec.grupo {
-    justify-content: start;
-}
+
 
 .frente.intro{
     padding-right: 0;
@@ -63,9 +73,6 @@ header a, header button{ /*enlace de la navegación*/
     padding: 0;
 }
 
-.img-sec-portada{
-    width: calc(100% + 40px);
-}
 
 .project-grid {
     position:relative;
