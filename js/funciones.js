@@ -103,11 +103,9 @@ const FGrupo = document.querySelector(".frente.grupo");
 const amores = FGrupo.querySelectorAll(".descrip.cabecera");
 
 
-    pocos.addEventListener("mouseenter", () => {
-        pocos.style.color = "white"; //Estoy segura de que hay una forma más práctica de agrupar esto
-        amores[1].style.color = "var(--color-2)";
-        pocos.style.mixBlendMode = "normal";
-        amores[1].innerText = "¿nos quieres?";
+    pocos.addEventListener("mouseenter", () => { //Estoy segura de que hay una forma más práctica de agrupar esto
+        pocos.remove();
+        amores[1].style.color = "var(--color-2)", amores[1].innerText = "¿nos quieres?";
         amores[2].remove();
     });
 
