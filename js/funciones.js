@@ -77,9 +77,6 @@ function animarTextoAleatorio() {
     });
 };
 
-document.addEventListener('DOMContentLoaded', animarTextoAleatorio); //funciona al cargar el documento
-
-
     /*Al hacer doble click sobre el logo se subraya y parpadea*/
 textoAnimado.addEventListener("dblclick", () => {
     textoAnimado.classList.add("seleccionado"); //funciona por la clase "seleccionado"
@@ -105,9 +102,14 @@ const amores = FGrupo.querySelectorAll(".descrip.cabecera");
 
     pocos.addEventListener("mouseenter", () => { //Estoy segura de que hay una forma más práctica de agrupar esto
         pocos.remove();
-        amores[1].style.color = "var(--color-2)", amores[1].innerText = "¿nos quieres?";
         amores[2].remove();
-    });
+        
+
+        amores[1].style.color = body.classList.contains('dark') ? "var(--texto-1)" : "var(--color-2)"; // No detecta el pulsar el botón de modo oscuro
+        amores[1].innerText = "¿nos quieres?";
+});
+
+
 
                     /*----- JS DE LA SECCIÓN DE PROJECTOS -----*/
 const imagenes = document.querySelectorAll(".element-grid-img-int");
