@@ -217,5 +217,4 @@ function ancho() {
 
 ancho();
 
-
 console.log("¡Hola! Este es un mensaje de consola para verificar que el script se ha cargado correctamente.");

@@ -297,7 +297,7 @@ div.horizontal-rule:nth-child(1){ /*linea horizontal amarilla sec 2*/
     font-family: "roboto", Helvetica, sans-serif, sans-serif;
 }
 
-/*--------------- SECCION XX ---------------*/
+/*--------------- SECCION GRUPO ---------------*/
 .frente.grupo{
     top:0;
     left:0;
@@ -511,11 +511,11 @@ div.horizontal-rule:nth-child(1){ /*linea horizontal amarilla sec 2*/
 }
 
 .tarjeta p.biografia{
-  color: var(--texto-1);
-  font-size: 0.9em;
-  font-family: monospace, "league-gothic", sans-serif;
-  padding-top: 20px;
-  text-align: justify;
+    color: var(--texto-1);
+    font-size: 0.9em;
+    font-family: monospace, "league-gothic", sans-serif;
+    padding-top: 20px;
+    text-align: justify;
 }
 
 .tarjeta .grafico{
@@ -554,11 +554,35 @@ picture img{
             height: 100%;
         }
 
+/*--------------- SECCION CIERRE ---------------*/
+.frente.cierre{
+    text-align: left;
+    position: relative;
+}
+
+.p-sec.cierre{
+    flex-direction: column;
+    margin: 0 auto;
+    padding-bottom: 100px;
+    z-index: -1;
+}
+
+.cierre a:hover{
+    cursor:pointer;
+    background-color: var(--color-2);
+    animation: nav 1.5s;
+    color: var(--texto-1);
+}
+
+.cierre a{
+    cursor:pointer;
+    color: var(--texto-1);
+}
 
 @media screen and (max-width: 1440px) {
 
 .descrip{
-    font-size: 9em;
+    font-size: clamp(9em);
 }
 
 .fondo.grid.oraciones.uno{

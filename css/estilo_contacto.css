@@ -1,0 +1,44 @@
+    .form-contacto {
+  max-width: 600px;
+  margin: 80px auto;
+  padding: 24px;
+  text-align: center;
+  background: #111;
+  color: var(--color-1);
+  border: 2px solid var(--color-1);
+  border-radius: 16px;
+  font-family: 'League Gothic', sans-serif;
+}
+
+.form-contacto h2 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.form-contacto input,
+.form-contacto textarea {
+  width: 100%;
+  margin: 12px 0;
+  padding: 12px;
+  font-size: 1.2em;
+  background: black;
+  border: 2px solid var(--color-1);
+  color: white;
+  font-family: inherit;
+}
+
+.form-contacto button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 1.2em;
+  background: var(--color-1);
+  border: none;
+  color: black;
+  cursor: pointer;
+  transition: all 0.3s ease;
+    border-radius: 16px;
+}
+
+.form-contacto button:hover {
+  background: white;
+}
