@@ -40,6 +40,7 @@ header a, header button{ /*enlace de la navegación*/
     justify-content: space-between;
     margin: 0 auto;
     z-index: -2;
+    font-family: "league gothic", sans-serif;
 }  
   
 .texto-animado{
