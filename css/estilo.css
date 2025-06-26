@@ -441,7 +441,6 @@ div.horizontal-rule:nth-child(1){ /*linea horizontal amarilla sec 2*/
 .element-grid-img-int.vacia{
     background-color: var(--color-1);
     cursor: pointer;
-    
 }
 
 .element-grid-img img{
@@ -490,6 +489,7 @@ div.horizontal-rule:nth-child(1){ /*linea horizontal amarilla sec 2*/
     align-self: anchor-center;
     height: 100dvh;
     width: 100%;
+    margin: 0 auto;
 }
 
 .tarjeta.visible{
