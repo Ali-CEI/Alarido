@@ -102,10 +102,9 @@ const FGrupo = document.querySelector(".frente.grupo");
 const amores = FGrupo.querySelectorAll(".descrip.cabecera");
 
 
-    pocos.addEventListener("mouseenter", () => { //Estoy segura de que hay una forma más práctica de agrupar esto
+    pocos.addEventListener("mouseenter", () => { //investigar si hay una forma más práctica de agrupar esto
         pocos.remove();
         amores[2].remove();
-        
 
         amores[1].style.color = body.classList.contains('dark') ? "var(--texto-1)" : "var(--color-2)"; // No detecta el pulsar el botón de modo oscuro
         amores[1].innerText = "¿nos quieres?";
