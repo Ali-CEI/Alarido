@@ -54,6 +54,32 @@ document.addEventListener("visibilitychange", () => { //extrae del documento
 });
 
 
+/*las líneas horizontales se cargan al entrar en pantalla*/
+const linea = document.querySelector(".vertical-linea");
+const barras = document.querySelectorAll(".horizontal-linea");
+
+function actualizarBarra(barra) { //función que añade la animación a las barras
+  barra.classList.add('animacion');
+}
+
+const observer = new IntersectionObserver((entrada, observar) => { //constante que "observa" la ventana del navegador
+entrada.forEach(entrada => { 
+    if (entrada.isIntersecting) {
+      actualizarBarra(entrada.target); //invoca la función
+      observar.unobserve(entrada.target); // solo activarlo una vez
+    }
+  });
+}, { threshold: 0.5 }); //porcentaje de visibilidad del elemento en el viewport
+
+/*que el "observer" funcione para cada linea horizontal*/
+barras.forEach(barra => observer.observe(barra));
+
+/*
+        let altura = document.body.clientHeight - window.innerHeight;
+        window.addEventListener("scroll", () => {
+            linea.style.height = `${window.scrollY * 100 / altura}%`;
+        })*/
+
     /*Hace aparecer el "logo" de la página en la sección de introducción*/
 const textoAnimado = document.querySelector(".texto-animado");
 const spans = textoAnimado.querySelectorAll("span");
@@ -121,7 +147,7 @@ const titulo = document.querySelector(".tarjeta h3");
 const parrafo = document.querySelector(".tarjeta p");
 const bio = document.querySelectorAll(".element-grid-texto p.bio");
 const picture = document.querySelector("picture");
-const nav = document.querySelector("nav")
+const nav = document.querySelector("header")
 
 for (let i = 0; i < imagenes.length; i++) {
     
@@ -158,12 +184,14 @@ for (let i = 0; i < imagenes.length; i++) {
         textosDescrip[i].style.visibility = 'hidden';
         nav.style.visibility = "hidden";
 
+         
         if(i == 5){
             
             /*contenedor.classList.add("visible");
             tarjeta.innerHTML = "<canvas></canvas>";*/
 
         }else{
+    
         let persona = imagenes[i].getAttribute("alt");
 
             contenedor.classList.add("visible");

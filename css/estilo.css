@@ -212,21 +212,23 @@ header button{
       }
 
       /*---------------LÍNEAS DECORATIVAS---------------*/
-div.vertical-rule{ /*linea vertical color (elemento decoracion)*/
+div.vertical-linea{ /*linea vertical color (elemento decoracion)*/
     background-color:var(--color-1);
     position: absolute;
     left: 40%;
     width: 1.5pt;
-    animation: crecimiento 4s linear 1s forwards; /*crece de arriba a abajo con 1s de delay y se queda*/
+    /*animation: crecimiento 4s linear 1s forwards; /*crece de arriba a abajo con 1s de delay y se queda*/
 }
 
-div.horizontal-rule{ /*linea horizontal color (elemento decoracion)*/
+div.horizontal-linea{ /*linea horizontal color (elemento decoracion)*/
     position: relative;
     left: 0;
     height: 6em;
     border-bottom: 2pt solid var(--color-1);
-    animation: movimiento 2s linear 1s forwards; /*crece de izquierda a derecha con 1s de delay y se queda*/
     opacity: 0;
+}
+div.horizontal-linea.animacion{
+    animation: movimiento 0.5s linear forwards; /*crece de izquierda a derecha con 1s de delay y se queda*/
 }
 
     @keyframes movimiento{ /*animacion linea horizontal*/
@@ -264,7 +266,7 @@ h4.text-p span.sub:hover{ /*tachado palabras primera seccion*/
   height: 8em;
 }
 
-.separador .horizontal-rule:nth-child(odd) {/*linea horizontal amarilla sec 2*/
+.separador .horizontal-linea:nth-child(odd) {/*linea horizontal amarilla sec 2*/
     height: 1em;
 }
 
@@ -492,20 +494,24 @@ h4.text-p span.sub:hover{ /*tachado palabras primera seccion*/
 
 .tarjeta{
     position: fixed;
+    top: 0;
+    left: 0;
     display: none;
     justify-content: center;
     background-color: rgb(17, 56, 58, 0.8);
-    align-self: anchor-center;
-    height: 100dvh;
+    height: 100%;
     width: 100%;
     margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
 }
 
 .tarjeta.visible{
     display: flex;
 }
 
-.tarjeta.presentacion{
+.tarjeta-presentacion{
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -515,7 +521,7 @@ h4.text-p span.sub:hover{ /*tachado palabras primera seccion*/
     background-color: var(--texto-2);
     box-shadow:  -6px 7px 10px 5px rgb(0, 0, 0, 0.4);
     overflow: hidden;
-    z-index: 10;
+    z-index: 1;
     /*justify-content: space-around;*/
 }
 
@@ -523,8 +529,8 @@ h4.text-p span.sub:hover{ /*tachado palabras primera seccion*/
     color: var(--texto-1);
     font-size: 0.9em;
     font-family: monospace, "league-gothic", sans-serif;
-    padding-top: 20px;
-    text-align: justify;
+    padding-top: 15px;
+    text-align: left;
 }
 
 .tarjeta .grafico{
