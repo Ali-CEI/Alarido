@@ -68,6 +68,8 @@ function mezclar(alarido) {
     return alarido;
 };
 
+document.addEventListener('DOMContentLoaded', animarTextoAleatorio);
+
 function animarTextoAleatorio() {
     const mezclado = mezclar([...spans]);
         mezclado.forEach((span, i) => {
@@ -158,9 +160,9 @@ for (let i = 0; i < imagenes.length; i++) {
         nav.style.visibility = "hidden";
 
         if(i == 5){
-            contenedor.classList.add("visible");
-            tarjeta.innerHTML = "<canvas></canvas>";
-            titulo.innerText = "Pulsa para dibujar"
+            
+            /*contenedor.classList.add("visible");
+            tarjeta.innerHTML = "<canvas></canvas>";*/
 
         }else{
         let persona = imagenes[i].getAttribute("alt");
