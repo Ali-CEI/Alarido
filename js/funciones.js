@@ -186,12 +186,12 @@ for (let i = 0; i < imagenes.length; i++) {
     svg.style.display = "inline-block";
 
     svg.addEventListener("click", () => {
-      svg.style.color = "var(--texto-2)";
+      svg.style.stroke = "var(--texto-2)";
       document.body.style.backgroundColor = 'var(--color-1)';
       imagenes[5].style.backgroundColor = 'var(--color-2)';
        textosDescrip.forEach(texto => {
                 texto.style.color = "var(--texto-2)";
-            });
+        });
       
       // Revertir después de 3 segundos
       setTimeout(() => {
