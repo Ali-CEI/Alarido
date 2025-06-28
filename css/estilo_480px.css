@@ -33,9 +33,7 @@
 }
 
 .introduccion{
-    width: 100%;
-    font-size: inherit;
-    font-family: "roboto", Helvetica, sans-serif, sans-serif;
+    padding-top: 20px;
 }
 
 .img-sec-portada{
@@ -66,6 +64,15 @@
     font-size: 4em;
 }
 
+.descrip.cabecera{
+    color: var(--color-2);
+}
+
+.descrip.cabecera span{
+    color: var(--texto-1);
+}
+
+
 .tarjeta.presentacion{
     width: 90%;
     height: 80dvh;
@@ -76,7 +83,6 @@
     overflow: hidden;
     justify-content: space-around;
     z-index: 10;
-
 }
 
 .tarjeta{

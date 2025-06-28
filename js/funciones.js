@@ -135,12 +135,15 @@ const amores = FGrupo.querySelectorAll(".descrip.cabecera");
     pocos.addEventListener("mouseenter", () => { //investigar si hay una forma más práctica de agrupar esto
         pocos.remove();
         amores[2].remove();
-
-        amores[1].style.color = body.classList.contains('dark') ? "var(--texto-1)" : "var(--color-2)"; // No detecta el pulsar el botón de modo oscuro
         amores[1].innerText = "¿nos quieres?";
+
+        if(window.height > 720){
+        amores[1].style.color = body.classList.contains('dark') ? "var(--texto-1)" : "var(--color-2)"; // No detecta el pulsar el botón de modo oscuro
+
+        }else{
+        amores[1].style.color = body.classList.contains('dark') ? "var(--texto-1)" : "var(--color-2)"; // No detecta el pulsar el botón de modo oscuro
+        }
 });
-
-
 
                     /*----- JS DE LA SECCIÓN DE PROJECTOS -----*/
 const imagenes = document.querySelectorAll(".element-grid-img-int");
@@ -152,38 +155,79 @@ const parrafo = document.querySelector(".tarjeta p");
 const bio = document.querySelectorAll(".element-grid-texto p.bio");
 const picture = document.querySelector("picture");
 const nav = document.querySelector("header")
+const svgs = document.querySelectorAll("svg");
+
+let boolean = false;
 
 for (let i = 0; i < imagenes.length; i++) {
-    
+
+    for(let j = 0; j < svgs.length; j++){
+
     imagenes[i].setAttribute('alt', textosDescrip[i].innerText); //asigna el texto de la descripción como atributo alt de la imagen
     
-      /*------- Cambia el fondo a color al colocar el cursor sobre las imagenes de projectos -------*/
-    imagenes[i].addEventListener('mouseenter', () => {
+        if(window.innerWidth > 770){
 
-        document.body.style.backgroundColor = 'var(--color-1)'; //cambia el fondo del body al color de la variable
-        imagenes[5].style.backgroundColor = 'var(--color-2)'; //cambia el fondo de la imagen del canvas al color de la variable
+         /*------- Cambia el fondo a color al colocar el cursor sobre las imagenes de projectos -------*/
+        imagenes[i].addEventListener('mouseenter', () => {
+
+            document.body.style.backgroundColor = 'var(--color-1)'; //cambia el fondo del body al color de la variable
+            imagenes[5].style.backgroundColor = 'var(--color-2)'; //cambia el fondo de la imagen del canvas al color de la variable
     
-        textosDescrip.forEach(texto => {
-            texto.style.color = "var(--texto-2)";
+            textosDescrip.forEach(texto => {
+                texto.style.color = "var(--texto-2)";
+            });
         });
-    });
-      
-    /*------- Vuelve el fondo a blanco -------*/
-    imagenes[i].addEventListener('mouseleave', () => {
+     
+        }else{
 
+  // SVGs: click -> color temporal
+  svgs.forEach((svg) => {
+    
+    svg.style.display = "inline-block";
+
+    svg.addEventListener("click", () => {
+      svg.style.color = "var(--texto-2)";
+      document.body.style.backgroundColor = 'var(--color-1)';
+      imagenes[5].style.backgroundColor = 'var(--color-2)';
+       textosDescrip.forEach(texto => {
+                texto.style.color = "var(--texto-2)";
+            });
+      
+      // Revertir después de 3 segundos
+      setTimeout(() => {
+        svg.style.color = ""; 
         if (body.classList.contains('dark')) {
-            body.style.backgroundColor = '#000'; //si está en modo oscuro, el fondo vuelve a ser el del body
-            
+            body.style.backgroundColor = '#000'; //si está en modo oscuro, el fondo vuelve a ser el del body   
         } else {
             body.style.backgroundColor = '#ffffff';
-        }
+        };
+        imagenes[5].style.backgroundColor = '';
+        textosDescrip.forEach(texto => {
+            texto.style.color = "inherit";
+        });
+
+      }, 3000);
+    });
+  });
+        };  
+
+        /*------- Vuelve el fondo a blanco -------*/
+        imagenes[i].addEventListener('mouseleave', () => {
+
+            if (body.classList.contains('dark')) {
+                body.style.backgroundColor = '#000'; //si está en modo oscuro, el fondo vuelve a ser el del body
+            
+            } else {
+                body.style.backgroundColor = '#ffffff';
+            };
 
         imagenes[5].style.backgroundColor = 'var(--color-1)';
         textosDescrip.forEach(texto => {
             texto.style.color = "inherit";
         });
-    });
+        });
 
+/*al hacer click sobre las imágenes*/
     imagenes[i].addEventListener("click", () => {
         textosDescrip[i].style.visibility = 'hidden';
         nav.style.visibility = "hidden";
@@ -205,7 +249,7 @@ for (let i = 0; i < imagenes.length; i++) {
             let TextoParrafo = bio[i].innerText; // Obtiene el texto del párrafo más cercano
             parrafo.innerText = TextoParrafo;            
         }});
-
+};
 };  
 
     contenedor.addEventListener("click", () => {
