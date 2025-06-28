@@ -105,22 +105,26 @@ function animarTextoAleatorio() {
     });
 };
 
-    /*Al hacer doble click sobre el logo se subraya y parpadea*/
-textoAnimado.addEventListener("dblclick", () => {
-    textoAnimado.classList.add("seleccionado"); //funciona por la clase "seleccionado"
-});
+/**/
+const textosTitulo =  [...document.querySelectorAll("h1, h2"), document.querySelector(".texto-animado")] // Selecciona todos los h1 y h2
 
+textosTitulo.forEach(titulos => {
+  titulos.addEventListener("dblclick", () => {
+  titulos.classList.add("seleccionado");
+});
 
     /*Quitar clase al perder selección*/
 document.addEventListener("selectionchange", () => {
     const seleccion = window.getSelection();
-    const contiene = seleccion.anchorNode && textoAnimado.contains(seleccion.anchorNode);
+    const contiene = seleccion.anchorNode && titulos.contains(seleccion.anchorNode);
     const textoSeleccionado = seleccion.toString();
 
         // Si ya no hay selección dentro de "palabra", quitar clase
         if (!textoSeleccionado || !contiene) {
-            textoAnimado.classList.remove("seleccionado");}
+            titulos.classList.remove("seleccionado");}
 });
+});
+
 
 /*cambia la frase de la segunda seccion al pasar el cursor*/
 const pocos = document.querySelector(".descrip.cabecera span");
@@ -235,7 +239,7 @@ function ancho() {
 
     if (window.innerWidth < 720) {
         cuadro.style.height = medidasCuadro.height + "px";
-        cuadro.style.width = medidasCuadro.width + "px";
+        cuadro.style.width = "100%";
 
     } else {
         const x = altoCuadro * anchoRect / anchoCuadro; //variable para que sea proporcional el alto del cuadro

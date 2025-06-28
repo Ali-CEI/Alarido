@@ -44,6 +44,10 @@ body.dark{ /*cuerpo de la pagina*/
     --texto-2: #000;
 }
 
+h1, h2{
+    cursor: default;
+}
+
       /*---------------CABECERA---------------*/
 header{
     position: sticky;
@@ -96,7 +100,6 @@ ul.rrss{ /*lista de redes sociales*/
     width: 15%;
 }
 
-
 header a:hover, nav button:hover{
     cursor:pointer;
     background-color: var(--color-2);
@@ -131,6 +134,7 @@ header button{
     font-size: 1.5em;
     color: inherit;
 }
+
 
       /*---------------PRIMERA SECCION DE LA PORTADA---------------*/
 .primera-portada{ /*div global de la intro*/
@@ -175,7 +179,7 @@ header button{
     z-index: 1;
     opacity: 0;
     transition: opacity 1s ease-in-out;
-    cursor: default ;
+    cursor: default;
 }
 
 .texto-animado span.aparecido {
@@ -187,13 +191,13 @@ header button{
 }
 
       /* Efecto visual al seleccionar texto */
-.texto-animado.seleccionado span {
+h1.seleccionado, h2.seleccionado, .texto-animado.seleccionado span {
     color: #ffffff;
     animation: parpadeo 1s infinite;
     background-color: var(--color-1);
 }
 
-.texto-animado span::selection {
+h1.seleccionado::selection, h2.seleccionado::selection, .texto-animado span::selection {
     color: #ffffff;
     animation: parpadeo 1s infinite;
     background-color: var(--color-1);
@@ -227,6 +231,7 @@ div.horizontal-linea{ /*linea horizontal color (elemento decoracion)*/
     border-bottom: 2pt solid var(--color-1);
     opacity: 0;
 }
+
 div.horizontal-linea.animacion{
     animation: movimiento 0.5s linear forwards; /*crece de izquierda a derecha con 1s de delay y se queda*/
 }
@@ -343,6 +348,7 @@ h4.text-p span.sub:hover{ /*tachado palabras primera seccion*/
     width: 100%;
     text-align: right;
     border-bottom: 2pt solid var(--color-2);
+    z-index: -1; /*debajo del body*/
 }
 
 .fondo.grid.oraciones.uno{
@@ -417,19 +423,19 @@ h4.text-p span.sub:hover{ /*tachado palabras primera seccion*/
   grid-area: 2/5/3/11;
 }
 
-.element-grid:nth-child(3) {
+.element-grid:nth-child(4) {
   grid-area: 3/2/4/5;
 }
 
-.element-grid:nth-child(4) {
+.element-grid:nth-child(6) {
   grid-area: 4/5/5/8;
 }
 
-.element-grid:nth-child(5) {
+.element-grid:nth-child(7) { /*+1 por la frase*/
   grid-area: 5/8/6/12;
 }
 
-.element-grid:nth-child(6) {
+.element-grid:nth-child(9) { /*+1 por la frase*/
   grid-area: 6/3/7/8;
 }
 
@@ -441,7 +447,6 @@ h4.text-p span.sub:hover{ /*tachado palabras primera seccion*/
     overflow: hidden;
     align-self: center;
     background-color: var(--color-1);
-    transform-origin: top left; /*crecer desde esquina superior izquierda */
 }
 
 .element-grid-img-int.vacia{
@@ -450,7 +455,6 @@ h4.text-p span.sub:hover{ /*tachado palabras primera seccion*/
 }
 
 .element-grid-img img{
-  display: inline-block;
   max-width: 100%;
   vertical-align: middle;
   mix-blend-mode: luminosity;
@@ -463,7 +467,6 @@ h4.text-p span.sub:hover{ /*tachado palabras primera seccion*/
 .element-grid-img-int {
     cursor: pointer;
     width: 100%;
-    /*height: inherit;*/
     position: relative;
     filter: brightness(100%) contrast(100%);
 }
@@ -473,21 +476,6 @@ h4.text-p span.sub:hover{ /*tachado palabras primera seccion*/
     padding-top: 12px;
     padding-left: 12px;
     font-size: 1.8em;
-}
-
-.desplegado{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100dvh;
-    background-color: var(--color-1);
-}
-
-.projectos.cierre{
-  margin-left:6em;
-  align-items: center;
 }
 
 /*---------------POP-UP TARJETA---------------*/
@@ -503,7 +491,6 @@ h4.text-p span.sub:hover{ /*tachado palabras primera seccion*/
     width: 100%;
     margin: 0 auto;
     align-items: center;
-    justify-content: center;
     z-index: 10;
 }
 
@@ -612,10 +599,6 @@ picture img{
 
 /*PARA PANTALLAS MÁS PEQUE*/
 @media screen and (max-width: 1440px) {
-
-.descrip{
-    font-size: clamp(9em);
-}
 
 .fondo.grid.oraciones.uno{
     top: 2%;

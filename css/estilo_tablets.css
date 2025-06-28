@@ -7,6 +7,10 @@
     min-height: auto;
 }
 
+.introduccion{
+    padding-top: 40px;
+}
+
 .p-sec.grupo {
     justify-content: start;
 }
@@ -14,6 +18,36 @@
 .img-sec-portada{
     width: calc(100% + 40px);
 }
+
+.fondo.grid.oraciones{
+    text-align: center;
+    z-index: 9;
+    width: 100%;
+    position: relative;
+}
+
+.descrip{
+    z-index: 9;
+}
+
+/*---------------GALERIA PROJECTOS---------------*/
+.project-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.element-grid {
+    margin: 20px;
+    width: 100%;
+}
+
+.fondo.grid, .frente.grid{
+    padding: 24px
+}
+
 }
 
 @media screen and (max-width: 720px) {
@@ -75,22 +109,6 @@ header a, header button{ /*enlace de la navegación*/
     padding: 0;
 }
 
-/*---------------GALERIA PROJECTOS---------------*/
-.project-grid {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-}
-
-.element-grid {
-    margin: 20px;
-}
-
-.fondo.grid, .frente.grid{
-  padding: 24px
-}
 
 /*---------------TARJETAS---------------*/
 .tarjeta.presentacion{

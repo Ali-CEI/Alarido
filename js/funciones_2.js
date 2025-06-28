@@ -53,13 +53,13 @@ document.addEventListener("visibilitychange", () => { //extrae del documento
     }
 });
 
-const bodyText = document.querySelectorAll("h1, h2, h3");    /*Al hacer doble click sobre el logo se subraya y parpadea*/
+const textosTitulo = document.querySelectorAll("h1, h2"); // Selecciona todos los h1 y h2
 
-for (let i = 0; i < bodyText.length; i++) {
-bodyText[i].addEventListener("dblclick", () => {
-    bodyText[i].classList.add("seleccionado"); //funciona por la clase "seleccionado"
+textosTitulo.forEach(titulos => {
+  titulos.addEventListener("dblclick", () => {
+  titulos.classList.add("seleccionado");
 });
-
+});
 
     /*Quitar clase al perder selección*/
 document.addEventListener("selectionchange", () => {
@@ -71,7 +71,22 @@ document.addEventListener("selectionchange", () => {
         if (!textoSeleccionado || !contiene) {
             bodyText[i].classList.remove("seleccionado");}
 });
-};
+
+
+textoAnimado.addEventListener("dblclick", () => {
+    textoAnimado.classList.add("seleccionado");
+});
+
+    /*Quitar clase al perder selección*/
+document.addEventListener("selectionchange", () => {
+    const seleccion = window.getSelection();
+    const contiene = seleccion.anchorNode && textoAnimado.contains(seleccion.anchorNode);
+    const textoSeleccionado = seleccion.toString();
+
+        // Si ya no hay selección dentro de "palabra", quitar clase
+        if (!textoSeleccionado || !contiene) {
+            textoAnimado.classList.remove("seleccionado");}
+});
 
                     /*----- JS DE LA SECCIÓN DE PROJECTOS -----*/
 const imagenes = document.querySelectorAll(".element-grid-img-int");
