@@ -534,15 +534,14 @@ svg{
 picture {
   height: 80%;
   overflow: hidden;
-  background-position: center;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 picture img{
     object-fit: cover;
-    width: 100%;
+    /*width: 100%;*/
+    align-self: normal;
 }
 
 .tarjeta h3{
