@@ -19,11 +19,12 @@
     width: calc(100% + 40px);
 }
 
-.fondo.grid.oraciones{
+.fondo.grid.oraciones.uno, .fondo.grid.oraciones.dos, .fondo.grid.oraciones.tres {
     text-align: center;
     z-index: 9;
     width: 100%;
     position: relative;
+    top: 0%;
 }
 
 .descrip{
@@ -46,6 +47,15 @@
 
 .fondo.grid, .frente.grid{
     padding: 24px
+}
+
+.tarjeta-presentacion {
+    width: 90%;
+    height: 80dvh;
+}
+
+picture{
+    margin-top: 20px;
 }
 
 }

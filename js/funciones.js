@@ -195,7 +195,8 @@ for (let i = 0; i < imagenes.length; i++) {
       
       // Revertir después de 3 segundos
       setTimeout(() => {
-        svg.style.color = ""; 
+        svg.style.stroke = "var(--texto-1)";
+
         if (body.classList.contains('dark')) {
             body.style.backgroundColor = '#000'; //si está en modo oscuro, el fondo vuelve a ser el del body   
         } else {
@@ -231,7 +232,7 @@ for (let i = 0; i < imagenes.length; i++) {
     imagenes[i].addEventListener("click", () => {
         textosDescrip[i].style.visibility = 'hidden';
         nav.style.visibility = "hidden";
-
+        let persona = imagenes[i].getAttribute("alt");
          
         if(i == 5){
             
@@ -239,15 +240,12 @@ for (let i = 0; i < imagenes.length; i++) {
             tarjeta.innerHTML = "<canvas></canvas>";*/
 
         }else{
-    
-        let persona = imagenes[i].getAttribute("alt");
-
             contenedor.classList.add("visible");
             tarjeta.setAttribute('src', imagenes[i].getAttribute("src"));
             titulo.innerText = persona;
 
             let TextoParrafo = bio[i].innerText; // Obtiene el texto del párrafo más cercano
-            parrafo.innerText = TextoParrafo;            
+            parrafo.innerText = TextoParrafo;
         }});
 };
 };  

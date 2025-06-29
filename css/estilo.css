@@ -508,7 +508,7 @@ svg{
 .tarjeta-presentacion{
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 60%;
     height: 80dvh;
     padding: 20px 60px 40px;
     border-radius: 10%;
@@ -532,16 +532,17 @@ svg{
 }
 
 picture {
-  height: 80%;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
+    height: 80%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 picture img{
     object-fit: cover;
-    /*width: 100%;*/
-    align-self: normal;
+    width: 100%;
+    position: relative;
 }
 
 .tarjeta h3{

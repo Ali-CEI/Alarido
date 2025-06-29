@@ -105,4 +105,12 @@
     padding-top: 10px;
   font-size: 0.7em;
 }
+
+picture img{
+    object-fit: cover;
+    height: 100%;
+    position: relative;
+}
+
+
 }

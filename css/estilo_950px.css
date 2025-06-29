@@ -12,5 +12,10 @@
       font-size: 4em;
     }
 
+    .tarjeta-presentacion {
+    width: 90%;
+    height: 80dvh;
+}
+
 
 }
