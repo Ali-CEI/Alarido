@@ -72,19 +72,6 @@
     color: var(--texto-1);
 }
 
-
-.tarjeta.presentacion{
-    width: 100%;
-    height: 100%;
-    padding: 20px 60px 40px;
-    border-radius: 10%;
-    background-color: white;
-    box-shadow:  -6px 7px 10px 5px rgb(0, 0, 0, 0.4);
-    overflow: hidden;
-    justify-content: space-around;
-    z-index: 10;
-}
-
 .tarjeta{
     position: fixed;
     display: none;
@@ -97,8 +84,12 @@
 }
 
 .tarjeta-presentacion {
+    width: 100%;
+    height: 100%;
+    padding: 30px;
     width: 90%;
     height: 90dvh;
+    border-radius: 5%;
 }
 
 .tarjeta p.biografia{
