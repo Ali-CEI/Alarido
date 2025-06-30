@@ -1,71 +1,79 @@
 .newsletter {
-  margin: 100px;
-
-}
-
-.text-subtitle{
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 2.5em;
   position: relative;
-  font-family: 'League Gothic', sans-serif;
-  font-size: 2.5rem;
-  text-align: left;
-  transition: all 1.5s;
-  z-index: 2;
-  background-color: var(--texto-2);
 }
 
-.text-subtitle.apuntarse{
-    position: absolute;
-    z-index: 1;
+.simulacion{
+  display: flex;
+  opacity: 0;
+  position: relative;
+    transition: transform 0.2s linear;
+
 }
-h3.text-subtitle span{
-      color: var(--color-1);
+
+.cortina{
+  display: inline-block;
+  height: 1.3em;
+  width: 100%;
+  background-color: var(--texto-2);
+  transform: translateY(3rem);
+  z-index: 3;
+}
+
+.text-subtitulo{
+  position: relative;
+  background-color: var(--texto-2);
+  z-index: 2;
+}
+
+.text-apuntarse{
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  transform: translateY(-3.3rem);
+  transition: transform 0.2s linear;
+}
+
+h3.text-subtitulo span{
+  color: var(--color-1);
 }
 
 input.text-sub{
   font-family: 'League Gothic', sans-serif;
   font-size: 2.5rem;
-  color: var(--color-1);
-  text-align: left;
+  color: var(--text-1);
   border: none;
   outline: none;
+  background-color: transparent;
 }
 
-input.text-sub::selection{
-  font-family: 'League Gothic', sans-serif;
-  font-size: 2.5rem;
+.newsletter button{
+  display: none;
+}
+
+@media screen and (max-width: 770px) {
+  .newsletter button{
+  display: block;
+  background-color: transparent;
+  border: none;
   color: var(--color-1);
-  text-align: center;
-  margin-top: 2rem;
-  border: none;
-  z-index: 8;
-  outline: none;
+  font-family: "league gothic";
+  font-size: 2rem;
 }
 
-input.text-sub:hover{
-  border: none;
-  z-index: 8;
+.newsletter{
+  font-size: 2em;
+  align-items: center;
 }
 
-
-.text-subtitle.apuntarse.active{
-    animation: transformacion 1s ease-in-out forwards;
+.text-apuntarse{
+  transform: translateY(-2.5rem);
 }
-
-@keyframes transformacion {
-    0% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-  98% {
-        transform: translateY(-3rem);
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(-3rem);
-        opacity: 0;
-    }
 }
-    
     
     /*.form-contacto {
   max-width: 600px;

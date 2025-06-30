@@ -80,37 +80,27 @@ barras.forEach(barra => observer.observe(barra));
         })*/
 
 /**/
-const textosTitulo =  [...document.querySelectorAll("h1, h2"), document.querySelector(".texto-animado")] // Selecciona todos los h1 y h2
 
-textosTitulo.forEach(titulos => {
-  titulos.addEventListener("dblclick", () => {
-  titulos.classList.add("seleccionado");
+
+const form = document.querySelector('.text-apuntarse');
+const cierre = document.querySelector('.newsletter');
+const simulacion = document.querySelector(".simulacion");
+
+form.addEventListener('mouseenter', ()  => {
+    form.style.transform = window.innerWidth < 770 ? "translateY(-6rem)" : "translateY(-6.3rem)";
+    simulacion.style.transform = "translateY(-3rem)";
+    simulacion.style.opacity = "1";
 });
 
-    /*Quitar clase al perder selección*/
-document.addEventListener("selectionchange", () => {
-    const seleccion = window.getSelection();
-    const contiene = seleccion.anchorNode && titulos.contains(seleccion.anchorNode);
-    const textoSeleccionado = seleccion.toString();
-
-        // Si ya no hay selección dentro de "palabra", quitar clase
-        if (!textoSeleccionado || !contiene) {
-            titulos.classList.remove("seleccionado");}
-});
+cierre.addEventListener("mouseleave", () => {
+    form.style.transform = window.innerWidth < 770 ? "translateY(-2.5rem)" : "translateY(-3.3rem)";
+    simulacion.style.transform = "translateY(0)";
+    simulacion.style.opacity = "0";
 });
 
-const form = document.querySelector('.text-subtitle.apuntarse');
-const email = document.querySelector('.text-sub');
+simulacion.addEventListener('submit', function(event) {
+    event.preventDefault();
+    console.log("Menos mal que no funciona. ¿Apuntándote a otra [mierda] que vas a dejar sin leer?",
+      "Esperamos que, al menos, no nos mandes a SPAM.");
+});
 
-document.addEventListener('click', (e) => {
-    const clickedInsideForm = form.contains(e.target);
-    const clickedInsideEmail = email.contains(e.target);
-
-    if (clickedInsideForm) {
-      form.classList.add('active');
-    } else if (form.classList.contains('active') && !clickedInsideEmail) {
-      form.classList.remove('active');
-    }
-  });
-
-console.log("¡Hola! Este es un mensaje de consola para verificar que el script se ha cargado correctamente.");

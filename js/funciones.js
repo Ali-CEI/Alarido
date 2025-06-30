@@ -24,6 +24,26 @@ function animarTextoAleatorio() {
     });
 };
 
+/*Al hacer dbl click sobre los textos se subrayan*/
+const textosTitulo =  [...document.querySelectorAll("h1, h2"), document.querySelector(".texto-animado")] // Selecciona todos los h1 y h2
+
+textosTitulo.forEach(titulos => {
+  titulos.addEventListener("dblclick", () => {
+  titulos.classList.add("seleccionado");
+});
+
+    /*Quitar clase al perder selección*/
+document.addEventListener("selectionchange", () => {
+    const seleccion = window.getSelection();
+    const contiene = seleccion.anchorNode && titulos.contains(seleccion.anchorNode);
+    const textoSeleccionado = seleccion.toString();
+
+        // Si ya no hay selección dentro de "palabra", quitar clase
+        if (!textoSeleccionado || !contiene) {
+            titulos.classList.remove("seleccionado");}
+});
+});
+
 /*cambia la frase de la segunda seccion al pasar el cursor*/
 const pocos = document.querySelector(".descrip.cabecera span");
 const FGrupo = document.querySelector(".frente.grupo");

@@ -15,65 +15,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <script defer src="js/funciones_generales.js"></script> <!--Link java-->
-  <script defer src="js/contacto.js"></script> <!--Link java-->
-
-  <!--Link League Gothic-->
-
-<style>
-
-.text-subtitle{
-  position: relative;
-  font-family: 'League Gothic', sans-serif;
-  font-size: 2.5rem;
-  color: #333;
-  text-align: left;
-  transition: transform 1.5s;
-  z-index: 2;
-  background-color: var(--texto-2);
-}
-
-.text-subtitle.apuntarse{
-    position: absolute;
-    z-index: 1;
-}
-
-input.text-sub{
-  font-family: 'League Gothic', sans-serif;
-  font-size: 2.5rem;
-  color: var(--color-1);
-  text-align: left;
-  border: none;
-  outline: none;
-
-}
-
-input.text-sub::selection{
-  font-family: 'League Gothic', sans-serif;
-  font-size: 2.5rem;
-  color: var(--color-1);
-  text-align: center;
-  margin-top: 2rem;
-  border: none;
-  z-index: 8;
-  outline: none;
-}
-
-input.text-sub:hover{
-  border: none;
-  z-index: 8;
-}
-
-
-.text-subtitle.apuntarse.active{
-    transform: translateY(-3rem);
-}
-
-
-
-
-
-</style>
-
 
 </head>
 <body>
@@ -91,7 +32,9 @@ input.text-sub:hover{
     </nav>
   </header>
 
-
+  <h2>blabla</h2>
+  <h4>blabla 3</h4>
+<h2>bblaskld</h2>
 <!--<section id="contacto" class="form-contacto">
   <h2>Contacto</h2>
   <form action="https://formsubmit.co/TU_CORREO@EMAIL.COM" method="POST">
@@ -106,13 +49,16 @@ input.text-sub:hover{
   </form>
 </section>
 
-<div class="newsletter">
-    <h3 class="text-subtitle">Somos maja gente.</h3>
-  <h3 class="text-subtitle apuntarse">Apúntate a nuestra newsletter.</h3>
-  <form action="https://formsubmit.co/aliabasc@alumnos.cei.es">
-    <input placeholder="Tu email aquí" class="text-sub" type="text" name="email">
-    <button type="submit"></button>
-  </form>
-</div>
+      <div class="newsletter">
+        <h3 class="text-subtitulo">Somos maja gente <span>[casi siempre].</span></h3>
+        <h3 class="text-apuntarse">Apúntate a nuestra newsletter.</h3>
+        <div class="cortina"></div>
+      <form class="simulacion">
+        <input placeholder="Tu email aquí" class="text-sub" type="email" name="email">
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+
+
 </body>
 </html>
