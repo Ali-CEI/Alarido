@@ -1,4 +1,70 @@
-  
+.newsletter {
+  margin: 100px;
+
+}
+
+.text-subtitle{
+  position: relative;
+  font-family: 'League Gothic', sans-serif;
+  font-size: 2.5rem;
+  text-align: left;
+  transition: all 1.5s;
+  z-index: 2;
+  background-color: var(--texto-2);
+}
+
+.text-subtitle.apuntarse{
+    position: absolute;
+    z-index: 1;
+}
+h3.text-subtitle span{
+      color: var(--color-1);
+}
+
+input.text-sub{
+  font-family: 'League Gothic', sans-serif;
+  font-size: 2.5rem;
+  color: var(--color-1);
+  text-align: left;
+  border: none;
+  outline: none;
+}
+
+input.text-sub::selection{
+  font-family: 'League Gothic', sans-serif;
+  font-size: 2.5rem;
+  color: var(--color-1);
+  text-align: center;
+  margin-top: 2rem;
+  border: none;
+  z-index: 8;
+  outline: none;
+}
+
+input.text-sub:hover{
+  border: none;
+  z-index: 8;
+}
+
+
+.text-subtitle.apuntarse.active{
+    animation: transformacion 1s ease-in-out forwards;
+}
+
+@keyframes transformacion {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+  98% {
+        transform: translateY(-3rem);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-3rem);
+        opacity: 0;
+    }
+}
     
     
     /*.form-contacto {

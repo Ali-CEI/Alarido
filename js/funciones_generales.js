@@ -53,7 +53,6 @@ document.addEventListener("visibilitychange", () => { //extrae del documento
     }
 });
 
-
 /*las líneas horizontales se cargan al entrar en pantalla*/
 const linea = document.querySelector(".vertical-linea");
 const barras = document.querySelectorAll(".horizontal-linea");
@@ -99,5 +98,19 @@ document.addEventListener("selectionchange", () => {
             titulos.classList.remove("seleccionado");}
 });
 });
+
+const form = document.querySelector('.text-subtitle.apuntarse');
+const email = document.querySelector('.text-sub');
+
+document.addEventListener('click', (e) => {
+    const clickedInsideForm = form.contains(e.target);
+    const clickedInsideEmail = email.contains(e.target);
+
+    if (clickedInsideForm) {
+      form.classList.add('active');
+    } else if (form.classList.contains('active') && !clickedInsideEmail) {
+      form.classList.remove('active');
+    }
+  });
 
 console.log("¡Hola! Este es un mensaje de consola para verificar que el script se ha cargado correctamente.");
