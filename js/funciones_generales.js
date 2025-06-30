@@ -107,9 +107,10 @@ document.addEventListener('click', (e) => {
     const clickedInsideEmail = email.contains(e.target);
 
     if (clickedInsideForm) {
+      form.classList.add('inactive');
+    } else if (form.classList.contains('inactive') && !clickedInsideEmail) {
+      form.classList.remove('inactive');
       form.classList.add('active');
-    } else if (form.classList.contains('active') && !clickedInsideEmail) {
-      form.classList.remove('active');
     }
   });
 

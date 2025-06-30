@@ -47,8 +47,12 @@ input.text-sub:hover{
 }
 
 
-.text-subtitle.apuntarse.active{
+.text-subtitle.apuntarse.inactive{
     animation: transformacion 1s ease-in-out forwards;
+}
+
+.text-subtitle.apuntarse.active{
+    animation: transformacion2 1s ease-in-out forwards;
 }
 
 @keyframes transformacion {
@@ -61,6 +65,18 @@ input.text-sub:hover{
         opacity: 1;
     }
     100% {
+        transform: translateY(-3rem);
+        opacity: 0;
+    }
+    }
+
+    @keyframes transformacion2 {
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    0% {
         transform: translateY(-3rem);
         opacity: 0;
     }

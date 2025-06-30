@@ -8,6 +8,7 @@ document.addEventListener('click', (e) => {
     if (clickedInsideForm) {
       form.classList.add('active');
     } else if (form.classList.contains('active') && !clickedInsideEmail) {
-      form.classList.remove('active');
+      form.classList.remove('inactive');
+      form.classList.add('active');
     }
   });
