@@ -1,3 +1,48 @@
+@media screen and (max-width: 1024px){
+.project-grid {
+    grid-template-columns: 1fr 1fr;
+    padding: 1em 0;
+    grid-area: auto;
+    gap: 1em;
+}
+
+.newsletter button{
+    display: block;
+    background-color: transparent;
+    border: none;
+    color: var(--color-1);
+    font-family: "league gothic";
+    font-size: 2.5rem;
+}
+
+.element-grid:nth-child(1n) {
+    grid-area: auto;
+    margin-top: 0;
+}
+
+.element-grid:nth-child(6) {
+    grid-area: 3;
+}
+
+.element-grid:nth-child(9) {
+    grid-column: span 2;
+}
+
+.fondo.grid.oraciones.uno, .fondo.grid.oraciones.dos, .fondo.grid.oraciones.tres {
+    text-align: left;
+    z-index: 9;
+    font-size: 0.4em;
+    position: relative;
+    top: 0%;
+}
+
+.fondo.grid.oraciones.tres{
+    grid-area: 3;
+    text-align: right;
+}
+
+}
+
 @media screen and (max-width: 770px) {
 
 .p-sec{
@@ -57,15 +102,9 @@
 picture{
     margin-top: 20px;
 }
+
 /*CIERRE*/
-  .newsletter button{
-  display: block;
-  background-color: transparent;
-  border: none;
-  color: var(--color-1);
-  font-family: "league gothic";
-  font-size: 2rem;
-}
+
 
 .newsletter{
   font-size: 2em;
@@ -143,5 +182,4 @@ header a, header button{ /*enlace de la navegación*/
     width: 90%;
     justify-content: space-around;
 }
-
 }

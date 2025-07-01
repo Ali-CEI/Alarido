@@ -83,7 +83,7 @@ for (let i = 0; i < imagenes.length; i++) {
 
     imagenes[i].setAttribute('alt', textosDescrip[i].innerText); //asigna el texto de la descripción como atributo alt de la imagen
     
-        if(window.innerWidth > 770){
+        if(window.innerWidth > 1024){
 
          /*------- Cambia el fondo a color al colocar el cursor sobre las imagenes de projectos -------*/
         imagenes[i].addEventListener('mouseenter', () => {

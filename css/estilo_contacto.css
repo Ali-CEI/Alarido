@@ -1,7 +1,45 @@
 .p-sec.contacto{
     flex-direction: column;
 }
-    
+
+.artista .descrip{
+  font-size: 6em;
+}
+
+section.artistas{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2em;
+  margin-bottom: 1em;
+}
+
+.categorias {
+    font-size: 4em;
+    color: var(--color-1);
+}
+
+.galeria-artistas p{
+  font-size: 1.2em;
+  line-height: 1.5;
+}
+
+.galeria-artistas picture{
+  height: auto;
+  margin-bottom: 1em;
+}
+
+@media screen and (max-width: 1024px){
+section.artistas{
+display: grid;
+grid-template-columns: 1fr;
+gap: 1em;
+}
+
+  .artista{
+  display: flex;
+}
+
+}
     /*.form-contacto {
   max-width: 600px;
   margin: 80px auto;
