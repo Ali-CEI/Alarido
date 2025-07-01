@@ -29,19 +29,19 @@ body{
     color: black;
 
     /*variables*/
-    --color-1: #298287;
-    --color-2: #00D0E0;
-    --texto-1: #000;
-    --texto-2: #fff;
+        --color-1: #298287;
+        --color-2: #00D0E0;
+        --texto-1: #000;
+        --texto-2: #fff;
 }
 
-body.dark{ /*cuerpo de la pagina*/
+body.dark{ /*cuerpo de la pagina en modo oscuro*/
     background-color: #222;
     color: white;
-    --color-1: #00D0E0;
-    --color-2: #298287;
-    --texto-1: #fff;
-    --texto-2: #000;
+        --color-1: #00D0E0;
+        --color-2: #298287;
+        --texto-1: #fff;
+        --texto-2: #000;
 }
 
 h1, h2{
@@ -56,14 +56,17 @@ header{
     padding: 20px 40px;
     display:flex;
     justify-content: space-between;
-    align-items:center;
+    align-items: center;
 }
 
-header a{ /*enlace de la navegación*/
-    cursor: pointer;
-    text-decoration: none;
+header a, header button{ 
     color: inherit;
     font-size: 1.5em;
+}
+
+header a{ 
+    cursor: pointer;
+    text-decoration: none;
 }
 
 header h1{
@@ -71,22 +74,28 @@ header h1{
     font-weight: normal;
 }
 
+header button {
+    font-family: "league gothic",sans-serif;
+    background-color: transparent;
+    border: 0
+}
+
 nav{
     width: 60%;
 }
 
 nav ul{
-    list-style:none;
     display:flex;
     justify-content: space-between;
-    gap:2rem;
+    gap: 2rem;
     text-align: center;
 }
 
+nav li,nav ul {
+    list-style: none
+}
+
 nav li{ /*elemento de la lista*/
-    text-decoration: none;
-    list-style: none;
-    display: inline-block;
     width: 25%;
 }
 
@@ -100,7 +109,7 @@ ul.rrss{ /*lista de redes sociales*/
     width: 15%;
 }
 
-header a:hover, nav button:hover{
+header a:hover, nav button:hover, .frente.cierre a:hover{
     cursor:pointer;
     background-color: var(--color-2);
     animation: nav 1.5s;
@@ -108,8 +117,8 @@ header a:hover, nav button:hover{
     padding: 0 4px;
 }
 
-@keyframes nav{
-    0%{
+@keyframes nav{ /*animacion nav*/
+    0%, 50%{
         letter-spacing: initial;
     }
 
@@ -118,23 +127,11 @@ header a:hover, nav button:hover{
         padding: 0 4px;
     }
 
-    50%{
-        letter-spacing: initial;
-    }
     75%{
         letter-spacing: 5px;
         padding: 0 4px;
     }
 }
-
-header button{
-    font-family: "league gothic", sans-serif;
-    background-color: transparent;
-    border: none;
-    font-size: 1.5em;
-    color: inherit;
-}
-
 
       /*---------------PRIMERA SECCION DE LA PORTADA---------------*/
 .primera-portada{ /*div global de la intro*/
@@ -221,7 +218,6 @@ div.vertical-linea{ /*linea vertical color (elemento decoracion)*/
     position: absolute;
     left: 40%;
     width: 1.5pt;
-    /*animation: crecimiento 4s linear 1s forwards; /*crece de arriba a abajo con 1s de delay y se queda*/
 }
 
 div.horizontal-linea{ /*linea horizontal color (elemento decoracion)*/
@@ -246,7 +242,6 @@ div.horizontal-linea.animacion{
 
 
 h4{ /*parrafos primera seccion*/
-  font-family: "League Gothic", sans-serif;
   font-size:  1.5em;
   animation: opacidad 2s forwards;
   font-weight: normal;
@@ -292,7 +287,6 @@ h4.text-p span.sub:hover{ /*tachado palabras primera seccion*/
     right: 0;
     z-index: 1;
     bottom: 0;
-    /*mix-blend-mode: multiply;*/
 }
 
 .frente.intro{
@@ -352,15 +346,15 @@ h4.text-p span.sub:hover{ /*tachado palabras primera seccion*/
 }
 
 .fondo.grid.oraciones.uno{
-    top: 5%; /*cambiar esto para que sea la mitad de una de las imgs*/
+    top: 5%; 
 }
 
 .fondo.grid.oraciones.dos{
-    top: 38%; /*rt*/
+    top: 38%; 
 }
 
 .fondo.grid.oraciones.tres{
-    top: 65%; /*rt 2*/
+    top: 65%; 
     text-align: left;
 }
 
@@ -370,23 +364,14 @@ h4.text-p span.sub:hover{ /*tachado palabras primera seccion*/
     line-height: 0.8em;
 }
 
-.descrip.cabecera{
+.descrip.cabecera, .descrip span {
     color: var(--color-1);
     font-weight: 700;
     text-transform: lowercase;
-    /*text-shadow: 1px 2px 3px var(--texto-2); no me convence*/
 }
 
 .descrip.cabecera span{
     color: var(--color-2);
-}
-
-.frente.intro .descrip.cabecera{
-    color:var(--color-1);
-}
-
-.descrip span{ 
-    color: var(--color-1);
 }
 
 .descrip span.oculto{ /*palabras que se muestran al volverse de color el fondo*/
@@ -403,7 +388,7 @@ h4.text-p span.sub:hover{ /*tachado palabras primera seccion*/
     display: grid;
     grid-template-rows: auto;
     grid-auto-columns: 1fr;
-    grid-row-gap: 0em;
+    grid-row-gap: 0;
     padding: 0 24px;
 }
 
@@ -423,7 +408,7 @@ h4.text-p span.sub:hover{ /*tachado palabras primera seccion*/
   grid-area: 2/5/3/11;
 }
 
-.element-grid:nth-child(4) {
+.element-grid:nth-child(4) { /*+1 por la frase*/
   grid-area: 3/2/4/5;
 }
 
@@ -496,7 +481,6 @@ svg{
     background-color: rgb(17, 56, 58, 0.8);
     height: 100%;
     width: 100%;
-    margin: 0 auto;
     align-items: center;
     z-index: 10;
 }
@@ -516,7 +500,6 @@ svg{
     box-shadow:  -6px 7px 10px 5px rgb(0, 0, 0, 0.4);
     overflow: hidden;
     z-index: 1;
-    /*justify-content: space-around;*/
 }
 
 .tarjeta p.biografia{
@@ -554,15 +537,6 @@ picture img{
   display: none;
 }
 
-        canvas{
-            cursor: crosshair;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-
 /*--------------- SECCION CIERRE ---------------*/
 .p-sec.cierre{
     flex-direction: column;
@@ -590,19 +564,69 @@ picture img{
     text-align: center;
 }
 
-.frente.cierre a:hover{
-    cursor:pointer;
-    background-color: var(--color-2);
-    animation: nav 1.5s;
-    color: black;
-    padding: 0 4px;
-}
-
 .cierre a{
     cursor:pointer;
     color: var(--color-1);
     text-transform: lowercase;
 }
+
+/*newsletter*/
+.newsletter {
+  position: relative;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 2.5em;
+}
+
+.simulacion{
+  display: flex;
+  opacity: 0;
+  position: relative;
+  transition: transform 0.2s linear;
+}
+
+.cortina{
+  display: inline-block;
+  height: 1.3em;
+  width: 100%;
+  background-color: var(--texto-2);
+  transform: translateY(3rem);
+  z-index: 3;
+}
+
+.newsletter .text-subtitulo{
+  position: relative;
+  background-color: var(--texto-2);
+  z-index: 2;
+}
+
+.text-apuntarse{
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  transform: translateY(-3.3rem);
+  transition: transform 0.2s linear;
+}
+
+.newsletter .text-subtitulo span{
+  color: var(--color-1);
+}
+
+input.text-sim{
+  font-family: 'League Gothic', sans-serif;
+  font-size: 2.5rem;
+  color: var(--text-1);
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.newsletter button{
+  display: none;
+}
+
 
 /*PARA PANTALLAS MÁS PEQUE*/
 @media screen and (max-width: 1440px) {

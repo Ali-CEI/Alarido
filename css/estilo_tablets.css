@@ -57,6 +57,24 @@
 picture{
     margin-top: 20px;
 }
+/*CIERRE*/
+  .newsletter button{
+  display: block;
+  background-color: transparent;
+  border: none;
+  color: var(--color-1);
+  font-family: "league gothic";
+  font-size: 2rem;
+}
+
+.newsletter{
+  font-size: 2em;
+  align-items: center;
+}
+
+.text-apuntarse{
+  transform: translateY(-2.5rem);
+}
 
 }
 

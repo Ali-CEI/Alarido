@@ -1,0 +1,668 @@
+@keyframes nav {
+    0%,50% {
+        letter-spacing: initial
+    }
+
+    25% {
+        letter-spacing: 10px;
+        padding: 0 4px
+    }
+
+    75% {
+        letter-spacing: 5px;
+        padding: 0 4px
+    }
+}
+
+@keyframes parpadeo {
+    0%,to {
+        background-color: var(--color-1);
+        color: var(--texto-2)
+    }
+
+    50% {
+        background-color: #adadad;
+        opacity: .5;
+        color: var(--texto-2)
+    }
+}
+
+@keyframes movimiento {
+    0% {
+        width: 0;
+        opacity: 0
+    }
+
+    to {
+        width: 100%;
+        opacity: 1
+    }
+}
+
+@keyframes crecimiento {
+    0% {
+        height: 0
+    }
+
+    to {
+        height: 100%
+    }
+}
+
+@keyframes opacidad {
+    0%,50% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+::-webkit-scrollbar {
+    display: none;
+    color: #298287;
+    width: 3px
+}
+
+:root {
+    font-family: "league gothic",sans-serif;
+    --font-family: "league gothic", sans-serif;
+    --height: 100dvh
+}
+
+body,html {
+    min-width: 320px;
+    position: relative;
+    scroll-behavior: smooth;
+    transition: all 1s ease
+}
+
+body {
+    background-color: #fff;
+    color: #000;
+    --color-1: #298287;
+    --color-2: #00D0E0;
+    --texto-1: #000;
+    --texto-2: #fff
+}
+
+body.dark {
+    background-color: #222;
+    color: #fff;
+    --color-1: #00D0E0;
+    --color-2: #298287;
+    --texto-1: #fff;
+    --texto-2: #000
+}
+
+h1,h2 {
+    cursor: default
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 9;
+    padding: 20px 40px;
+    align-items: center
+}
+
+header a,header button {
+    font-size: 1.5em;
+    color: inherit
+}
+
+header a {
+    cursor: pointer;
+    text-decoration: none
+}
+
+header h1 {
+    font-size: inherit;
+    font-weight: 400
+}
+
+nav {
+    width: 60%
+}
+
+.primera-portada,header,nav ul,ul.rrss {
+    display: flex;
+    justify-content: space-between
+}
+
+nav li,nav ul {
+    list-style: none
+}
+
+nav ul {
+    gap: 2rem;
+    text-align: center
+}
+
+nav li {
+    text-decoration: none;
+    display: inline-block;
+    width: 25%
+}
+
+ul.rrss {
+    justify-content: end;
+    width: 25%
+}
+
+.rrss li {
+    width: 15%
+}
+
+.frente.cierre a:hover,header a:hover,nav button:hover {
+    cursor: pointer;
+    background-color: var(--color-2);
+    animation: nav 1.5s;
+    color: #000;
+    padding: 0 4px
+}
+
+header button {
+    font-family: "league gothic",sans-serif;
+    background-color: transparent;
+    border: 0
+}
+
+.primera-portada {
+    width: 100%;
+    height: calc(100dvh - 80px);
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    z-index: 8
+}
+
+.pp-top {
+    width: 100%
+}
+
+.texto-animado {
+    width: inherit;
+    position: relative;
+    display: flex;
+    align-items: end;
+    margin: auto;
+    bottom: 0;
+    opacity: 90%
+}
+
+.texto-fondo:nth-child(2) {
+    position: relative;
+    padding-left: 34.55%;
+    padding-top: 20px
+}
+
+.texto-animado span {
+    position: relative;
+    font-family: sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: clamp(32px,18vw,12em);
+    line-height: 1;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    cursor: default
+}
+
+.texto-animado span.aparecido {
+    opacity: 1
+}
+
+.texto-animado span:nth-child(1),.texto-animado span:nth-child(2),.texto-animado span:nth-child(5) {
+    color: var(--color-1)
+}
+
+.texto-animado.seleccionado span,h1.seleccionado,h2.seleccionado {
+    color: #fff;
+    animation: parpadeo 1s infinite;
+    background-color: var(--color-1)
+}
+
+.texto-animado span::selection,h1.seleccionado::selection,h2.seleccionado::selection {
+    color: #fff;
+    animation: parpadeo 1s infinite;
+    background-color: var(--color-1)
+}
+
+div.vertical-linea {
+    background-color: var(--color-1);
+    position: absolute;
+    left: 40%;
+    width: 1.5pt
+}
+
+div.horizontal-linea {
+    position: relative;
+    left: 0;
+    height: 6em;
+    border-bottom: 2pt solid var(--color-1);
+    opacity: 0
+}
+
+div.horizontal-linea.animacion {
+    animation: movimiento .5s linear forwards
+}
+
+h4 {
+    font-family: "League Gothic",sans-serif;
+    font-size: 1.5em;
+    animation: opacidad 2s forwards;
+    font-weight: 400
+}
+
+h4.text-p span.sub:hover {
+    text-decoration-line: line-through;
+    color: var(--color-1)
+}
+
+.separador {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    height: 8em
+}
+
+.separador .horizontal-linea:nth-child(odd) {
+    height: 1em
+}
+
+.p-sec {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0 40px;
+    margin: 100px 0;
+    justify-content: space-around
+}
+
+.fondo.grid.oraciones,.frente {
+    position: absolute;
+    text-align: right
+}
+
+.frente {
+    right: 0;
+    z-index: 1;
+    bottom: 0
+}
+
+.frente.intro {
+    position: relative
+}
+
+.introduccion {
+    font-size: 1.2em;
+    font-family: "roboto",Helvetica,sans-serif,sans-serif
+}
+
+.frente.grupo {
+    top: 0;
+    left: 0;
+    text-align: left;
+    padding-top: 100px;
+    margin-left: 40px
+}
+
+.p-sec.grupo {
+    justify-content: end;
+    margin: 0
+}
+
+.img-sec-portada {
+    height: 100%;
+    width: 80%;
+    object-fit: cover
+}
+
+.projectos {
+    position: relative;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column
+}
+
+.fondo.grid {
+    position: relative;
+    padding: 48px
+}
+
+.frente.grid {
+    padding: 48px;
+    z-index: 0
+}
+
+.fondo.grid.oraciones {
+    width: 100%;
+    border-bottom: 2pt solid var(--color-2);
+    z-index: -1
+}
+
+.fondo.grid.oraciones.uno {
+    top: 5%
+}
+
+.fondo.grid.oraciones.dos {
+    top: 38%
+}
+
+.fondo.grid.oraciones.tres {
+    top: 65%;
+    text-align: left
+}
+
+.descrip {
+    font-size: 10em;
+    text-transform: uppercase;
+    line-height: .8em
+}
+
+.descrip.cabecera {
+    font-weight: 700;
+    text-transform: lowercase
+}
+
+.descrip.cabecera span {
+    color: var(--color-2)
+}
+
+.descrip span,.descrip.cabecera,.frente.intro .descrip.cabecera {
+    color: var(--color-1)
+}
+
+.descrip span.oculto {
+    color: var(--texto-2)
+}
+
+.blur {
+    filter: blur(3px)
+}
+
+.project-grid {
+    position: relative;
+    display: grid;
+    grid-template-rows: auto;
+    grid-auto-columns: 1fr;
+    grid-row-gap: 0;
+    padding: 0 24px
+}
+
+.element-grid {
+    margin-top: -3em;
+    position: relative;
+    overflow: hidden;
+    grid-area: span 1/span 4/span 1/span 4;
+    transition: color 0s 1s ease-in-out
+}
+
+.element-grid:nth-child(1) {
+    margin-top: 0
+}
+
+.element-grid:nth-child(2) {
+    grid-area: 2/5/3/11
+}
+
+.element-grid:nth-child(4) {
+    grid-area: 3/2/4/5
+}
+
+.element-grid:nth-child(6) {
+    grid-area: 4/5/5/8
+}
+
+.element-grid:nth-child(7) {
+    grid-area: 5/8/6/12
+}
+
+.element-grid:nth-child(9) {
+    grid-area: 6/3/7/8
+}
+
+.element-grid-img {
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    align-self: center;
+    background-color: var(--color-1)
+}
+
+.element-grid-img-int.vacia {
+    background-color: var(--color-1);
+    cursor: pointer
+}
+
+.element-grid-img img {
+    max-width: 100%;
+    vertical-align: middle;
+    mix-blend-mode: luminosity
+}
+
+.element-grid-img img:hover {
+    mix-blend-mode: normal
+}
+
+.element-grid-img-int {
+    cursor: pointer;
+    width: 100%;
+    position: relative;
+    filter: brightness(100%) contrast(100%)
+}
+
+.element-grid-texto h4 {
+    display: block;
+    padding-top: 12px;
+    padding-left: 12px;
+    font-size: 1.8em
+}
+
+svg {
+    display: none;
+    stroke-width: 4px;
+    fill: none;
+    stroke: var(--texto-1)
+}
+
+.tarjeta,canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
+
+.tarjeta {
+    display: none;
+    justify-content: center;
+    background-color: rgb(17,56,58,.8);
+    margin: 0 auto;
+    align-items: center;
+    z-index: 10
+}
+
+.tarjeta.visible {
+    display: flex
+}
+
+.tarjeta-presentacion {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 80dvh;
+    padding: 20px 60px 40px;
+    border-radius: 10%;
+    background-color: var(--texto-2);
+    box-shadow: -6px 7px 10px 5px rgb(0,0,0,.4);
+    overflow: hidden;
+    z-index: 1
+}
+
+.tarjeta p.biografia {
+    color: var(--texto-1);
+    font-size: .9em;
+    font-family: monospace,"league-gothic",sans-serif;
+    padding-top: 15px;
+    text-align: left
+}
+
+.tarjeta .grafico,picture {
+    height: 80%
+}
+
+picture {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+picture img {
+    object-fit: cover;
+    width: 100%;
+    position: relative
+}
+
+.tarjeta h3 {
+    font-size: 3em
+}
+
+.bio,.newsletter button {
+    display: none
+}
+
+canvas {
+    cursor: crosshair
+}
+
+.p-sec.cierre {
+    flex-direction: column;
+    margin: 0 auto;
+    padding-bottom: 120px;
+    z-index: 0
+}
+
+.fondo.cierre,.tarjeta h3 {
+    text-align: center
+}
+
+.descrip.cierre {
+    font-size: 6em
+}
+
+.cierre h4.text-p {
+    padding-bottom: 40px
+}
+
+.frente.cierre {
+    position: relative;
+    margin: 0 auto;
+    width: 80%;
+    text-align: center
+}
+
+.cierre a {
+    cursor: pointer;
+    text-transform: lowercase
+}
+
+.newsletter,.simulacion {
+    display: flex;
+    position: relative
+}
+
+.newsletter {
+    margin: 100px auto;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 2.5em
+}
+
+.simulacion {
+    opacity: 0;
+    transition: transform .2s linear
+}
+
+.cortina {
+    display: inline-block;
+    height: 1.3em;
+    width: 100%;
+    background-color: var(--texto-2);
+    transform: translateY(3rem);
+    z-index: 3
+}
+
+.newsletter .text-subtitulo {
+    position: relative;
+    background-color: var(--texto-2);
+    z-index: 2
+}
+
+.text-apuntarse {
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(-3.3rem);
+    transition: transform .2s linear
+}
+
+.cierre a,.newsletter .text-subtitulo span {
+    color: var(--color-1)
+}
+
+input.text-sim {
+    font-family: "League Gothic",sans-serif;
+    font-size: 2.5rem;
+    color: var(--text-1);
+    border: 0;
+    outline: 0;
+    background-color: transparent
+}
+
+@media screen and (max-width:1440px) {
+    .fondo.grid.oraciones.uno {
+        top: 2%
+    }
+
+    .fondo.grid.oraciones.dos {
+        top: 35%
+    }
+
+    .element-grid-img-int.vacia {
+        background-color: var(--color-1);
+        cursor: pointer
+    }
+}
+
+@media screen and (max-width:1080px) {
+    .p-sec {
+        flex-direction: column-reverse;
+        padding: 0 20px;
+        justify-content: space-evenly;
+        min-height: auto
+    }
+
+    .p-sec.grupo {
+        justify-content: start
+    }
+
+    .img-sec-portada {
+        width: calc(100% + 40px)
+    }
+}
