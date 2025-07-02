@@ -31,7 +31,7 @@
 .fondo.grid.oraciones.uno, .fondo.grid.oraciones.dos, .fondo.grid.oraciones.tres {
     text-align: left;
     z-index: 9;
-    font-size: 0.4em;
+    font-size: 0.6em;
     position: relative;
     top: 0%;
 }

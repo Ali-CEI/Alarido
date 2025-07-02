@@ -74,13 +74,12 @@ entrada.forEach(entrada => {
 barras.forEach(barra => observer.observe(barra));
 
 /*
-        let altura = document.body.clientHeight - window.innerHeight;
-        window.addEventListener("scroll", () => {
-            linea.style.height = `${window.scrollY * 100 / altura}%`;
-        })*/
-
+    let altura = document.body.clientHeight - window.innerHeight;
+      window.addEventListener("scroll", () => {
+      linea.style.height = `${window.scrollY * 100 / (altura / 1.5)}%`;
+    })
+*/
 /**/
-
 
 const form = document.querySelector('.text-apuntarse');
 const cierre = document.querySelector('.newsletter');

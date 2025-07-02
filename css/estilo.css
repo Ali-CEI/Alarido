@@ -218,6 +218,7 @@ div.vertical-linea{ /*linea vertical color (elemento decoracion)*/
     position: absolute;
     left: 40%;
     width: 1.5pt;
+    animation: crecimiento 10s linear forwards; /*crece de izquierda a derecha con 1s de delay y se queda*/
 }
 
 div.horizontal-linea{ /*linea horizontal color (elemento decoracion)*/
