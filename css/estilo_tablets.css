@@ -41,7 +41,35 @@
     text-align: right;
 }
 
+.blur{
+    filter:none;
 }
+}
+
+
+
+@media screen and (max-width: 950px) {
+    
+    .frente_grid{
+    position: absolute;
+    text-align: right;
+    right: 0;
+    bottom: 0;
+    padding: 48px;
+}
+
+    .descrip {
+      font-size: 4em;
+    }
+
+    .tarjeta-presentacion {
+    width: 90%;
+    height: 80dvh;
+}
+}
+
+
+
 
 @media screen and (max-width: 770px) {
 
@@ -70,6 +98,7 @@
     width: 100%;
     position: relative;
     top: 0%;
+    font-size: 1em;
 }
 
 .descrip{

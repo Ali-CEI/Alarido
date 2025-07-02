@@ -82,9 +82,6 @@
     margin: 0 auto;   
 }
 
-.blur{
-    filter:blur(2px);
-}
 
 .tarjeta-presentacion {
     width: 100%;
