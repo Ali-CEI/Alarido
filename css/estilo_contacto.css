@@ -51,8 +51,6 @@
 }
 
 .matrix{
-  display: flex;
-  width: 60%;
   margin: 2em;
   gap: 2em;
   align-items: flex-end;
