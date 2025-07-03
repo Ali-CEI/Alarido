@@ -59,6 +59,24 @@
   justify-content: space-around;
 }
 
+.roja{
+  display: flex;
+  gap: 2em;
+  align-items: flex-end;
+  justify-content: space-around;
+}
+
+.responsive{
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.roja button, .roja a{
+  width: 200px;
+}
+
 .linea{
   width: 0.5em;
   height: 100%;
@@ -78,15 +96,17 @@ section.artistas{
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2em;
   margin-bottom: 1em;
-  transition: all 1s smooth;
 }
 
-.arte{
-  visibility: hidden;
+.artista{
+  transform: translateY(30%);
+  opacity: 0;
+  transition: opacity .5s ease .2s, transform .5s ease .2s;
 }
 
 .visible{
-  visibility: visible;
+  opacity: 1;
+  transform: translateY(0%);
 }
 
 .categorias {

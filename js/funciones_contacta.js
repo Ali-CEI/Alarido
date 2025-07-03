@@ -3,8 +3,7 @@ const pildoras = document.querySelectorAll(".pildoras");
 
 pildoras.forEach(pildora => { 
 
-// Guardar texto original para restaurarlo luego
-const textoOriginal = pildora.innerText;
+const textoOriginal = pildora.innerText; // Guardar texto original para restaurarlo luego
 
 pildora.innerHTML = pildora.innerText.split("").map(function(caracter){
     return caracter == " " ? caracter : `<span>${caracter}</span>`;
@@ -33,17 +32,17 @@ function animarTextoAleatorio() {
                         pildora.textContent = textoOriginal;
                     }, 1000); // Espera un poco más después del último span
                 }
-        }, i * 200); // Delay aplicado a orden aleatorio de aparación del texto
+        }, i * 100); // Delay aplicado a orden aleatorio de aparación del texto
     });
 };
 
-setTimeout(animarTextoAleatorio, 200);
+setTimeout(animarTextoAleatorio, 100);
 });
 
 
 /*las líneas horizontales se cargan al entrar en pantalla*/
 const artes = document.querySelector(".ga");
-const filas = document.querySelectorAll(".arte");
+const filas = document.querySelectorAll(".artista");
 
 function actualizarBarra(barra) { //función que añade la animación a las barras
   barra.classList.add('visible');
@@ -61,5 +60,19 @@ entrada.forEach(entrada => {
 /*que el "observer" funcione para cada linea horizontal*/
 filas.forEach(barra => observer.observe(barra));
 
+const matrix = document.querySelectorAll(".matrix");
+
+function elegir() {
+    if(window.innerWidth < 770){
+        matrix[1].style.display = "flex";
+        matrix[0].style.display = "none";
+    }else{
+        matrix[0].style.display = "flex";
+        matrix[1].style.display = "none";
+        console.log("no funciona");
+    };
+};
+
+elegir();
 
 console.log("¡Hola! Este es un mensaje de consola para verificar que el script se ha cargado correctamente.");
