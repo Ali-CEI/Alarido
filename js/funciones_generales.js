@@ -73,19 +73,15 @@ entrada.forEach(entrada => {
 /*que el "observer" funcione para cada linea horizontal*/
 barras.forEach(barra => observer.observe(barra));
 
-/*
-    let altura = document.body.clientHeight - window.innerHeight;
-      window.addEventListener("scroll", () => {
-      linea.style.height = `${window.scrollY * 100 / (altura / 1.5)}%`;
-    })
-*/
-/**/
+function formulario() {
 
 const form = document.querySelector('.text-apuntarse');
 const cierre = document.querySelector('.newsletter');
 const simulacion = document.querySelector(".simulacion");
 
-form.addEventListener('mouseenter', ()  => {
+if (!form) return;
+
+ form.addEventListener('mouseenter', ()  => {
     form.style.transform = window.innerWidth < 770 ? "translateY(-6rem)" : "translateY(-6.3rem)";
     simulacion.style.transform = "translateY(-3rem)";
     simulacion.style.opacity = "1";
@@ -102,4 +98,8 @@ simulacion.addEventListener('submit', function(event) {
     console.log("Menos mal que no funciona. ¿Apuntándote a otra [mierda] que vas a dejar sin leer?",
       "Esperamos que, al menos, no nos mandes a SPAM.");
 });
+
+};
+
+formulario();
 

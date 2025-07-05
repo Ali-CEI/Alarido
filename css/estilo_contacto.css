@@ -21,15 +21,11 @@
     opacity: 1;
 }
 
-.pildoras:nth-child(1) {
-    color: var(--texto-1) ;
-}
-
 .elige button, .elige a{
     display: block;
     background-color: transparent;
     border: none;
-    color: var(--color-1);
+    color: var(--texto-1);
     font-family: "league gothic";
     font-size: 6rem;
     font-weight: 900;
@@ -40,12 +36,8 @@
 
 .responsive button, .responsive a{
     width: 150px;
-    text-align: right;
-    font-size: 5rem;
-}
-
-.responsive button:nth-child(2), .responsive a:nth-child(2){
-    text-align: left;
+    text-align: center;
+    font-size: 4rem;
 }
 
 .pildoras:hover{
@@ -65,6 +57,7 @@
 .matrix{
   margin: 2em;
   gap: 2em;
+  display: flex;
   align-items: flex-end;
   justify-content: space-around;
 }
@@ -78,15 +71,19 @@
 }
 
 .responsive{
+  display: none;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
 }
 
+.ordena{
+  display: none;
+}
+
 .linea{
   width: 0.5em;
-  height: 100%;
   background-color: var(--color-1);
 }
 
@@ -121,9 +118,9 @@ section.artistas{
     color: var(--color-1);
 }
 
-.cabecera{
+/*.cabecera{
   font-size: 6em;
-}
+}*/
 
 .galeria-artistas p{
   font-size: 1.2em;
@@ -134,6 +131,7 @@ section.artistas{
   height: 250px;
   margin-bottom: 1em;
   overflow: hidden;
+  display: inline-block;
 }
 
 .galeria-artistas picture img{

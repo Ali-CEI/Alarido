@@ -41,36 +41,35 @@ setTimeout(animarTextoAleatorio, 100);
 
 
 /*las líneas horizontales se cargan al entrar en pantalla*/
-const filas = document.querySelectorAll(".artista");
+const fotos = document.querySelectorAll(".artista");
 
-function actualizarBarra(fila) { //función que añade la animación a las barras
-  fila.classList.add('visible');
+function aparecerFotos(foto) { //función que añade la animación a las barras
+  foto.classList.add('visible');
 }
 
-const observer = new IntersectionObserver((entrada, observar) => { //constante que "observa" la ventana del navegador
+const o = new IntersectionObserver((entrada, observar) => { //constante que "observa" la ventana del navegador
 entrada.forEach(entrada => { 
     if (entrada.isIntersecting) {
-      actualizarBarra(entrada.target); //invoca la función
+      aparecerFotos(entrada.target); //invoca la función
       observar.unobserve(entrada.target); // solo activarlo una vez
     }
   });
 }, { threshold: 0.3 }); //porcentaje de visibilidad del elemento en el viewport
 
-/*que el "observer" funcione para cada linea horizontal*/
-filas.forEach(barra => observer.observe(barra));
+fotos.forEach(foto => o.observe(foto));
+
 
 function elegir() {
-const matrix = document.querySelectorAll(".matrix");
+const matrix = document.querySelector(".matrix");
+const rojo = document.querySelector(".responsive");
+const azul = document.querySelector(".ordena");
 
-if (matrix > 0) {
+if (!matrix) return;
+
     if(window.innerWidth < 770){
-        matrix[1].style.display = "flex";
-        matrix[0].style.display = "none";
+        rojo.style.display ="flex";
     }else{
-        matrix[0].style.display = "flex";
-        matrix[1].style.display = "none";
-        console.log("no funciona");
-    };
+        azul.style.display = "flex";
     };
 };
 
@@ -88,9 +87,6 @@ for (let a = 0; a < alinearArtistas.length; a++) {
 }
 }
 
-document.addEventListener("DOMContentLoaded", () => {
   elegir();
   fotoAli();
-});
-
 
