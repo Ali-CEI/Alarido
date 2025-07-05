@@ -62,6 +62,7 @@ filas.forEach(barra => observer.observe(barra));
 function elegir() {
 const matrix = document.querySelectorAll(".matrix");
 
+if (matrix > 0) {
     if(window.innerWidth < 770){
         matrix[1].style.display = "flex";
         matrix[0].style.display = "none";
@@ -70,28 +71,26 @@ const matrix = document.querySelectorAll(".matrix");
         matrix[1].style.display = "none";
         console.log("no funciona");
     };
+    };
 };
 
-/**/
-function fotoTreboada () {
+function fotoAli () {
 
 const alinearArtistas = document.querySelectorAll(".galeria-artistas picture img");
 
 for (let a = 0; a < alinearArtistas.length; a++) {
   const altTexto = alinearArtistas[a].getAttribute("alt") || "";
 
-  if (altTexto.includes("Treboada")) {
-    alinearArtistas[a].style.top = "110px";
-    alinearArtistas[a].style.height = "auto";
-  } else {
-    alinearArtistas[a].style.height = "100%";
+  if (altTexto.includes("Ali")) {
+    alinearArtistas[a].style.bottom = "115px";
+    alinearArtistas[a].style.position = "relative";
   }
 }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
   elegir();
-  fotoTreboada();
+  fotoAli();
 });
 
 

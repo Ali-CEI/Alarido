@@ -193,6 +193,5 @@ section.artistas{
 .info-artista{
   display: flex;
   flex-direction: column;
-  align-items: center;
   margin-left: 1em;
 }}
