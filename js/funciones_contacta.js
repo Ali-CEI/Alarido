@@ -41,11 +41,10 @@ setTimeout(animarTextoAleatorio, 100);
 
 
 /*las líneas horizontales se cargan al entrar en pantalla*/
-const artes = document.querySelector(".ga");
 const filas = document.querySelectorAll(".artista");
 
-function actualizarBarra(barra) { //función que añade la animación a las barras
-  barra.classList.add('visible');
+function actualizarBarra(fila) { //función que añade la animación a las barras
+  fila.classList.add('visible');
 }
 
 const observer = new IntersectionObserver((entrada, observar) => { //constante que "observa" la ventana del navegador
@@ -55,14 +54,14 @@ entrada.forEach(entrada => {
       observar.unobserve(entrada.target); // solo activarlo una vez
     }
   });
-}, { threshold: 0.5 }); //porcentaje de visibilidad del elemento en el viewport
+}, { threshold: 0.3 }); //porcentaje de visibilidad del elemento en el viewport
 
 /*que el "observer" funcione para cada linea horizontal*/
 filas.forEach(barra => observer.observe(barra));
 
+function elegir() {
 const matrix = document.querySelectorAll(".matrix");
 
-function elegir() {
     if(window.innerWidth < 770){
         matrix[1].style.display = "flex";
         matrix[0].style.display = "none";
@@ -73,6 +72,26 @@ function elegir() {
     };
 };
 
-elegir();
+/**/
+function fotoTreboada () {
 
-console.log("¡Hola! Este es un mensaje de consola para verificar que el script se ha cargado correctamente.");
+const alinearArtistas = document.querySelectorAll(".galeria-artistas picture img");
+
+for (let a = 0; a < alinearArtistas.length; a++) {
+  const altTexto = alinearArtistas[a].getAttribute("alt") || "";
+
+  if (altTexto.includes("Treboada")) {
+    alinearArtistas[a].style.top = "110px";
+    alinearArtistas[a].style.height = "auto";
+  } else {
+    alinearArtistas[a].style.height = "100%";
+  }
+}
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  elegir();
+  fotoTreboada();
+});
+
+

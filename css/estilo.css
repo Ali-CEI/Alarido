@@ -519,7 +519,7 @@ svg{
     height: 80%;
 }
 
-picture {
+.tarjeta picture {
     height: 80%;
     overflow: hidden;
     display: flex;
@@ -527,7 +527,7 @@ picture {
     align-items: center;
 }
 
-picture img{
+.tarjeta picture img{
     object-fit: cover;
     width: 100%;
     position: relative;

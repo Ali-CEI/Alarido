@@ -34,6 +34,18 @@
     font-size: 6rem;
     font-weight: 900;
     text-decoration: none;
+    width: 80%;
+    text-align: center;
+}
+
+.responsive button, .responsive a{
+    width: 150px;
+    text-align: right;
+    font-size: 5rem;
+}
+
+.responsive button:nth-child(2), .responsive a:nth-child(2){
+    text-align: left;
 }
 
 .pildoras:hover{
@@ -57,10 +69,11 @@
   justify-content: space-around;
 }
 
-.roja{
+.pantal{
   display: flex;
-  gap: 2em;
+  gap: 0.5em;
   align-items: flex-end;
+  width: 90%;
   justify-content: space-around;
 }
 
@@ -68,11 +81,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-
-.roja button, .roja a{
-  width: 200px;
+  width: 100%;
 }
 
 .linea{
@@ -86,12 +95,12 @@
 }
 
 .artista .descrip{
-  font-size: 6em;
+  font-size: 5em;
 }
 
 section.artistas{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2em;
   margin-bottom: 1em;
 }
@@ -108,8 +117,12 @@ section.artistas{
 }
 
 .categorias {
-    font-size: 4em;
+    font-size: 3em;
     color: var(--color-1);
+}
+
+.cabecera{
+  font-size: 6em;
 }
 
 .galeria-artistas p{
@@ -118,8 +131,47 @@ section.artistas{
 }
 
 .galeria-artistas picture{
-  height: auto;
+  height: 250px;
   margin-bottom: 1em;
+  overflow: hidden;
+}
+
+.galeria-artistas picture img{
+    object-fit: cover;
+    width: 100%;
+}
+
+.info-artista{
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+}
+
+.enlaces{
+  display: flex;
+}
+
+.enlaces button{
+  border: none;
+  background-color: var(--color-1);
+  color: var(--texto-2);
+  text-align: center;
+  padding: 2px 24px;
+  border-radius: 15px;
+  font-family: 'League Gothic';
+  font-size: 1.5em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.enlaces button:hover{
+  background-color: var(--color-2);
+  color: var(--texto-1);
+}
+
+.enlaces a{
+  text-decoration: none;
+  margin: 10px 10px 0 0;
 }
 
 @media screen and (max-width: 1024px){
@@ -134,10 +186,8 @@ section.artistas{
 }
 
 .galeria-artistas picture{
-  width: 70%;
-  height: auto;
+  width: 400px;
   margin-bottom: 1em;
-  object-fit: cover;
 }
 
 .info-artista{
@@ -146,47 +196,3 @@ section.artistas{
   align-items: center;
   margin-left: 1em;
 }}
-    /*.form-contacto {
-  max-width: 600px;
-  margin: 80px auto;
-  padding: 24px;
-  text-align: center;
-  background: #111;
-  color: var(--color-1);
-  border: 2px solid var(--color-1);
-  border-radius: 16px;
-  font-family: 'League Gothic', sans-serif;
-}
-
-.form-contacto h2 {
-  font-size: 3em;
-  margin-bottom: 20px;
-}
-
-.form-contacto input,
-.form-contacto textarea {
-  width: 100%;
-  margin: 12px 0;
-  padding: 12px;
-  font-size: 1.2em;
-  background: black;
-  border: 2px solid var(--color-1);
-  color: white;
-  font-family: inherit;
-}
-
-.form-contacto button {
-  margin-top: 20px;
-  padding: 12px 24px;
-  font-size: 1.2em;
-  background: var(--color-1);
-  border: none;
-  color: black;
-  cursor: pointer;
-  transition: all 0.3s ease;
-    border-radius: 16px;
-}
-
-.form-contacto button:hover {
-  background: white;
-}
