@@ -193,3 +193,16 @@ section.artistas{
   flex-direction: column;
   margin-left: 1em;
 }}
+
+@media screen and (max-width: 480px){
+
+.artista{
+    flex-direction: column;
+    align-items: center;
+}
+
+.enlaces{
+      justify-content: space-evenly;
+}
+
+}

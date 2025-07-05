@@ -104,4 +104,10 @@ picture img{
 }
 
 
+
+/*WEB ARTISTAS*/
+.artistar{
+    flex-direction: column;
+}
+
 }
