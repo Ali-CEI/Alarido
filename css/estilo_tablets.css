@@ -132,9 +132,13 @@
     margin-top: 20px;
 }
 
+.haz-click{
+    margin: -1em;
+    text-align: center;
+    color: var(--color-1);
+}
+
 /*CIERRE*/
-
-
 .newsletter{
   font-size: 2em;
   align-items: center;

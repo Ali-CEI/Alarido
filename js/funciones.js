@@ -105,7 +105,7 @@ for (let i = 0; i < imagenes.length; i++) {
     svg.style.display = "inline-block";
 
     svg.addEventListener("click", () => {
-      svg.style.stroke = "var(--texto-2)";
+      svg.style.stroke = "var(--color-1)";
       document.body.style.backgroundColor = 'var(--color-1)';
       imagenes[5].style.backgroundColor = 'var(--color-2)';
        textosDescrip.forEach(texto => {
@@ -183,14 +183,7 @@ for (let i = 0; i < imagenes.length; i++) {
 const cuadro = document.querySelector(".element-grid-img-int.vacia");
 const oraciones = document.querySelectorAll(".fondo.grid.oraciones");
 const projectos = document.querySelector(".projectos");
-
-const frase = projectos.getBoundingClientRect();
 const medidasCuadro = imagenes[4].getBoundingClientRect();
-
-function getCoords(projectos) {
-  let posicionFrase = projectos.getBoundingClientRect();
-  console.log(posicionFrase);
-}
 
 function ancho() {
     const altoCuadro = medidasCuadro.height;
