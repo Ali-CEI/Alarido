@@ -11,6 +11,10 @@
   color: var(--color-1);
 }
 
+.expresiones {
+  font-size: 6em;
+}
+
 .pildoras span {
     opacity: 0;
     transition: opacity 1s ease-in-out;
