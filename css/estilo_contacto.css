@@ -122,9 +122,10 @@ section.artistas{
     color: var(--color-1);
 }
 
-/*.cabecera{
-  font-size: 6em;
-}*/
+.elige .vertical-linea{
+  left: calc(50% - 1.5pt);
+  animation: crecimiento 1s linear forwards;
+}
 
 .galeria-artistas p{
   font-size: 1.2em;
@@ -199,6 +200,9 @@ section.artistas{
 }}
 
 @media screen and (max-width: 480px){
+.info-artista {
+  margin-left: 0;
+}
 
 .artista{
     flex-direction: column;
