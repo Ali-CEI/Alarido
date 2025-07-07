@@ -80,25 +80,39 @@ const alinearArtistas = document.querySelectorAll(".galeria-artistas picture img
 for (let a = 0; a < alinearArtistas.length; a++) {
   const altTexto = alinearArtistas[a].getAttribute("alt") || "";
 
+  if(window.innerWidth > 770){
   if (altTexto.includes("Ali")) {
-    alinearArtistas[a].style.bottom = "115px";
+    alinearArtistas[a].style.bottom = "200px";
     alinearArtistas[a].style.position = "relative";
-  }
-}
+  };
+  if (altTexto.includes("Hacher")) {
+    alinearArtistas[a].style.bottom = "100px";
+    alinearArtistas[a].style.position = "relative";
+  };
+};
+    if(window.innerWidth < 770){
+        if (altTexto.includes("Carol")) {
+        alinearArtistas[a].style.height = "auto";
+  };
+    }
+};
 }
 
 function pasando (){
     const pasando = document.querySelector(".aqui");
     const mas = document.querySelector(".mas");
-    const info = document.querySelector(".info");
 
-    pasando.addEventListener("mouseenter", () => {
-        mas.style.visibility = "visible";
-    });
-
-    info.addEventListener("click", () => {
-        
-    })
+    if (!pasando) return;
+    if(window.innerWidth < 770){
+        pasando.addEventListener("mouseenter", () => {
+            mas.style.visibility = "visible";
+        });
+    
+    }else{
+        pasando.addEventListener("click", () => {
+            mas.style.visibility = "visible";
+        });
+    };
 }
 
   elegir();

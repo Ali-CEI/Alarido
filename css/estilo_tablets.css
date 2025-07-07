@@ -60,7 +60,6 @@
 
 
 @media screen and (max-width: 950px) {
-    
     .frente_grid{
     position: absolute;
     text-align: right;
@@ -70,7 +69,7 @@
 }
 
     .descrip {
-      font-size: 4em;
+      font-size: 6em;
     }
 
     .tarjeta-presentacion {
@@ -143,7 +142,7 @@
     margin-top: 20px;
 }
 
-.haz-click{
+.haz-click, .tres .haz-click{
     text-align: center;
 }
 

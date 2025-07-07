@@ -100,41 +100,42 @@ for (let i = 0; i < imagenes.length; i++) {
         });
      
         }else{
-
-  // SVGs: click -> color temporal
-  svgs.forEach((svg) => {
-    
-    svg.style.display = "inline-block";
-
-    svg.addEventListener("click", () => {
-      svg.style.stroke = "var(--color-1)";
-      document.body.style.backgroundColor = 'var(--color-1)';
-      imagenes[5].style.backgroundColor = 'var(--color-2)';
-       textosDescrip.forEach(texto => {
-                texto.style.color = "var(--texto-2)";
+        
+        clicks.forEach((descubrir) => {
+            descubrir.style.display = "block";
         });
-    clicks.forEach((descubrir) => {
-        descubrir.style.display = "block";
-    });
+
+        // SVGs: click -> color temporal
+            svgs.forEach((svg) => {
+                svg.style.display = "inline-block";
+
+                svg.addEventListener("click", () => {
+                    svg.style.stroke = "var(--color-1)";
+                    document.body.style.backgroundColor = 'var(--color-1)';
+                    imagenes[5].style.backgroundColor = 'var(--color-2)';
+            
+                    textosDescrip.forEach(texto => {
+                        texto.style.color = "var(--texto-2)";
+                    });
       
-      // Revertir después de 2 segundos
-      setTimeout(() => {
-        svg.style.stroke = "var(--texto-1)";
+        // Revertir después de 2 segundos
+            setTimeout(() => {
+                svg.style.stroke = "var(--texto-1)";
 
-        if (body.classList.contains('dark')) {
-            body.style.backgroundColor = '#000'; //si está en modo oscuro, el fondo vuelve a ser el del body   
-        } else {
-            body.style.backgroundColor = '#ffffff';
-        };
-        imagenes[5].style.backgroundColor = '';
-        textosDescrip.forEach(texto => {
-            texto.style.color = "inherit";
-        });
+                if (body.classList.contains('dark')) {
+                    body.style.backgroundColor = '#000'; //si está en modo oscuro, el fondo vuelve a ser el del body   
+                } else {
+                    body.style.backgroundColor = '#ffffff';
+                };
 
-      }, 2000);
-    });
-  });
-        };  
+                imagenes[5].style.backgroundColor = '';
+            
+                textosDescrip.forEach(texto => {
+                    texto.style.color = "inherit";
+                });
+            }, 2000);
+            });
+        });};  
 
         /*------- Vuelve el fondo a blanco -------*/
         imagenes[i].addEventListener('mouseleave', () => {

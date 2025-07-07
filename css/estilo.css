@@ -217,7 +217,7 @@ div.vertical-linea{ /*linea vertical color (elemento decoracion)*/
     position: absolute;
     left: 40%;
     width: 1.5pt;
-    animation: crecimiento 10s linear forwards; /*crece de izquierda a derecha con 1s de delay y se queda*/
+    animation: crecimiento 10s linear forwards; /*crece de arriba a abajo y se queda*/
 }
 
 div.horizontal-linea{ /*linea horizontal color (elemento decoracion)*/
@@ -229,7 +229,7 @@ div.horizontal-linea{ /*linea horizontal color (elemento decoracion)*/
 }
 
 div.horizontal-linea.animacion{
-    animation: movimiento 0.5s linear forwards; /*crece de izquierda a derecha con 1s de delay y se queda*/
+    animation: movimiento 0.5s linear forwards; /*crece de izquierda a derecha y se queda*/
 }
 
     @keyframes movimiento{ /*animacion linea horizontal*/
@@ -242,36 +242,36 @@ div.horizontal-linea.animacion{
 
 
 h4{ /*parrafos primera seccion*/
-  font-size:  1.5em;
-  animation: opacidad 2s forwards;
-  font-weight: normal;
+    font-size:  1.5em;
+    animation: opacidad 2s forwards;
+    font-weight: normal;
 }
 
-@keyframes opacidad {
-  0%, 50% { opacity: 0; }
-  100% { opacity: 1; }
-}
+    @keyframes opacidad {
+        0%, 50% { opacity: 0; }
+        100% { opacity: 1; }
+    }
 
 h4.text-p span.sub:hover{ /*tachado palabras primera seccion*/
-  text-decoration-line: line-through;
-  color: var(--color-1);
+    text-decoration-line: line-through;
+    color: var(--color-1);
 }
 
-/*---------------SECCION SEPARADOR---------------*/
+/*--------------- SEPARADOR ---------------*/
 .separador{ 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: stretch;
-  height: 8em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    height: 8em;
 }
 
-.separador .horizontal-linea:nth-child(odd) {/*linea horizontal amarilla sec 2*/
+.separador .horizontal-linea:nth-child(odd) { /*linea horizontal 1º separador*/
     height: 1em;
 }
 
-/*--------------- SECCION XX ---------------*/
-.p-sec{
+/*--------------- SECCIONES ---------------*/
+.p-sec{ /*general secciones*/
     position: relative;
     display: flex;
     align-items: center;
@@ -326,7 +326,7 @@ h4.text-p span.sub:hover{ /*tachado palabras primera seccion*/
   flex-direction: column;
 }
 
-/*---------------FONDO PROJECTOS---------------*/
+    /*-----------FONDO PROJECTOS----------*/
 .fondo.grid{ 
     position: relative;
     padding: 48px;
@@ -345,7 +345,7 @@ h4.text-p span.sub:hover{ /*tachado palabras primera seccion*/
     z-index: -1; /*debajo del body*/
 }
 
-.fondo.grid.oraciones.uno{
+.fondo.grid.oraciones.uno{ /*frases borrosas*/
     top: 5%; 
 }
 
@@ -358,13 +358,13 @@ h4.text-p span.sub:hover{ /*tachado palabras primera seccion*/
     text-align: left;
 }
 
-.descrip{
+.descrip {
     font-size: 10em;
     text-transform: uppercase;
     line-height: 0.8em;
 }
 
-.descrip span { /*palabras que se muestran al volverse de color el fondo*/
+.descrip span {
     color: var(--color-1);
 }
 
@@ -405,27 +405,27 @@ h4.text-p span.sub:hover{ /*tachado palabras primera seccion*/
 }
 
 .element-grid:nth-child(1) {
-  margin-top: 0;
+    margin-top: 0;
 }
 
 .element-grid:nth-child(2) {
-  grid-area: 2/5/3/11;
+    grid-area: 2/5/3/11;
 }
 
 .element-grid:nth-child(4) { /*+1 por la frase*/
-  grid-area: 3/2/4/5;
+    grid-area: 3/2/4/5;
 }
 
 .element-grid:nth-child(6) {
-  grid-area: 4/5/5/8;
+    grid-area: 4/5/5/8;
 }
 
 .element-grid:nth-child(7) { /*+1 por la frase*/
-  grid-area: 5/8/6/12;
+    grid-area: 5/8/6/12;
 }
 
 .element-grid:nth-child(9) { /*+1 por la frase*/
-  grid-area: 6/3/7/8;
+    grid-area: 6/3/7/8;
 }
 
 .element-grid-img {
@@ -444,13 +444,13 @@ h4.text-p span.sub:hover{ /*tachado palabras primera seccion*/
 }
 
 .element-grid-img img{
-  max-width: 100%;
-  vertical-align: middle;
-  mix-blend-mode: luminosity;
+    max-width: 100%;
+    vertical-align: middle;
+    mix-blend-mode: luminosity;
 }
 
 .element-grid-img img:hover{
-  mix-blend-mode: normal;
+    mix-blend-mode: normal;
 }
 
 .element-grid-img-int {
@@ -467,11 +467,16 @@ h4.text-p span.sub:hover{ /*tachado palabras primera seccion*/
     font-size: 1.8em;
 }
 
-.haz-click{
+.bio{/*info que se traslada a la tarjeta*/
+  display: none;
+}
+
+    /*--ACTIVAR CAMBIO FONDO EN DISPOSITIVOS TACTILES--*/
+.haz-click{ /*frase que indica como activarlo*/
     display: none;
 }
 
-svg{
+svg{ /*ojo en svg*/
     display: none;
     stroke-width: 4px;
     fill: none; 
@@ -493,9 +498,9 @@ svg{
     z-index: 10;
 }
 
-.tarjeta.visible{
-    display: flex;
-}
+    .tarjeta.visible{
+        display: flex;
+    }
 
 .tarjeta-presentacion{
     display: flex;
@@ -510,16 +515,13 @@ svg{
     z-index: 1;
 }
 
-.tarjeta p.biografia{
-    color: var(--texto-1);
-    font-size: 0.9em;
-    font-family: monospace, "league-gothic", sans-serif;
-    padding-top: 15px;
-    text-align: left;
+.tarjeta .grafico{  /*agrupacion titulo + foto*/
+    height: 80%;
 }
 
-.tarjeta .grafico{
-    height: 80%;
+.tarjeta h3{
+    text-align: center;
+    font-size: 3em;
 }
 
 .tarjeta picture {
@@ -536,13 +538,12 @@ svg{
     position: relative;
 }
 
-.tarjeta h3{
-    text-align: center;
-    font-size: 3em;
-}
-
-.bio{
-  display: none;
+.tarjeta p.biografia{
+    color: var(--texto-1);
+    font-size: 0.9em;
+    font-family: monospace, "league-gothic", sans-serif;
+    padding-top: 15px;
+    text-align: left;
 }
 
 /*--------------- SECCION CIERRE ---------------*/
@@ -578,7 +579,7 @@ svg{
     text-transform: lowercase;
 }
 
-/*newsletter*/
+/*----NEWSLETTER----*/
 .newsletter {
     position: relative;
     margin: 100px auto;
@@ -595,7 +596,7 @@ svg{
   transition: transform 0.2s linear;
 }
 
-.cortina{
+.cortina{/*tapa la frase al desplazarse*/
     display: inline-block;
     height: 1.3em;
     width: 100%;
@@ -613,11 +614,11 @@ svg{
 }
 
 .text-apuntarse{
-  z-index: 1;
-  position: absolute;
-  bottom: 0;
-  transform: translateY(-3.3rem);
-  transition: transform 0.2s linear;
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(-3.3rem);
+    transition: transform 0.2s linear;
 }
 
 .newsletter .text-subtitulo span{
@@ -626,22 +627,23 @@ svg{
 }
 
 input.text-sim{
-  font-family: 'League Gothic', sans-serif;
-  font-size: 2.5rem;
-  color: var(--text-1);
-  border: none;
-  outline: none;
-  background-color: transparent;
+    font-family: 'League Gothic', sans-serif;
+    font-size: 2.5rem;
+    color: var(--text-1);
+    border: none;
+    outline: none;
+    background-color: transparent;
 }
 
 .newsletter button{
-  display: none;
+    display: none;
 }
 
 
-/*PARA PANTALLAS MÁS PEQUE*/
+/*PARA PANTALLAS portatil*/
 @media screen and (max-width: 1440px) {
 
+    /*COLOCACION ORACIONES SEC-PROJECTOS*/
 .fondo.grid.oraciones.uno{
     top: 2%;
 }
@@ -649,15 +651,9 @@ input.text-sim{
 .fondo.grid.oraciones.dos{
     top: 35%;
 }
-
-.element-grid-img-int.vacia{
-    background-color: var(--color-1);
-    cursor: pointer;
-}
 }
 
 @media screen and (max-width: 1080px) {
-
 .p-sec{
     flex-direction: column-reverse;
     padding: 0 20px;
@@ -669,7 +665,7 @@ input.text-sim{
     justify-content: start;
 }
 
-.img-sec-portada{
+.img-sec-portada{ /*adaptar al nuevo padding de p-sec*/
     width: calc(100% + 40px);
 }
 }

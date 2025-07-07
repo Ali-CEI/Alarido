@@ -1,18 +1,18 @@
 .elige{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100dvh;
-  width: 100%;
-  position: fixed;
-  z-index: 8;
-  flex-direction: column;
-  top:0;
-  color: var(--color-1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100dvh;
+    width: 100%;
+    position: fixed;
+    z-index: 8;
+    flex-direction: column;
+    top:0;
+    color: var(--color-1);
 }
 
 .expresiones {
-  font-size: 6em;
+    font-size: 6em;
 }
 
 .pildoras span {
@@ -25,7 +25,7 @@
     opacity: 1;
 }
 
-.elige button, .elige a{
+.matrix button, .matrix a{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -53,26 +53,22 @@
     padding: 0 10px;
 }
 
-@keyframes flotar{
-  0% { transform: translateY(0);}
-  50% { transform: translateY(-20px);}
-  100% { transform: translateY(0); }
-}
+    @keyframes flotar{
+      0%, 100% { transform: translateY(0);}
+      50% { transform: translateY(-20px);}
+    }
 
 .matrix{
-  margin: 2em;
-  gap: 2em;
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-around;
+    margin: 2em;
+    gap: 2em;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
 }
 
 .pantal{
   display: flex;
   gap: 0.5em;
-  align-items: flex-end;
-  width: 90%;
-  justify-content: space-around;
 }
 
 .responsive{
@@ -97,9 +93,18 @@
  color: var(--texto-1);
 }
 
+.pasando span.aqui{
+ text-decoration: underline;
+}
+
 .mas{
   visibility: hidden;
 }
+
+.mas a{
+  color: inherit;
+}
+
 /*
 .filtros-artistas{
   position: sticky;
@@ -191,20 +196,20 @@ section.artistas{
 }
 
 .elige .vertical-linea{
-  left: calc(50% - 1.5pt);
-  animation: crecimiento 1s linear forwards;
+    left: calc(50% - 1.5pt);
+    animation: crecimiento 1s linear forwards;
 }
 
 .galeria-artistas p{
-  font-size: 1.2em;
-  line-height: 1.5;
+    font-size: 1.2em;
+    line-height: 1.5;
 }
 
 .galeria-artistas picture{
-  height: 250px;
-  margin-bottom: 1em;
-  overflow: hidden;
-  display: inline-block;
+    height: 300px;
+    margin-bottom: 1em;
+    overflow: hidden;
+    display: inline-block;
 }
 
 .galeria-artistas picture img{
@@ -257,8 +262,13 @@ section.artistas{
 }
 
 .galeria-artistas picture{
-  width: 400px;
+  width: 325px;
   margin-bottom: 1em;
+}
+
+.galeria-artistas picture img{
+  width: 400px;
+  height: 100%;
 }
 
 .info-artista{
@@ -266,6 +276,14 @@ section.artistas{
   flex-direction: column;
   margin-left: 1em;
 }}
+
+@media screen and (max-width: 770px){
+.pasando{
+  flex-direction: column;
+  text-align: center;
+}
+}
+
 
 @media screen and (max-width: 480px){
 .info-artista {
@@ -280,5 +298,5 @@ section.artistas{
 .enlaces{
       justify-content: space-evenly;
 }
-
 }
+
