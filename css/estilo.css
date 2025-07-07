@@ -611,6 +611,8 @@ svg{ /*ojo en svg*/
 .newsletter .text-subtitulo{
     position: relative;
     z-index: 2;
+    transition: all 1s ease;
+    background-color: var(--texto-2);
 }
 
 .text-apuntarse{

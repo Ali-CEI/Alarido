@@ -51,6 +51,7 @@
 }
 
 .haz-click{
+    display: inline-block;
     margin: -0.5em;
     font-size: 2em;
     text-align: left;
