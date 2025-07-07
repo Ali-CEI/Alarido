@@ -127,8 +127,12 @@ function contratar() {
     contratar.forEach(contrato => {
         contrato.addEventListener("click", () => {
             popup.classList.add("desplegado");
-            contratado = true
+            contratado = true;
         });
+
+        if(contratado = true){
+            window.addEventListener
+        }
         
     });};
 
