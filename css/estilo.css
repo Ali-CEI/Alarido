@@ -587,6 +587,8 @@ svg{ /*ojo en svg*/
     flex-direction: column;
     justify-content: center;
     font-size: 2.5em;
+    background-color: var(--texto-2);
+    transition: all 1s ease; /*"" cortina*/
 }
 
 .simulacion{
@@ -608,9 +610,7 @@ svg{ /*ojo en svg*/
 
 .newsletter .text-subtitulo{
     position: relative;
-    background-color: var(--texto-2);
     z-index: 2;
-    transition: all 1s ease; /*"" cortina*/
 }
 
 .text-apuntarse{
