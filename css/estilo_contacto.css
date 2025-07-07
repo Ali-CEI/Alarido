@@ -200,7 +200,7 @@ section.artistas{
 
 .galeria-artistas p{
     font-size: 1.2em;
-    line-height: 1.5;
+    line-height: 1;
 }
 
 .galeria-artistas picture{
@@ -208,11 +208,13 @@ section.artistas{
     margin-bottom: 1em;
     overflow: hidden;
     display: inline-block;
+    flex-shrink: 0;
 }
 
 .galeria-artistas picture img{
     object-fit: cover;
     width: 100%;
+    height: 100%
 }
 
 .info-artista{
@@ -247,6 +249,86 @@ section.artistas{
   margin: 10px 10px 0 0;
 }
 
+/*Formulario CONTRATAR*/
+    h1 {
+      font-weight: bold;
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    form {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 0.25rem;
+      color: #f4511e;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      grid-column: 1 / -1;
+      min-height: 100px;
+    }
+
+    .full-width {
+      grid-column: 1 / -1;
+    }
+
+
+    /**/
+  .popup {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+  height: 100%;
+  background-color: var(--texto-1, 0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup.desplegado{
+  display: flex;
+}
+
+.popup-contenido {
+  background-color: var(--texto-2);
+  padding: 1rem;
+  max-width: 600px;
+  width: 90%;
+  height: 80%;
+  overflow: auto;
+  border-radius: 10px;
+}
+
+.popup iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+
+
+/*---MEDIA RESPONSIVE---*/
 @media screen and (max-width: 1024px){
 section.artistas{
   display: grid;

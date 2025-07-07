@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="css/estilo_tablets.css"> <!--Estilo para pantallas de menos de 1024px-->
   <link rel="stylesheet" href="css/estilo_mobile.css"> <!--Estilo para pantallas de menos de 480px-->
   <link rel="stylesheet" href="css/estilo_contacto.css">
+    <link rel="stylesheet" href="css/estilo_contratar.css">
+
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,23 +22,78 @@
 </head>
 <body>
 
-  <header>
-    <h1><a href="index.html">alarido</a></h1>
-    <nav>
-      <ul>
-      <li><a href="contacto.html">contacto</a></li>
-      <li><button id="modoOscuro"></button></li>
-      <ul class="rrss">
-        <li><a href="">li</a></li>
-        <li><a href="https://www.instagram.com/ali_abasc/">in</a></li><!--enlace provisional-->
-      </ul>
-      </ul>
-    </nav>
-  </header>
+  <h1>Pide presupuesto a Arpista en Madrid. Eventos y bodas.</h1>
 
-  <div>
-    
-  </div>
+  <form>
+    <div>
+      <label for="tipo-evento">Tipo de evento</label>
+      <select id="tipo-evento" name="tipo-evento">
+        <option>Seleccionar tipo de evento</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="ciudad">Ciudad</label>
+      <select id="ciudad" name="ciudad">
+        <option>Seleccionar...</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="cp">Código Postal</label>
+      <input type="text" id="cp" name="cp" />
+    </div>
+
+    <div>
+      <label for="fecha">Día del evento</label>
+      <input type="date" id="fecha" name="fecha" />
+    </div>
+
+    <div>
+      <label for="hora">Hora del evento</label>
+      <select id="hora" name="hora">
+        <option>Hora</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="duracion">Duración</label>
+      <select id="duracion" name="duracion">
+        <option>No lo sé</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="asistentes">Nro de asistentes</label>
+      <select id="asistentes" name="asistentes">
+        <option>Número de asistentes</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="presupuesto">Presupuesto aproximado</label>
+      <select id="presupuesto" name="presupuesto">
+        <option>Presupuesto aproximado</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="interes">Grado de interés</label>
+      <select id="interes" name="interes">
+        <option>Grado de interés</option>
+      </select>
+    </div>
+
+    <div class="full-width">
+      <label for="lugar">Lugar</label>
+      <input type="text" id="lugar" name="lugar" />
+    </div>
+
+    <div class="full-width">
+      <label for="detalles">Detalles de tu fiesta o evento</label>
+      <textarea id="detalles" name="detalles" placeholder="Incluye toda la información relevante..."></textarea>
+    </div>
+  </form>
   
 </body>
 </html>

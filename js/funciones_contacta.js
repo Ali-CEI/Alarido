@@ -81,12 +81,15 @@ for (let a = 0; a < alinearArtistas.length; a++) {
   const altTexto = alinearArtistas[a].getAttribute("alt") || "";
 
   if(window.innerWidth > 770){
+  if (["Ali", "Hacher", "Carol"].some(nombre => altTexto.includes(nombre))) {
+    alinearArtistas[a].style.height = "auto";
+  };
   if (altTexto.includes("Ali")) {
-    alinearArtistas[a].style.bottom = "200px";
+    alinearArtistas[a].style.bottom = "130px";
     alinearArtistas[a].style.position = "relative";
   };
   if (altTexto.includes("Hacher")) {
-    alinearArtistas[a].style.bottom = "100px";
+    alinearArtistas[a].style.bottom = "70px";
     alinearArtistas[a].style.position = "relative";
   };
 };
@@ -115,7 +118,23 @@ function pasando (){
     };
 }
 
-  elegir();
-  fotoAli();
-  pasando();
+function contratar() {
+   
+    const contratar = document.querySelectorAll(".btn.contratar");
+    const popup = document.getElementById("popup")
+    contratado = false;
 
+    contratar.forEach(contrato => {
+        contrato.addEventListener("click", () => {
+            popup.classList.add("desplegado");
+            contratado = true
+        });
+        
+    });};
+
+
+//FUNCIONES
+elegir();
+fotoAli();
+pasando();
+contratar();
