@@ -1,4 +1,9 @@
 @media screen and (max-width: 1024px){
+.introduccion{
+    background-color: var(--texto-2);
+    transition: all 1s ease;
+}
+
 .project-grid {
     grid-template-columns: 1fr 1fr;
     padding: 1em 0;
@@ -44,7 +49,6 @@
 .blur{
     filter: none;
 }
-
 
 .haz-click{
     margin: -0.5em;

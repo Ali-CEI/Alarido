@@ -25,12 +25,10 @@
     opacity: 1;
 }
 
-.matrix button, .matrix a{
+.matrix .btn, .matrix a{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: transparent;
-    border: none;
     color: var(--texto-1);
     font-family: "league gothic";
     font-size: 6rem;
@@ -39,7 +37,7 @@
     width: 80%;
 }
 
-.responsive button, .responsive a{
+.responsive .btn, .responsive a{
     width: 150px;
     text-align: center;
     font-size: 4rem;
@@ -227,8 +225,7 @@ section.artistas{
   display: flex;
 }
 
-.enlaces button{
-  border: none;
+.enlaces a{
   background-color: var(--color-1);
   color: var(--texto-2);
   text-align: center;
@@ -240,7 +237,7 @@ section.artistas{
   cursor: pointer;
 }
 
-.enlaces button:hover{
+.enlaces a:hover{
   background-color: var(--color-2);
   color: var(--texto-1);
 }

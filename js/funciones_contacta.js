@@ -103,7 +103,7 @@ function pasando (){
     const mas = document.querySelector(".mas");
 
     if (!pasando) return;
-    if(window.innerWidth < 770){
+    if(window.innerWidth > 770){
         pasando.addEventListener("mouseenter", () => {
             mas.style.visibility = "visible";
         });
