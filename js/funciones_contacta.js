@@ -87,6 +87,21 @@ for (let a = 0; a < alinearArtistas.length; a++) {
 }
 }
 
+function pasando (){
+    const pasando = document.querySelector(".aqui");
+    const mas = document.querySelector(".mas");
+    const info = document.querySelector(".info");
+
+    pasando.addEventListener("mouseenter", () => {
+        mas.style.visibility = "visible";
+    });
+
+    info.addEventListener("click", () => {
+        
+    })
+}
+
   elegir();
   fotoAli();
+  pasando();
 

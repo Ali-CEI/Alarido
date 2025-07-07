@@ -1,4 +1,4 @@
-                      /*GENERALES*/
+/*GENERALES*/
 *{
     margin: 0;
     padding: 0;
@@ -11,9 +11,8 @@
     width: 3px;
 }
 
-:root{ /*base (raiz)*/
+:root{ /*base*/
     font-family: "league gothic", sans-serif;
-    --font-family: "league gothic", sans-serif;
     --height: 100dvh;
 }
 
@@ -468,6 +467,10 @@ h4.text-p span.sub:hover{ /*tachado palabras primera seccion*/
     font-size: 1.8em;
 }
 
+.haz-click{
+    display: none;
+}
+
 svg{
     display: none;
     stroke-width: 4px;
@@ -577,12 +580,12 @@ svg{
 
 /*newsletter*/
 .newsletter {
-  position: relative;
-  margin: 100px auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-size: 2.5em;
+    position: relative;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 2.5em;
 }
 
 .simulacion{
@@ -593,18 +596,20 @@ svg{
 }
 
 .cortina{
-  display: inline-block;
-  height: 1.3em;
-  width: 100%;
-  background-color: var(--texto-2);
-  transform: translateY(3rem);
-  z-index: 3;
+    display: inline-block;
+    height: 1.3em;
+    width: 100%;
+    background-color: var(--texto-2);
+    transform: translateY(3rem);
+    z-index: 3;
+    transition: all 1s ease; /*para que transicione el fondo con el body*/
 }
 
 .newsletter .text-subtitulo{
-  position: relative;
-  background-color: var(--texto-2);
-  z-index: 2;
+    position: relative;
+    background-color: var(--texto-2);
+    z-index: 2;
+    transition: all 1s ease; /*"" cortina*/
 }
 
 .text-apuntarse{
@@ -617,6 +622,7 @@ svg{
 
 .newsletter .text-subtitulo span{
   color: var(--color-1);
+
 }
 
 input.text-sim{

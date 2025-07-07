@@ -16,6 +16,7 @@
   <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <script defer src="js/funciones_contacta.js"></script> <!--Link java-->
   <script defer src="js/funciones_generales.js"></script> <!--Link java-->
+    <script defer src="js/filtro_artistas.js"></script> <!--Link java-->
 
 </head>
 <body>
@@ -38,6 +39,53 @@
       <h2 class="descrip">Contacta</h2>
     </div>
 
+    <section class="filtros-artistas">
+    <img class="filtro" src="img/filtrar.png" alt="Filtrar">
+  <form id="filtro-form">
+      <h3>Filtrar artistas</h3>
+
+    <div class="labels">
+    <label>
+      <p>Género:</p>
+      <select id="filtro-genero" class="opciones">
+        <option value="">Todos</option>
+        <option value="poeta">Poesía</option>
+        <option value="cantautor">Cantautor</option>
+        <option value="rapera">Rap</option>
+        <option value="fotógrafo">Fotografía</option>
+        <option value="performer">Artista</option>
+      </select>
+    </label>
+
+    <label>
+      <p>Tipo de arte:</p>
+      <select id="filtro-tipo" class="opciones">
+        <option value="">Todos</option>
+        <option value="poesia">Poesía</option>
+        <option value="musica">Música</option>
+        <option value="arte">Arte</option>
+      </select>
+    </label>
+
+    <label>
+      <P>Localidad:</P>
+      <input type="text" id="filtro-localidad" placeholder="Introduce una ciudad">
+    </label>
+
+        <label>
+      <p>Edad:</p>
+      <select id="filtro-edad" class="opciones">
+        <option value="">Todos</option>
+        <option value="poesia">> 18 años</option>
+        <option value="musica">18 - 35 años</option>
+        <option value="arte">< 35 años</option>
+      </select>
+    </label>
+</div>  
+    <button type="submit">Filtrar</button>
+  </form>
+</section>
+
     <div class="galeria-artistas">
       <section class="poesia">
         <h2 class="expresiones ">poesía</h2> 
@@ -49,10 +97,10 @@
           </picture>
           <div class="info-artista">
             <h2 class="descrip">Cris Rivero</h2>
-            <h3 class="categorias">Poeta</h3>
-            <p>Diseñadora gráfica y desarrolladora web.</h3>
+            <h3 class="categorias">Poesía</h3>
+            <p>Pronombres elle/elles. 28 años, residente en Zaragoza, original de Sevilla.</p>
             <div class="enlaces">
-              <a href="#" alt="enlace al instagram de Cris"><button>instagram</button></a>
+              <a href="https://www.instagram.com/cris_rivm/" alt="enlace al instagram de Cris"><button>instagram</button></a>
               <a href="contratar.html" alt="enlace a Cris Rivero"><button>Contratar</button></a>
           </div>
         </div>
@@ -64,11 +112,11 @@
           </picture>
           <div class="info-artista">
             <h2 class="descrip">Naiara Jiménez</h2>
-            <h3 class="categorias">Poeta</h3>
-            <p>Diseñadora gráfica y desarrolladora web.</p>
+            <h3 class="categorias">Poesía</h3>
+            <p>Pronombres elle/elles. 23 años, residente en Málaga.</p>
             <div class="enlaces">
-              <a href="#" alt="enlace al instagram de Nai"><button>instagram</button></a>
-              <a href="contratar.html" alt="enlace a Nai"><button>Contratar</button></a>
+              <a href="https://www.instagram.com/naiarajmenez/" alt="enlace al instagram de Naiara"><button>instagram</button></a>
+              <a href="contratar.html" alt="enlace a Naiara"><button>Contratar</button></a>
             </div>
           </div>
         </div>
@@ -79,8 +127,8 @@
           </picture>
           <div class="info-artista">
             <h2 class="descrip">Sandra Lario</h2>
-            <h3 class="categorias">Poeta y fotógrafa</h3>
-            <p>Diseñadora gráfica y desarrolladora web.</h3>
+            <h3 class="categorias">Poesía y fotografía</h3>
+            <p>Pronombres ella/ellas. 32 años, residente en Zaragoza.</p>
             <div class="enlaces">
               <a href="https://www.instagram.com/s.lario/" alt="enlace al instagram de Sandra"><button>instagram</button></a>
               <a href="contratar.html" alt="enlace a Sandra"><button>Contratar</button></a>
@@ -94,10 +142,10 @@
           </picture>
           <div class="info-artista">
             <h2 class="descrip">Inés Criado</h2>
-            <h3 class="categorias">Poeta y artista</h3>
-            <p>Diseñadora gráfica y desarrolladora web.</h3>
+            <h3 class="categorias">Poesía y artista</h3>
+            <p>Pronombres ella/ellas. 25 años, residente en Valladolid.</p>
             <div class="enlaces">
-              <a href="#" alt="enlace al instagram de Ines"><button>instagram</button></a>
+              <a href="https://www.instagram.com/inescri.biendo/" alt="enlace al instagram de Ines"><button>instagram</button></a>
               <a href="contratar.html" alt="enlace a Ines"><button>Contratar</button></a>
             </div>
            </div>
@@ -109,10 +157,10 @@
           </picture>
           <div class="info-artista">
             <h2 class="descrip">Rubén Moragues</h2>
-            <h3 class="categorias">Actor y poeta</h3>
-            <p>Diseñadora gráfica y desarrolladora web.</h3>
+            <h3 class="categorias">Actuación y poesía</h3>
+            <p>Pronombres él/ellos. 20 años, residente en Granada, orginial de Alicante.</p>
             <div class="enlaces">
-              <a href="#" alt="enlace al instagram de Ruben"><button>instagram</button></a>
+              <a href="https://www.instagram.com/moragves/" alt="enlace al instagram de Ruben"><button>instagram</button></a>
               <a href="contratar.html" alt="enlace a Ruben"><button>Contratar</button></a>
             </div>
           </div>
@@ -124,11 +172,11 @@
           </picture>
           <div class="info-artista">
             <h2 class="descrip">Zero</h2>
-            <h3 class="categorias">Poeta y performer</h3>
-            <p>Diseñadora gráfica y desarrolladora web.</h3>
+            <h3 class="categorias">Rap y poesía</h3>
+            <p>Pronombres él/ellos. 31 años, residente en Valladolid.</p>
             <div class="enlaces">
-              <a href="https://www.instagram.com/hacheer__/" alt="enlace al instagram de Hacher"><button>instagram</button></a>
-              <a href="contratar.html" alt="enlace a Hacher"><button>Contratar</button></a>
+              <a href="https://www.instagram.com/zero_poetryrap/?hl=es" alt="enlace al instagram de Zero"><button>instagram</button></a>
+              <a href="contratar.html" alt="enlace a Zero"><button>Contratar</button></a>
              </div>
           </div>
         </div>
@@ -144,29 +192,15 @@
             <img src="img/Treboada_2.JPG" alt="Foto de Carolina Treboada">
           </picture>
           <div class="info-artista">
-            <h2 class="descrip">Carolina Treboada</h2>
-            <h3 class="categorias">Rapera y poeta</h3>
-            <p>Diseñadora gráfica y desarrolladora web.</h3>
+            <h2 class="descrip">Carol Treboada</h2>
+            <h3 class="categorias">Rap y poesía</h3>
+            <p>Pronombres ella/ellas. 36 años. Residente en Madrid.</p>
+            <p>Habla alemán, gallego e inglé.</h3>
             <div class="enlaces">
-              <a href="https://www.instagram.com/carolinatreboada/" alt="enlace al instagram de Carol"><button>instagram</button></a>
-              <a href="contratar.html" alt="enlace a Carol"><button>Contratar</button></a>
+              <a href="https://www.instagram.com/carolinatreboada/" alt="enlace al instagram de Carolina"><button>instagram</button></a>
+              <a href="contratar.html" alt="enlace a Carolina"><button>Contratar</button></a>
             </div>
           </div>
-      </div>
-
-      <div class="artista">
-        <picture>
-          <img src="img/Cris-Rivero_1.JPG" alt="Foto de Álvaro Basanta">
-        </picture>
-        <div class="info-artista">
-          <h2 class="descrip">Álvaro Basanta</h2>
-          <h3 class="categorias">Cantautor</h3>
-          <p>Diseñadora gráfica y desarrolladora web.</h3>
-          <div class="enlaces">
-            <a href="#" alt="enlace al instagram de álvaro"><button>instagram</button></a>
-            <a href="contratar.html" alt="enlace a Álvaro"><button>Contratar</button></a>
-          </div>
-        </div>
       </div>
 
       <div class="artista">
@@ -176,7 +210,7 @@
         <div class="info-artista">
           <h2 class="descrip">Jaime Hortelano</h2>
           <h3 class="categorias">Cantautor</h3>
-          <p>Diseñadora gráfica y desarrolladora web.</h3>
+          <p>Pronombres él/ellos. 28 años. Residente en Madrid, orginial de Cádiz.</p>
           <div class="enlaces">
             <a href="#" alt="enlace al instagram de Jaime"><button>instagram</button></a>
             <a href="contratar.html" alt="enlace a Jaime"><button>Contratar</button></a>
@@ -198,7 +232,7 @@
           <div class="info-artista">
             <h2 class="descrip">Mateo Pattons</h2>
             <h3 class="categorias">Performer</h3>
-            <p>Diseñadora gráfica y desarrolladora web.</h3>
+            <p>Pronombres él/elle/ellos/elles. 28 años. Residente en Logroño.</p>
             <div class="enlaces">
               <a href="#" alt="enlace al instagram de Mateo"><button>instagram</button></a>
               <a href="contratar.html" alt="enlace a Mateo"><button>Contratar</button></a>
@@ -212,8 +246,8 @@
           </picture>
           <div class="info-artista">
             <h2 class="descrip">Hacher</h2>
-            <h3 class="categorias">Fotógrafo</h3>
-            <p>Diseñadora gráfica y desarrolladora web.</h3>
+            <h3 class="categorias">Fotografía</h3>
+            <p>Pronombres él/ellos. 24 años. Residente en Madrid.</p>
             <div class="enlaces">
               <a href="https://www.instagram.com/hacheer__/" alt="enlace al instagram de Hacher"><button>instagram</button></a>
               <a href="contratar.html" alt="enlace a Hacher"><button>Contratar</button></a>
@@ -228,7 +262,7 @@
           <div class="info-artista">
             <h2 class="descrip">Ali A</h2>
             <h3 class="categorias">Artista y poeta</h3>
-            <p>Diseñadora gráfica y desarrolladora web.</h3>
+            <p>Pronombres ella/ellas. 25 años. Residente en Madrid, original de Cantabria.</p>
             <div class="enlaces">
               <a href="https://www.instagram.com/ali_abasc/" alt="enlace al instagram de Ali"><button>instagram</button></a>
             <a href="contratar.html" alt="enlace a Ali"><button>Contratar</button></a>
@@ -238,6 +272,9 @@
 
     </section>
     </section>
+
+    <h2>¿No sabes lo que buscas?</h2>
+    <h2>No te preocupes, nosotres te ayudamos.</h2>
 </div>
 
   <div class="newsletter">

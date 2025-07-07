@@ -54,6 +54,7 @@ const amores = FGrupo.querySelectorAll(".descrip.cabecera");
         pocos.remove();
         amores[2].remove();
         amores[1].innerText = "¿nos quieres?";
+        amores[1].style.color = "var(--color-2)";
 
         /* NO CONSIGO QUE FUNCIONE
         if(window.height > 720){
@@ -75,8 +76,9 @@ const bio = document.querySelectorAll(".element-grid-texto p.bio");
 const picture = document.querySelector("picture");
 const nav = document.querySelector("header")
 const svgs = document.querySelectorAll("svg");
+const clicks = document.querySelectorAll(".haz-click");
 
-let boolean = false;
+/*let boolean = false;*/
 
 for (let i = 0; i < imagenes.length; i++) {
 
@@ -111,8 +113,11 @@ for (let i = 0; i < imagenes.length; i++) {
        textosDescrip.forEach(texto => {
                 texto.style.color = "var(--texto-2)";
         });
+    clicks.forEach((descubrir) => {
+        descubrir.style.display = "block";
+    });
       
-      // Revertir después de 3 segundos
+      // Revertir después de 2 segundos
       setTimeout(() => {
         svg.style.stroke = "var(--texto-1)";
 
@@ -126,7 +131,7 @@ for (let i = 0; i < imagenes.length; i++) {
             texto.style.color = "inherit";
         });
 
-      }, 3000);
+      }, 2000);
     });
   });
         };  

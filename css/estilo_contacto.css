@@ -26,7 +26,9 @@
 }
 
 .elige button, .elige a{
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: transparent;
     border: none;
     color: var(--texto-1);
@@ -35,7 +37,6 @@
     font-weight: 900;
     text-decoration: none;
     width: 80%;
-    text-align: center;
 }
 
 .responsive button, .responsive a{
@@ -80,6 +81,73 @@
   align-items: center;
   justify-content: center;
   width: 100%;
+}
+
+.pasando{
+  position: fixed;
+  bottom: 200px;
+  font-size: 1.5em;
+  display: flex;
+  background-color: var(--texto-2);
+  padding: 20px;
+  transition: all 1s;
+}
+
+.pasando span{
+ color: var(--texto-1);
+}
+
+.mas{
+  visibility: hidden;
+}
+/*
+.filtros-artistas{
+  position: sticky;
+  right: 0;
+  top: 50px;
+  z-index: 10;
+  justify-content: end;
+}*/
+
+.filtro{
+  width: 30px;
+  padding: 4px;
+  background-color: var(--color-1);
+  border-radius: 5px;
+  mix-blend-mode: hard-light;
+  position: absolute;
+}
+
+.filtro.desplegado{
+  position: relative;
+}
+
+#filtro-form{
+display: none;
+flex-direction: column;
+}
+
+#filtro-form.desplegado{
+display: flex;
+}
+
+.labels{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+label, input, .opciones{
+  display: inline-block;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-family: monospace;
+}
+
+#text{
+  font-weight: bold;
+  color: var(--color-1);
 }
 
 .ordena{
