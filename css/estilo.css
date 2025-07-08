@@ -485,15 +485,15 @@ svg{ /*ojo en svg*/
 
 /*---------------POP-UP TARJETA---------------*/
 
-.tarjeta{
+.tarjeta, .popup{
     position: fixed;
     top: 0;
     left: 0;
+    height: 100%;
+    width: 100%;
     display: none;
     justify-content: center;
     background-color: rgb(17, 56, 58, 0.8);
-    height: 100%;
-    width: 100%;
     align-items: center;
     z-index: 10;
 }
@@ -502,24 +502,24 @@ svg{ /*ojo en svg*/
         display: flex;
     }
 
-.tarjeta-presentacion{
+.tarjeta-presentacion, .popup-contenido {
     display: flex;
     flex-direction: column;
-    width: 60%;
+    width: 90%;
+    max-width: 600px;
     height: 80dvh;
     padding: 20px 60px 40px;
     border-radius: 10%;
     background-color: var(--texto-2);
     box-shadow:  -6px 7px 10px 5px rgb(0, 0, 0, 0.4);
     overflow: hidden;
-    z-index: 1;
 }
 
 .tarjeta .grafico{  /*agrupacion titulo + foto*/
     height: 80%;
 }
 
-.tarjeta h3{
+h3.titulo-popup{
     text-align: center;
     font-size: 3em;
 }

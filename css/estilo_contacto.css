@@ -227,7 +227,7 @@ section.artistas{
   display: flex;
 }
 
-.enlaces a{
+.enlaces a, .btn.contratar{
   background-color: var(--color-1);
   color: var(--texto-2);
   text-align: center;
@@ -237,17 +237,16 @@ section.artistas{
   font-size: 1.5em;
   text-transform: uppercase;
   cursor: pointer;
+  border: none;
+  text-decoration: none;
+  margin: 10px 10px 0 0;
 }
 
-.enlaces a:hover{
+.enlaces a:hover, .btn.contratar{
   background-color: var(--color-2);
   color: var(--texto-1);
 }
 
-.enlaces a{
-  text-decoration: none;
-  margin: 10px 10px 0 0;
-}
 
 /*Formulario CONTRATAR*/
     h1 {
@@ -292,25 +291,13 @@ section.artistas{
     }
 
 
-    /**/
-.popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  background-color: var(--texto-1, 0.6);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
+/*.popup estilo en estilo.css con .tarjeta*/
 .popup.desplegado{
     display: flex;
 }
 
-.popup-contenido {
+/*
+ .popup-contenido{
   background-color: var(--texto-2);
   padding: 1rem;
   max-width: 600px;
@@ -319,6 +306,7 @@ section.artistas{
   overflow: auto;
   border-radius: 10px;
 }
+*/
 
 .popup iframe {
   width: 100%;

@@ -22,7 +22,7 @@
 </head>
 <body>
 
-  <h1>Pide presupuesto a Arpista en Madrid. Eventos y bodas.</h1>
+  <h3 class="titulo-popup">Pide presupuesto</h3>
 
   <form>
     <div>
@@ -35,16 +35,16 @@
     <div>
       <label for="comunidad">Comunidad</label>
       <select id="comunidad" name="comunidad">
-        <option>Todas</option>
-        <option>Cantabria</option>
-        <option>Castilla y León</option>
-        <option>Granada</option>
-        <option>Logroño</option>
-        <option>Madrid</option>
-        <option>Málaga</option>
-        <option>Cantabria</option>
-        <option>Valadolid</option>
-        <option>Zaragoza</option>
+        <option selected disabled>Lugar del evento</option>
+        <option value="1">Cantabria</option>
+        <option value="2">Castilla y León</option>
+        <option value="3">Granada</option>
+        <option value="4">Logroño</option>
+        <option value="5">Madrid</option>
+        <option value="6">Málaga</option>
+        <option value="7">Cantabria</option>
+        <option value="8">Valadolid</option>
+        <option value="9">Zaragoza</option>
       </select>
     </div>
 
@@ -60,7 +60,7 @@
 
     <div>
       <label for="hora">Hora del evento</label>
-      <input type="hour" id="hora" name="hora"/>
+      <input type="time" id="hora" name="hora" min="00:00" max="23:59"/>
     </div>
 
     <div>
@@ -71,9 +71,14 @@
     </div>
 
     <div>
-      <label for="asistentes">Nro de asistentes</label>
+      <label for="asistentes">Número de asistentes</label>
       <select id="asistentes" name="asistentes">
-        <option>Número de asistentes</option>
+        <option selected disabled>Número aproximado de asistentes</option>
+        <option value="1">< 10</option>
+        <option value="1">10 - 50</option>
+        <option value="1">50 - 100</option>
+        <option value="1">+ 100</option>
+
       </select>
     </div>
 
