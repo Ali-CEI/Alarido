@@ -3,7 +3,7 @@
   /*PRIMERA SECCION DE LA PORTADA*/
 .primera-portada{ /*div global de la intro*/
     width: 100%;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 120px);
     display: flex;
     flex-direction: column;
     align-items: center;
