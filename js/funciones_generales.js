@@ -91,7 +91,7 @@ if (!form) return;
       simulacion.style.transform = "translateY(-1.9em)";
 
   } else {
-    form.style.transform = "translateY(-4.3em)";
+    form.style.transform = "translateY(-3.3em)";
     simulacion.style.transform = "translateY(-1.9em)";
 
   }
