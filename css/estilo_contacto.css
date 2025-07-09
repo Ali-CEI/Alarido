@@ -242,6 +242,7 @@ display: flex;
 .algo{
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
 }
 
 .cerrar{

@@ -98,3 +98,19 @@ picture img{
 
 
 }
+
+
+@media screen and (max-width: 350px) {
+
+.newsletter{
+    font-size: 1.5em;
+}
+
+.text-apuntarse{
+  transform: translateY(-3.3em);
+}
+
+input.text-sim{
+    font-size: 1.8em;
+}
+}

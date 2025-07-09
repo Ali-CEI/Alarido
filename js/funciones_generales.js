@@ -82,14 +82,36 @@ const simulacion = document.querySelector(".simulacion");
 if (!form) return;
 
  form.addEventListener('mouseenter', ()  => {
-    form.style.transform = window.innerWidth < 770 ? "translateY(-3.6em)" : "translateY(-3.3em)";
+    if (window.innerWidth < 350) {
+    form.style.transform = "translateY(-4.5em)";
+    simulacion.style.transform = "translateY(-2.3em)";
+
+  } else if (window.innerWidth < 770) {
+    form.style.transform = "translateY(-3.7em)";
+      simulacion.style.transform = "translateY(-1.9em)";
+
+  } else {
+    form.style.transform = "translateY(-4.3em)";
     simulacion.style.transform = "translateY(-1.9em)";
+
+  }
     simulacion.style.opacity = "1";
+    
 });
+    
 
 cierre.addEventListener("mouseleave", () => {
-    form.style.transform = window.innerWidth < 770 ? "translateY(-2.3em)" : "translateY(-2.1em)";
+      if (window.innerWidth < 350) {
+    form.style.transform = "translateY(-3.3em)";
+    simulacion.style.transform = "translateY(-2.7em)";
+  } else if (window.innerWidth < 770) {
+    form.style.transform = "translateY(-2.3em)";
     simulacion.style.transform = "translateY(-0.7em)";
+  } else {
+    form.style.transform = "translateY(-2.1em)";
+    simulacion.style.transform = "translateY(-0.7em)";
+  }
+    
     simulacion.style.opacity = "0";
 });
 
