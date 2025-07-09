@@ -250,6 +250,15 @@ section.artistas{
 }
 
 /*.popup estilo en estilo.css con .tarjeta*/
+.algo{
+  display: flex;
+  justify-content: space-between;
+}
+
+.cerrar{
+    color: var(--color-1);
+}
+
 form.contratar{
     display: grid;
     grid-template-columns: auto;

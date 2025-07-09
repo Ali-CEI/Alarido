@@ -512,7 +512,7 @@ svg{ /*ojo en svg*/
     height: 80%;
 }
 
-h3.titulo-popup{
+h3.titulo-popup, .cerrar{
     text-align: center;
     font-size: 3em;
 }

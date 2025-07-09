@@ -122,18 +122,19 @@ function contratar() {
    
     const contratar = document.querySelectorAll(".btn.contratar");
     const popup = document.getElementById("popup")
-    contratado = false;
 
     contratar.forEach(contrato => {
         contrato.addEventListener("click", () => {
             popup.classList.add("desplegado");
-            contratado = true;
         });
 
-        if(contratado = true){
-            window.addEventListener
-        }
-        
+    
+    const cerrar = document.querySelector(".cerrar");
+    
+    cerrar.addEventListener("click", () => {
+        popup.classList.remove("desplegado");
+    });
+
     });};
 
 

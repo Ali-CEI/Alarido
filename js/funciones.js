@@ -69,8 +69,8 @@ const amores = FGrupo.querySelectorAll(".descrip.cabecera");
 const imagenes = document.querySelectorAll(".element-grid-img-int");
 const textosDescrip = document.querySelectorAll(".grid-texto");
 const contenedor = document.querySelector(".tarjeta");
-const tarjeta = document.querySelector(".tarjeta h3.tarjeta img");
-const titulo = document.querySelector("titulo-popup");
+const tarjeta = document.querySelector(".tarjeta picture img");
+const titulo = document.querySelector(".titulo-popup");
 const parrafo = document.querySelector(".tarjeta p");
 const bio = document.querySelectorAll(".element-grid-texto p.bio");
 const picture = document.querySelector("picture");
@@ -82,15 +82,13 @@ const clicks = document.querySelectorAll(".haz-click");
 
 for (let i = 0; i < imagenes.length; i++) {
 
-    for(let j = 0; j < svgs.length; j++){
+    //for(let j = 0; j < svgs.length; j++){
 
     imagenes[i].setAttribute('alt', textosDescrip[i].innerText); //asigna el texto de la descripción como atributo alt de la imagen
-    
         if(window.innerWidth > 1024){
 
          /*------- Cambia el fondo a color al colocar el cursor sobre las imagenes de projectos -------*/
         imagenes[i].addEventListener('mouseenter', () => {
-
             document.body.style.backgroundColor = 'var(--color-1)'; //cambia el fondo del body al color de la variable
             imagenes[5].style.backgroundColor = 'var(--color-2)'; //cambia el fondo de la imagen del canvas al color de la variable
     
@@ -101,9 +99,8 @@ for (let i = 0; i < imagenes.length; i++) {
      
         }else{
         
-        clicks.forEach((descubrir) => {
-            descubrir.style.display = "block";
-        });
+            clicks.forEach((descubrir) => {
+                descubrir.style.display = "block";});
 
         // SVGs: click -> color temporal
             svgs.forEach((svg) => {
@@ -115,25 +112,19 @@ for (let i = 0; i < imagenes.length; i++) {
                     imagenes[5].style.backgroundColor = 'var(--color-2)';
             
                     textosDescrip.forEach(texto => {
-                        texto.style.color = "var(--texto-2)";
-                    });
+                        texto.style.color = "var(--texto-2)";});
       
-        // Revertir después de 2 segundos
-            setTimeout(() => {
-                svg.style.stroke = "var(--texto-1)";
+                setTimeout(() => { // Revertir después de 2 segundos
+                    svg.style.stroke = "var(--texto-1)";
 
-                if (body.classList.contains('dark')) {
-                    body.style.backgroundColor = '#000'; //si está en modo oscuro, el fondo vuelve a ser el del body   
-                } else {
-                    body.style.backgroundColor = '#ffffff';
-                };
+                    if (body.classList.contains('dark')) { body.style.backgroundColor = '#000'; //si está en modo oscuro, el fondo vuelve a ser el del body   
+                    } else { body.style.backgroundColor = '#ffffff';};
 
-                imagenes[5].style.backgroundColor = '';
+                    imagenes[5].style.backgroundColor = '';
             
-                textosDescrip.forEach(texto => {
-                    texto.style.color = "inherit";
-                });
-            }, 2000);
+                    textosDescrip.forEach(texto => {
+                        texto.style.color = "inherit";});
+                }, 2000);
             });
         });};  
 
@@ -173,7 +164,7 @@ for (let i = 0; i < imagenes.length; i++) {
             parrafo.innerText = TextoParrafo;
         }});
 };
-};  
+//};  
 
     contenedor.addEventListener("click", () => {
         contenedor.classList.remove("visible");
