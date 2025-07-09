@@ -170,7 +170,7 @@ header a:hover, nav button:hover, .frente.cierre a:hover{
     font-family: sans-serif;
     font-weight: 900;
     text-transform: uppercase;
-    font-size: clamp(32px, 18vw, 12em);
+    font-size: 12em;
     line-height: 1;
     z-index: 1;
     opacity: 0;
@@ -664,5 +664,9 @@ input.text-sim{
 
 .img-sec-portada{ /*adaptar al nuevo padding de p-sec*/
     width: calc(100% + 40px);
+}
+
+.texto-animado span {
+    font-size: 10em;
 }
 }

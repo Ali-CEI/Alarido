@@ -1,3 +1,4 @@
+
 .elige{
     display: flex;
     align-items: center;
@@ -103,56 +104,6 @@
   color: inherit;
 }
 
-/*
-.filtros-artistas{
-  position: sticky;
-  right: 0;
-  top: 50px;
-  z-index: 10;
-  justify-content: end;
-}*/
-
-.filtro{
-  width: 30px;
-  padding: 4px;
-  background-color: var(--color-1);
-  border-radius: 5px;
-  mix-blend-mode: hard-light;
-  position: absolute;
-}
-
-.filtro.desplegado{
-  position: relative;
-}
-
-#filtro-form{
-display: none;
-flex-direction: column;
-}
-
-#filtro-form.desplegado{
-display: flex;
-}
-
-.labels{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-label, input, .opciones{
-  display: inline-block;
-  background-color: transparent;
-  border: none;
-  outline: none;
-  font-family: monospace;
-}
-
-#text{
-  font-weight: bold;
-  color: var(--color-1);
-}
-
 .ordena{
   display: none;
   text-align: center;
@@ -164,8 +115,13 @@ label, input, .opciones{
   background-color: var(--color-1);
 }
 
+/*WEB CONTRATAR ARTISTAS*/
 .p-sec.contacto{
-    flex-direction: column;
+  flex-direction: column;
+}
+
+.texto-animado.contactar{
+    font-size: 0.8em;
 }
 
 .artista .descrip{
@@ -249,6 +205,39 @@ section.artistas{
   color: var(--texto-1);
 }
 
+.filtro{
+  width: 30px;
+  padding: 4px;
+  background-color: var(--color-1);
+  border-radius: 5px;
+  mix-blend-mode: hard-light;
+  position: absolute;
+}
+
+.filtro.desplegado{
+  position: relative;
+}
+
+#filtro-form{
+display: none;
+flex-direction: column;
+}
+
+#filtro-form.desplegado{
+display: flex;
+}
+
+.labels{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#text{
+  font-weight: bold;
+  color: var(--color-1);
+}
+
 /*.popup estilo en estilo.css con .tarjeta*/
 .algo{
   display: flex;
@@ -280,7 +269,7 @@ label {
     font-family: "league gothic";
 }
 
-input, select, textarea {
+input, select, textarea, .opciones {
     width: 100%;
     padding: 0.6em;
     border: 1px solid #ccc;
@@ -302,10 +291,6 @@ input, select, textarea {
 @media screen and (min-width: 1920px){
 .artista picture{
     width: 550px;
-}
-
-.enlaces{
-      justify-content: space-evenly;
 }
 }
 
@@ -344,7 +329,7 @@ section.artistas{
 }
 }
 
-@media screen and (max-width: 480px){
+@media screen and (max-width: 640px){
 .artista{
     flex-direction: column;
     align-items: center;

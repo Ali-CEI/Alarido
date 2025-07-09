@@ -78,6 +78,10 @@
     padding: 48px;
 }
 
+.texto-animado span {
+    font-size: 9em;
+}
+
     .descrip {
       font-size: 6em;
     }
@@ -98,6 +102,10 @@
     padding: 0 20px;
     justify-content: space-evenly;
     min-height: auto;
+}
+
+.texto-animado span {
+    font-size: 8em;
 }
 
 .introduccion{
@@ -200,7 +208,7 @@ header a, header button{ /*enlace de la navegación*/
 }
   
 .texto-animado span {
-    font-size: clamp(8em);
+    font-size: 5em;
     line-height: 1;
     font-weight: 900;
 }
