@@ -15,47 +15,6 @@
     font-size: 6em;
 }
 
-.pildoras span {
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-    cursor: default;
-}
-
-.pildoras span.aparecido {
-    opacity: 1;
-}
-
-.matrix .btn, .matrix a{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--texto-1);
-    font-family: "league gothic";
-    font-size: 6rem;
-    font-weight: 900;
-    text-decoration: none;
-    width: 80%;
-}
-
-.responsive .btn, .responsive a{
-    width: 150px;
-    text-align: center;
-    font-size: 4rem;
-}
-
-.pildoras:hover{
-    cursor: pointer;
-    animation: flotar 1.5s ease-in-out infinite;
-    background-color: var(--color-1);
-    color: var(--texto-2);
-    padding: 0 10px;
-}
-
-    @keyframes flotar{
-      0%, 100% { transform: translateY(0);}
-      50% { transform: translateY(-20px);}
-    }
-
 .matrix{
     margin: 2em;
     gap: 2em;
@@ -76,6 +35,47 @@
   justify-content: center;
   width: 100%;
 }
+
+.matrix .btn, .matrix a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--texto-1);
+    font-family: "league gothic";
+    font-size: 6rem;
+    font-weight: 900;
+    text-decoration: none;
+    width: 40%;
+}
+
+.responsive .btn, .responsive a{
+    width: 150px;
+    text-align: center;
+    font-size: 4rem;
+}
+
+.pildoras span {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    cursor: default;
+}
+
+.pildoras span.aparecido {
+    opacity: 1;
+}
+
+.pildoras:hover{
+    cursor: pointer;
+    animation: flotar 1.5s ease-in-out infinite;
+    background-color: var(--color-1);
+    color: var(--texto-2);
+    padding: 0 10px;
+}
+
+    @keyframes flotar{
+      0%, 100% { transform: translateY(0);}
+      50% { transform: translateY(-20px);}
+    }
 
 .pasando{
   position: fixed;
@@ -155,6 +155,8 @@ label, input, .opciones{
 
 .ordena{
   display: none;
+  text-align: center;
+  justify-content: space-around;
 }
 
 .linea{
@@ -227,7 +229,7 @@ section.artistas{
   display: flex;
 }
 
-.enlaces a, .btn.contratar{
+.enlaces a, .btn.contratar, form button{
   background-color: var(--color-1);
   color: var(--texto-2);
   text-align: center;
@@ -242,44 +244,40 @@ section.artistas{
   margin: 10px 10px 0 0;
 }
 
-.enlaces a:hover, .btn.contratar{
+.enlaces a:hover, .btn.contratar:hover{
   background-color: var(--color-2);
   color: var(--texto-1);
 }
 
+/*.popup estilo en estilo.css con .tarjeta*/
+form.contratar{
+    display: grid;
+    grid-template-columns: auto;
+    gap: 1rem;
+    max-width: 800px;
+}
+
+.popup iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
 
 /*Formulario CONTRATAR*/
-    h1 {
-      font-weight: bold;
-      font-size: 1.5rem;
-      margin-bottom: 1.5rem;
-    }
+label {
+    margin-bottom: 0.25rem;
+    color: var(--color-1);
+    font-family: "league gothic";
+}
 
-    form {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1rem;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    label {
-      display: block;
-      font-weight: bold;
-      margin-bottom: 0.25rem;
-      color: #f4511e;
-    }
-
-    input,
-    select,
-    textarea {
-      width: 100%;
-      padding: 0.5rem;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 1rem;
-      box-sizing: border-box;
-    }
+input, select, textarea {
+    width: 100%;
+    padding: 0.6em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.8em;
+    box-sizing: border-box;
+}
 
     textarea {
       grid-column: 1 / -1;
@@ -290,32 +288,18 @@ section.artistas{
       grid-column: 1 / -1;
     }
 
-
-/*.popup estilo en estilo.css con .tarjeta*/
-.popup.desplegado{
-    display: flex;
-}
-
-/*
- .popup-contenido{
-  background-color: var(--texto-2);
-  padding: 1rem;
-  max-width: 600px;
-  width: 90%;
-  height: 80%;
-  overflow: auto;
-  border-radius: 10px;
-}
-*/
-
-.popup iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-
 /*---MEDIA RESPONSIVE---*/
+@media screen and (min-width: 1920px){
+.artista picture{
+    width: 550px;
+}
+
+.enlaces{
+      justify-content: space-evenly;
+}
+}
+
+
 @media screen and (max-width: 1024px){
 section.artistas{
   display: grid;
@@ -350,12 +334,7 @@ section.artistas{
 }
 }
 
-
 @media screen and (max-width: 480px){
-.info-artista {
-  margin-left: 0;
-}
-
 .artista{
     flex-direction: column;
     align-items: center;

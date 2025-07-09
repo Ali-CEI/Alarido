@@ -4,20 +4,15 @@
     transition: all 1s ease;
 }
 
+.frente.intro{
+    margin-bottom: 1em;
+}
+
 .project-grid {
     grid-template-columns: 1fr 1fr;
     padding: 1em 0;
     grid-area: auto;
     gap: 1em;
-}
-
-.newsletter button{
-    display: block;
-    background-color: transparent;
-    border: none;
-    color: var(--color-1);
-    font-family: "league gothic";
-    font-size: 2.5rem;
 }
 
 .element-grid:nth-child(1n) {
@@ -50,6 +45,15 @@
     filter: none;
 }
 
+.newsletter button{
+    display: block;
+    background-color: transparent;
+    border: none;
+    color: var(--color-1);
+    font-family: "league gothic";
+    font-size: 2.5rem;
+}
+
 .haz-click{
     display: inline-block;
     margin: -0.5em;
@@ -61,6 +65,7 @@
 .tres .haz-click{
     text-align: right;
 }
+
 }
 
 
@@ -158,7 +163,7 @@
 }
 
 .text-apuntarse{
-  transform: translateY(-2.5rem);
+  transform: translateY(-1.7em);
 }
 
 }
@@ -224,7 +229,7 @@ header a, header button{ /*enlace de la navegación*/
 
 
 /*---------------TARJETAS---------------*/
-.tarjeta.presentacion{
+.tarjeta.presentacion, .popup-contenido {
     width: 90%;
     justify-content: space-around;
 }

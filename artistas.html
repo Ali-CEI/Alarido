@@ -10,8 +10,6 @@
   <link rel="stylesheet" href="css/estilo_tablets.css"> <!--Estilo para pantallas de menos de 1024px-->
   <link rel="stylesheet" href="css/estilo_mobile.css"> <!--Estilo para pantallas de menos de 480px-->
   <link rel="stylesheet" href="css/estilo_contacto.css">
-    <link rel="stylesheet" href="css/estilo_contratar.css">
-
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -288,12 +286,6 @@
     </section>
     </section>
 
-<div id="popup" class="popup">
-  <div class="popup-contenido">
-        <iframe src="contratar.html"></iframe>
-    </div>
-    </div>
-    
       <h2 class="expresiones">¿No sabes lo que buscas?</h2>
       <h4>No te preocupes, te ayudamos.</h4>
     </div>
@@ -308,6 +300,102 @@
     </form>
     </div>
   </div>
+
+
+  <div id="popup" class="popup">
+  <div class="popup-contenido">
+      <h3 class="titulo-popup">Pide presupuesto</h3>
+  <form class="contratar">
+
+    <div name="datos-contacto">
+      <label for="nombre">Nombre</label>
+      <input type="text" id="name" name="name" required/>
+    </div>
+
+    <div name="datos-contacto">
+      <label for="apellidos">Apellidos</label>
+      <input type="text" id="apellidos" name="apellidos" required/>
+    </div>
+
+        <div name="datos-contacto">
+    <label for="phone">Nº de teléfono</label>
+<input type="tel" id="phone" name="phone" required />
+</div>
+
+    <div class="">
+      <label for="tipo-evento">Tipo de evento</label>
+      <select id="tipo-evento" name="tipo-evento">
+        <option>Seleccionar tipo de evento</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="comunidad">Comunidad</label>
+      <select id="comunidad" name="comunidad">
+        <option selected disabled class="muted">Lugar del evento</option>
+        <option value="1">Cantabria</option>
+        <option value="2">Castilla y León</option>
+        <option value="3">Granada</option>
+        <option value="4">Logroño</option>
+        <option value="5">Madrid</option>
+        <option value="6">Málaga</option>
+        <option value="7">Cantabria</option>
+        <option value="8">Valadolid</option>
+        <option value="9">Zaragoza</option>
+      </select>
+    </div>
+
+    <div class="full-width">
+      <label for="cp">Lugar</label>
+      <input type="text" id="lugar" name="lugar" />
+    </div>
+
+    <div>
+      <label for="fecha">Día del evento</label>
+      <input type="date" id="fecha" name="fecha" />
+    </div>
+
+    <div>
+      <label for="hora">Hora del evento</label>
+      <input type="time" id="hora" name="hora" min="00:00" max="23:59"/>
+    </div>
+
+    <div>
+      <label for="duracion">Duración</label>
+      <select id="duracion" name="duracion">
+        <option>No lo sé</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="asistentes">Número de asistentes</label>
+      <select id="asistentes" name="asistentes">
+        <option selected disabled>Número aproximado de asistentes</option>
+        <option value="1">&lt; 10</option>
+        <option value="1">10 - 50</option>
+        <option value="1">50 - 100</option>
+        <option value="1">+ 100</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="presupuesto">Presupuesto aproximado</label>
+      <select id="presupuesto" name="presupuesto">
+        <option>Presupuesto aproximado</option>
+      </select>
+    </div>
+
+    <div class="full-width">
+      <label for="detalles">Detalles de tu fiesta o evento</label>
+      <textarea id="detalles" name="detalles" placeholder="Incluye toda la información relevante..."></textarea>
+    </div>
+
+    <button type="submit">Enviar</button>
+  </form>
+    </div>
+  </div>
+
+
 
 </body>
 </html>

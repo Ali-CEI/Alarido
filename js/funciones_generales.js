@@ -82,13 +82,13 @@ const simulacion = document.querySelector(".simulacion");
 if (!form) return;
 
  form.addEventListener('mouseenter', ()  => {
-    form.style.transform = window.innerWidth < 770 ? "translateY(-6rem)" : "translateY(-6.3rem)";
-    simulacion.style.transform = "translateY(-3rem)";
+    form.style.transform = window.innerWidth < 770 ? "translateY(-3.6em)" : "translateY(-3.3em)";
+    simulacion.style.transform = "translateY(-2em)";
     simulacion.style.opacity = "1";
 });
 
 cierre.addEventListener("mouseleave", () => {
-    form.style.transform = window.innerWidth < 770 ? "translateY(-2.5rem)" : "translateY(-3.3rem)";
+    form.style.transform = window.innerWidth < 770 ? "translateY(-2.3em)" : "translateY(-2.1em)";
     simulacion.style.transform = "translateY(0)";
     simulacion.style.opacity = "0";
 });

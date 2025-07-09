@@ -327,14 +327,12 @@ h4.text-p span.sub:hover{ /*tachado palabras primera seccion*/
 }
 
     /*-----------FONDO PROJECTOS----------*/
-.fondo.grid{ 
-    position: relative;
+.fondo.grid, .frente.grid{ 
     padding: 48px;
 }
 
-.frente.grid{
-    padding: 48px;
-    z-index: 0;
+.fondo.grid{
+    position: relative;
 }
 
 .fondo.grid.oraciones {
@@ -364,12 +362,11 @@ h4.text-p span.sub:hover{ /*tachado palabras primera seccion*/
     line-height: 0.8em;
 }
 
-.descrip span {
+.descrip span, .descrip.cabecera {
     color: var(--color-1);
 }
 
 .descrip.cabecera {
-    color: var(--color-1);
     font-weight: 700;
     text-transform: lowercase;
 }
@@ -383,7 +380,7 @@ h4.text-p span.sub:hover{ /*tachado palabras primera seccion*/
 }
 
 .blur{ /*texto borroso*/
-    filter:blur(3px);
+    filter: blur(3px);
 }
 
 /*---------------GALERIA PROJECTOS---------------*/
@@ -467,15 +464,11 @@ h4.text-p span.sub:hover{ /*tachado palabras primera seccion*/
     font-size: 1.8em;
 }
 
-.bio{/*info que se traslada a la tarjeta*/
+.bio, .haz-click{ /*info que se traslada a la tarjeta*/
   display: none;
 }
 
     /*--ACTIVAR CAMBIO FONDO EN DISPOSITIVOS TACTILES--*/
-.haz-click{ /*frase que indica como activarlo*/
-    display: none;
-}
-
 svg{ /*ojo en svg*/
     display: none;
     stroke-width: 4px;
@@ -498,7 +491,7 @@ svg{ /*ojo en svg*/
     z-index: 10;
 }
 
-    .tarjeta.visible{
+    .tarjeta.visible, .popup.desplegado{
         display: flex;
     }
 
@@ -506,13 +499,13 @@ svg{ /*ojo en svg*/
     display: flex;
     flex-direction: column;
     width: 90%;
-    max-width: 600px;
+    max-width: 800px;
     height: 80dvh;
     padding: 20px 60px 40px;
     border-radius: 10%;
     background-color: var(--texto-2);
     box-shadow:  -6px 7px 10px 5px rgb(0, 0, 0, 0.4);
-    overflow: hidden;
+    overflow: scroll;
 }
 
 .tarjeta .grafico{  /*agrupacion titulo + foto*/
@@ -619,7 +612,7 @@ h3.titulo-popup{
     z-index: 1;
     position: absolute;
     bottom: 0;
-    transform: translateY(-3.3rem);
+    transform: translateY(-2.1em);
     transition: transform 0.2s linear;
 }
 
