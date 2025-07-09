@@ -216,6 +216,7 @@ div.vertical-linea{ /*linea vertical color (elemento decoracion)*/
     background-color:var(--color-1);
     position: absolute;
     left: 40%;
+    opacity: 60%;
     width: 1.5pt;
     animation: crecimiento 10s linear forwards; /*crece de arriba a abajo y se queda*/
 }

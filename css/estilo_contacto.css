@@ -80,7 +80,7 @@
 
 .pasando{
   position: fixed;
-  bottom: 200px;
+  bottom: 100px;
   font-size: 1.5em;
   display: flex;
   background-color: var(--texto-2);
@@ -327,6 +327,7 @@ section.artistas{
 .pasando{
   flex-direction: column;
   text-align: center;
+  bottom: 60px;
 }
 }
 

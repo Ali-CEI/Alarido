@@ -106,11 +106,27 @@ picture img{
     font-size: 1.5em;
 }
 
+.texto-fondo:nth-child(2) {
+    padding-left: 55%;
+}
+
+h4.text-p{
+    font-size: 1em;
+}
+
 .text-apuntarse{
   transform: translateY(-3.3em);
 }
 
 input.text-sim{
-    font-size: 1.8em;
+    font-size: 1.6em;
+}
+
+.descrip, .descrip.cierre {
+    font-size: 2em;
+}
+
+.descrip.cabecera, .texto-animado span{
+    font-size: 3em;
 }
 }
