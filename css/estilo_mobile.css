@@ -65,11 +65,11 @@
 }
 
 .descrip.cabecera{
-    color: var(--color-2);
+    color: var(--color-1);
 }
 
 .descrip.cabecera span{
-    color: var(--texto-1);
+    color: var(--texto-2);
 }
 
 .tarjeta-presentacion, .popup-contenido  {

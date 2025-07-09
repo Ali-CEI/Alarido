@@ -257,6 +257,7 @@ section.artistas{
 
 .cerrar{
     color: var(--color-1);
+    font-size: 2em;
 }
 
 form.contratar{

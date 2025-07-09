@@ -83,19 +83,19 @@ if (!form) return;
 
  form.addEventListener('mouseenter', ()  => {
     form.style.transform = window.innerWidth < 770 ? "translateY(-3.6em)" : "translateY(-3.3em)";
-    simulacion.style.transform = "translateY(-2em)";
+    simulacion.style.transform = "translateY(-1.9em)";
     simulacion.style.opacity = "1";
 });
 
 cierre.addEventListener("mouseleave", () => {
     form.style.transform = window.innerWidth < 770 ? "translateY(-2.3em)" : "translateY(-2.1em)";
-    simulacion.style.transform = "translateY(0)";
+    simulacion.style.transform = "translateY(-0.7em)";
     simulacion.style.opacity = "0";
 });
 
 simulacion.addEventListener('submit', function(event) {
     event.preventDefault();
-    console.log("Menos mal que no funciona. ¿Apuntándote a otra [mierda] que vas a dejar sin leer?",
+    console.log("Menos mal que no funciona. ¿Apuntándote a otra [m̷i̷e̷r̷d̷a̷] que vas a dejar sin leer?",
       "Esperamos que, al menos, no nos mandes a SPAM.");
 });
 

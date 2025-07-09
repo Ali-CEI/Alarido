@@ -55,15 +55,7 @@ const amores = FGrupo.querySelectorAll(".descrip.cabecera");
         amores[2].remove();
         amores[1].innerText = "¿nos quieres?";
         amores[1].style.color = "var(--color-2)";
-
-        /* NO CONSIGO QUE FUNCIONE
-        if(window.height > 720){
-        amores[1].style.color = body.classList.contains('dark') ? "var(--texto-1)" : "var(--color-2)"; // No detecta el pulsar el botón de modo oscuro
-
-        }else{
-        amores[1].style.color = body.classList.contains('dark') ? "var(--texto-1)" : "var(--color-2)"; // No detecta el pulsar el botón de modo oscuro
-        }*/
-});
+    });
 
                     /*----- JS DE LA SECCIÓN DE PROJECTOS -----*/
 const imagenes = document.querySelectorAll(".element-grid-img-int");

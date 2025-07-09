@@ -506,13 +506,14 @@ svg{ /*ojo en svg*/
     background-color: var(--texto-2);
     box-shadow:  -6px 7px 10px 5px rgb(0, 0, 0, 0.4);
     overflow: scroll;
+    justify-content: center;
 }
 
 .tarjeta .grafico{  /*agrupacion titulo + foto*/
-    height: 80%;
+    height: 70%;
 }
 
-h3.titulo-popup, .cerrar{
+h3.titulo-popup{
     text-align: center;
     font-size: 3em;
 }
@@ -588,6 +589,7 @@ h3.titulo-popup, .cerrar{
   display: flex;
   opacity: 0;
   position: relative;
+  transform: translateY(-0.7em);
   transition: transform 0.2s linear;
 }
 
