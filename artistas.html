@@ -16,7 +16,6 @@
   <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <script defer src="js/funciones_contacta.js"></script> <!--Link java-->
   <script defer src="js/funciones_generales.js"></script> <!--Link java-->
-    <script defer src="js/filtro_artistas.js"></script> <!--Link java-->
 
 </head>
 <body>
@@ -37,59 +36,18 @@
 
 
   <div class="p-sec contacto">
-    <div class="texto-animado contactar">
-        <span class="aparecido">CONTACTA</span>
+    <div class="pp-contactar">
+        <h1 class="contactar">Contacta</h1>
+        <h4>Catálogo de artistas actualizado</h4>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga ipsam, ut voluptate, maxime repudiandae odio hic quas nostrum corporis veritatis sapiente qui quod eveniet nesciunt minima facilis molestias recusandae magnam?</p>
       </div>
-      
-    <section class="filtros-artistas">
-    <img class="filtro" src="img/filtrar.png" alt="Filtrar">
-  <form id="filtro-form">
-      <h3>Filtrar artistas</h3>
-
-    <div class="labels">
-    <label>Género:
-      <select id="filtro-genero" class="opciones">
-        <option value="">Todos</option>
-        <option value="poeta">Poesía</option>
-        <option value="cantautor">Cantautor</option>
-        <option value="rapera">Rap</option>
-        <option value="fotógrafo">Fotografía</option>
-        <option value="performer">Artista</option>
-      </select>
-    </label>
-
-    <label>Tipo de arte:
-      <select id="filtro-tipo" class="opciones">
-        <option value="">Todos</option>
-        <option value="poesia">Poesía</option>
-        <option value="musica">Música</option>
-        <option value="arte">Arte</option>
-      </select>
-    </label>
-
-    <label>Localidad:
-      <input type="text" id="filtro-localidad" placeholder="Introduce una ciudad">
-    </label>
-
-        <label>Edad:
-      <select id="filtro-edad" class="opciones">
-        <option value="">Todos</option>
-        <option value="poesia">> 18 años</option>
-        <option value="musica">18 - 35 años</option>
-        <option value="arte">&lt;&nbsp;35 años</option>
-      </select>
-    </label>
-</div>  
-    <button type="submit">Filtrar</button>
-  </form>
-</section>
 
     <div class="galeria-artistas">
       <section class="poesia">
         <h2 class="expresiones ">poesía</h2> 
         <section class="artistas poesia">
         
-        <div class="artista visible">
+        <div class="artista">
           <picture>
             <img src="img/Cris-Rivero_2.JPG" alt="Foto de Cris Rivero">
           </picture>
@@ -305,14 +263,14 @@
 
   <div id="popup" class="popup">
   <div class="popup-contenido">
-    <div class="algo">
+    <div class="presupuestar">
       <h3 class="titulo-popup">Pide presupuesto</h3>
       <h3 class="cerrar">x</h3>
   </div>
   <form class="contratar">
 
     <div name="datos-contacto">
-      <label for="nombre">Nombre</label>
+      <label for="name">Nombre</label>
       <input type="text" id="name" name="name" required/>
     </div>
 
@@ -350,7 +308,7 @@
     </div>
 
     <div class="full-width">
-      <label for="cp">Lugar</label>
+      <label for="lugar">Lugar</label>
       <input type="text" id="lugar" name="lugar" />
     </div>
 

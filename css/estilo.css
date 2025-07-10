@@ -5,12 +5,6 @@
     box-sizing:border-box;
 }
 
-::-webkit-scrollbar {
-    display: none;
-    color: #298287;
-    width: 3px;
-}
-
 :root{ /*base*/
     font-family: "league gothic", sans-serif;
     --height: 100dvh;
@@ -112,7 +106,7 @@ header a:hover, nav button:hover, .frente.cierre a:hover{
     cursor:pointer;
     background-color: var(--color-2);
     animation: nav 1.5s;
-    color: black;
+    color: var(--texto-1);
     padding: 0 4px;
 }
 
@@ -161,7 +155,7 @@ header a:hover, nav button:hover, .frente.cierre a:hover{
 
 .texto-fondo:nth-child(2){
     position: relative;
-    padding-left: 34.55%;
+    padding-left: 36%;
     padding-top: 20px;
 }
 
@@ -187,14 +181,8 @@ header a:hover, nav button:hover, .frente.cierre a:hover{
 }
 
       /* Efecto visual al seleccionar texto */
-h1.seleccionado, h2.seleccionado, .texto-animado.seleccionado span {
-    color: #ffffff;
-    animation: parpadeo 1s infinite;
-    background-color: var(--color-1);
-}
-
-h1.seleccionado::selection, h2.seleccionado::selection, .texto-animado span::selection {
-    color: #ffffff;
+h1.seleccionado, h2.seleccionado, .texto-animado.seleccionado span, h1.seleccionado::selection, h2.seleccionado::selection, .texto-animado span::selection {
+    color: var(--texto-2);
     animation: parpadeo 1s infinite;
     background-color: var(--color-1);
 }
@@ -206,7 +194,7 @@ h1.seleccionado::selection, h2.seleccionado::selection, .texto-animado span::sel
           }
           50% {
           background-color: rgb(173, 173, 173);
-          opacity: 0.5;
+          opacity: .5;
           color: var(--texto-2);
           }
       }
@@ -230,7 +218,7 @@ div.horizontal-linea{ /*linea horizontal color (elemento decoracion)*/
 }
 
 div.horizontal-linea.animacion{
-    animation: movimiento 0.5s linear forwards; /*crece de izquierda a derecha y se queda*/
+    animation: movimiento .5s linear forwards; /*crece de izquierda a derecha y se queda*/
 }
 
     @keyframes movimiento{ /*animacion linea horizontal*/
@@ -245,7 +233,7 @@ div.horizontal-linea.animacion{
 h4{ /*parrafos primera seccion*/
     font-size:  1.5em;
     animation: opacidad 2s forwards;
-    font-weight: normal;
+    font-weight: 400;
 }
 
     @keyframes opacidad {
@@ -294,9 +282,9 @@ h4.text-p span.sub:hover{ /*tachado palabras primera seccion*/
     position: relative;
 }
 
-.introduccion{
-    font-size: 1.2em;
-    font-family: "roboto", Helvetica, sans-serif, sans-serif;
+.introduccion, p{
+    font-size: 1.1em;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /*--------------- SECCION GRUPO ---------------*/
@@ -360,7 +348,7 @@ h4.text-p span.sub:hover{ /*tachado palabras primera seccion*/
 .descrip {
     font-size: 10em;
     text-transform: uppercase;
-    line-height: 0.8em;
+    line-height: .8em;
 }
 
 .descrip span, .descrip.cabecera {
@@ -465,13 +453,12 @@ h4.text-p span.sub:hover{ /*tachado palabras primera seccion*/
     font-size: 1.8em;
 }
 
-.bio, .haz-click{ /*info que se traslada a la tarjeta*/
+.bio, .haz-click, svg, .newsletter button{ /*info que se traslada a la tarjeta*/
   display: none;
 }
 
     /*--ACTIVAR CAMBIO FONDO EN DISPOSITIVOS TACTILES--*/
 svg{ /*ojo en svg*/
-    display: none;
     stroke-width: 4px;
     fill: none; 
     stroke: var(--texto-1);
@@ -492,9 +479,9 @@ svg{ /*ojo en svg*/
     z-index: 10;
 }
 
-    .tarjeta.visible, .popup.desplegado{
-        display: flex;
-    }
+.tarjeta.visible, .popup.desplegado{
+    display: flex;
+}
 
 .tarjeta-presentacion, .popup-contenido {
     display: flex;
@@ -535,8 +522,8 @@ h3.titulo-popup{
 
 .tarjeta p.biografia{
     color: var(--texto-1);
-    font-size: 0.9em;
-    font-family: monospace, "league-gothic", sans-serif;
+    font-size: .9em;
+    font-family: monospace, Arial, Helvetica, sans-serif;
     padding-top: 15px;
     text-align: left;
 }
@@ -553,7 +540,7 @@ h3.titulo-popup{
     text-align: center;
 }
 
-.descrip.cierre{
+.descrip.cierre, .expresiones{
     font-size: 6em;
 }
 
@@ -583,7 +570,6 @@ h3.titulo-popup{
     justify-content: center;
     font-size: 2.5em;
     background-color: var(--texto-2);
-    transition: all 1s ease; /*"" cortina*/
 }
 
 .simulacion{
@@ -591,7 +577,11 @@ h3.titulo-popup{
   opacity: 0;
   position: relative;
   transform: translateY(-0.7em);
-  transition: transform 0.2s linear;
+  transition: transform .2s linear;
+}
+
+.newsletter, .cortina, .text-subtitulo{
+    transition: all 1s ease; 
 }
 
 .cortina{/*tapa la frase al desplazarse*/
@@ -601,13 +591,11 @@ h3.titulo-popup{
     background-color: var(--texto-2);
     transform: translateY(3rem);
     z-index: 3;
-    transition: all 1s ease; /*para que transicione el fondo con el body*/
 }
 
 .newsletter .text-subtitulo{
     position: relative;
     z-index: 2;
-    transition: all 1s ease;
     background-color: var(--texto-2);
 }
 
@@ -616,7 +604,7 @@ h3.titulo-popup{
     position: absolute;
     bottom: 0;
     transform: translateY(-2.1em);
-    transition: transform 0.2s linear;
+    transition: transform .2s linear;
 }
 
 .newsletter .text-subtitulo span{

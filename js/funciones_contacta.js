@@ -58,7 +58,6 @@ entrada.forEach(entrada => {
 
 fotos.forEach(foto => o.observe(foto));
 
-
 function elegir() {
 const matrix = document.querySelector(".matrix");
 const rojo = document.querySelector(".responsive");

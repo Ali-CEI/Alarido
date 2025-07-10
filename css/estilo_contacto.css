@@ -1,19 +1,20 @@
-
+/*Estilo de web CONTACTO + SOY (.html) + BUSCO(artistas.html)*/
 .elige{
-    display: flex;
-    align-items: center;
-    justify-content: center;
     height: 100dvh;
     width: 100%;
     position: fixed;
-    z-index: 8;
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 8;
     top:0;
     color: var(--color-1);
 }
 
-.expresiones {
-    font-size: 6em;
+.elige .vertical-linea{
+    left: calc(50% - 1.5pt);
+    animation: crecimiento 1s linear forwards;
 }
 
 .matrix{
@@ -25,34 +26,32 @@
 }
 
 .pantal{
-  display: flex;
-  gap: 0.5em;
+    display: flex;
+    gap: .5em;
 }
 
 .responsive{
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.matrix .btn, .matrix a{
+.matrix a{
+    width: 40%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--texto-1);
-    font-family: "league gothic";
-    font-size: 6rem;
     font-weight: 900;
+    color: var(--texto-1);
     text-decoration: none;
-    width: 40%;
 }
 
-.responsive .btn, .responsive a{
+.responsive a{
     width: 150px;
     text-align: center;
-    font-size: 4rem;
+    font-size: 4em;
 }
 
 .pildoras span {
@@ -74,34 +73,34 @@
 }
 
     @keyframes flotar{
-      0%, 100% { transform: translateY(0);}
+      0%, to { transform: translateY(0);}
       50% { transform: translateY(-20px);}
     }
 
 .pasando{
-  position: fixed;
-  bottom: 100px;
-  font-size: 1.5em;
-  display: flex;
-  background-color: var(--texto-2);
-  padding: 20px;
-  transition: all 1s;
+    position: fixed;
+    bottom: 100px;
+    font-size: 1.5em;
+    display: flex;
+    background-color: var(--texto-2);
+    padding: 20px;
+    transition: all 1s;
 }
 
 .pasando span{
- color: var(--texto-1);
+    color: var(--texto-1);
 }
 
 .pasando span.aqui{
- text-decoration: underline;
+    text-decoration: underline;
 }
 
 .mas{
-  visibility: hidden;
+    visibility: hidden;
 }
 
 .mas a{
-  color: inherit;
+    color: inherit;
 }
 
 .ordena{
@@ -110,40 +109,35 @@
   justify-content: space-around;
 }
 
-.linea{
-  width: 0.5em;
-  background-color: var(--color-1);
-}
-
 /*WEB CONTRATAR ARTISTAS*/
+
 .p-sec.contacto{
-  flex-direction: column;
+    flex-direction: column;
+    align-items: flex-start;
+    animation: opacidad 1s forwards;
+    margin: 0;
 }
 
-.texto-animado.contactar{
-    font-size: 0.8em;
+.pp-contactar{
+    margin: 30px 0;
 }
 
-.artista .descrip{
-  font-size: 5em;
+h1.contactar{
+    font-size: 8em;
+    text-transform: uppercase;
+    color: var(--color-1);
 }
 
+.pp-contactar p{
+    margin-top: 10px;
+}
+
+    /*Secciones*/
 section.artistas{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2em;
-  margin-bottom: 1em;
-}
-
-.artista{
-  transform: translateY(30%);
-  opacity: 0;
-  transition: opacity .5s ease .2s, transform .5s ease .2s;
-}
-
-.visible{
-  opacity: 1;
-  transform: translateY(0%);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+    margin-bottom: 1em;
 }
 
 .categorias {
@@ -151,9 +145,24 @@ section.artistas{
     color: var(--color-1);
 }
 
-.elige .vertical-linea{
-    left: calc(50% - 1.5pt);
-    animation: crecimiento 1s linear forwards;
+/*Tarjetas artistas*/
+.artista{
+  transform: translateY(30%);
+  opacity: 0;
+  transition: opacity .4s ease .2s, transform .4s ease .2s;
+}
+
+.artista .descrip{
+    font-size: 5em;
+}
+
+.visible{
+    opacity: 1;
+    transform: translateY(0%);
+}
+
+.artista:nth-child(-n+3) {
+    opacity: 1;
 }
 
 .galeria-artistas p{
@@ -176,73 +185,42 @@ section.artistas{
 }
 
 .info-artista{
-  display: flex;
-  flex-direction: column;
-  height: 300px;
+    display: flex;
+    flex-direction: column;
+    min-height: 300px;
 }
 
 .enlaces{
-  display: flex;
+    display: flex;
 }
 
 .enlaces a, .btn.contratar{
-  background-color: var(--color-1);
-  color: var(--texto-2);
-  text-align: center;
-  padding: 2px 24px;
-  border-radius: 15px;
-  font-family: 'League Gothic';
-  font-size: 1.5em;
-  text-transform: uppercase;
-  cursor: pointer;
-  border: none;
-  text-decoration: none;
-  margin: 10px 10px 0 0;
+    background-color: var(--color-1);
+    color: var(--texto-2);
+    text-align: center;
+    padding: 2px 24px;
+    border-radius: 15px;
+    font-family: 'League Gothic';
+    font-size: 1.5em;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    margin: 10px 10px 0 0;
 }
 
 .enlaces a:hover, .btn.contratar:hover{
-  background-color: var(--color-2);
-  color: var(--texto-1);
+    background-color: var(--color-2);
+    color: var(--texto-1);
 }
 
-.filtro{
-  width: 30px;
-  padding: 4px;
-  background-color: var(--color-1);
-  border-radius: 5px;
-  mix-blend-mode: hard-light;
-  position: absolute;
-}
 
-.filtro.desplegado{
-  position: relative;
-}
-
-#filtro-form{
-display: none;
-flex-direction: column;
-}
-
-#filtro-form.desplegado{
-display: flex;
-}
-
-.labels{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-#text{
-  font-weight: bold;
-  color: var(--color-1);
-}
-
+    /*FORMULARIO DE CONTRATACION*/
 /*.popup estilo en estilo.css con .tarjeta*/
-.algo{
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
+.presupuestar{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
 }
 
 .cerrar{
@@ -265,28 +243,27 @@ form.contratar{
 
 /*Formulario CONTRATAR*/
 label {
-    margin-bottom: 0.25rem;
+    margin-bottom: .25rem;
     color: var(--color-1);
     font-family: "league gothic";
 }
 
-input, select, textarea, .opciones {
+.opciones, input, select, textarea {
     width: 100%;
-    padding: 0.6em;
+    padding: .6em;
     border: 1px solid #ccc;
     border-radius: 4px;
-    font-size: 0.8em;
+    font-size: .8em;
     box-sizing: border-box;
 }
 
-    textarea {
-      grid-column: 1 / -1;
-      min-height: 100px;
-    }
+textarea {
+    min-height: 100px;
+}
 
-    .full-width {
-      grid-column: 1 / -1;
-    }
+.full-width, textarea {
+    grid-column: 1 / -1;
+}
 
 /*---MEDIA RESPONSIVE---*/
 @media screen and (min-width: 1920px){
@@ -337,8 +314,14 @@ section.artistas{
     align-items: center;
 }
 
+.info-artista{
+    min-height: 250px;
+}
+
 .enlaces{
       justify-content: space-evenly;
 }
+
+
 }
 
