@@ -284,9 +284,13 @@ h4.text-p span.sub:hover{ /*tachado palabras primera seccion*/
 
 .introduccion, p{
     font-size: 1.1em;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "roboto", Arial, Helvetica, sans-serif;
 }
-
+    
+p{
+    font-size: 1.1em;
+}
+    
 /*--------------- SECCION GRUPO ---------------*/
 .frente.grupo{
     top:0;
@@ -341,7 +345,7 @@ h4.text-p span.sub:hover{ /*tachado palabras primera seccion*/
 }
 
 .fondo.grid.oraciones.tres{
-    top: 65%; 
+    top: 63%; 
     text-align: left;
 }
 
@@ -494,7 +498,23 @@ svg{ /*ojo en svg*/
     background-color: var(--texto-2);
     box-shadow:  -6px 7px 10px 5px rgb(0, 0, 0, 0.4);
     overflow: scroll;
-    justify-content: center;
+    justify-content: space-around;
+}
+
+.tarjeta-presentacion{
+    overflow: hidden;
+}
+
+.pres{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    cursor: pointer;
+}
+
+.cerrar{
+    color: var(--color-1);
+    font-size: 2em;
 }
 
 .tarjeta .grafico{  /*agrupacion titulo + foto*/
@@ -511,7 +531,7 @@ h3.titulo-popup{
     overflow: hidden;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
 }
 
 .tarjeta picture img{
@@ -628,14 +648,16 @@ input.text-sim{
 
 /*PARA PANTALLAS portatil*/
 @media screen and (max-width: 1440px) {
-
+.descrip{
+    font-size: 8em;
+}
     /*COLOCACION ORACIONES SEC-PROJECTOS*/
 .fondo.grid.oraciones.uno{
     top: 2%;
 }
 
 .fondo.grid.oraciones.dos{
-    top: 35%;
+    top: 38%;
 }
 }
 

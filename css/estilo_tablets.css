@@ -60,6 +60,7 @@
     font-size: 2em;
     text-align: left;
     color: var(--color-1);
+    font-family: 'League Gothic';
 }
 
 .tres .haz-click{

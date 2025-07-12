@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Somos el alarido</title>
+  <link rel="stylesheet" href="css/estilo.css">
+  <link rel="stylesheet" href="css/estilo_tablets.css"> <!--Estilo para pantallas de menos de 1024px-->
+  <link rel="stylesheet" href="css/estilo_mobile.css"> <!--Estilo para pantallas de menos de 480px-->
+  <link rel="stylesheet" href="css/estilo_contacto.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <script defer src="js/funciones_contacta.js"></script> <!--Link java-->
+  <script defer src="js/funciones_generales.js"></script> <!--Link java-->
+
+<style>
+    .unete-colectivo {
+  max-width: 600px;
+  margin: auto;
+  padding: 2em;
+  font-family: "Roboto", sans-serif;
+}
+
+.form-unete input,
+.form-unete select,
+.form-unete textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 1em;
+  padding: 0.8em;
+  font-size: 1em;
+}
+
+.form-unete button {
+  background: black;
+  color: white;
+  padding: 0.8em 1.5em;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.form-unete button:hover {
+  background: #333;
+}
+
+</style>
+
+</head>
+<body>
+
+  <header>
+    <h1><a href="index.html">alarido</a></h1>
+    <nav>
+      <ul>
+      <li><a href="contacto.html">contacto</a></li>
+      <li><button id="modoOscuro"></button></li>
+      <ul class="rrss">
+        <li><a href="">li</a></li>
+        <li><a href="https://www.instagram.com/ali_abasc/">in</a></li><!--enlace provisional-->
+      </ul>
+      </ul>
+    </nav>
+  </header>
+
+<section class="unete-colectivo">
+  <h2>¿Eres artista? Súmate al alarido</h2>
+  <p>Buscamos artistas de cualquier disciplina que vibren con la palabra, la imagen o la acción.</p>
+
+  <form class="form-unete" action="https://formsubmit.co/tucorreo@ejemplo.com" method="POST" enctype="multipart/form-data">
+    <input type="text" name="nombre" placeholder="Nombre completo" required>
+    <input type="email" name="email" placeholder="Correo de contacto" required>
+    <input type="text" name="redes" placeholder="Instagram, web o portfolio">
+    
+    <select name="disciplina" required>
+      <option disabled selected>Tu disciplina artística</option>
+      <option value="poesia">Poesía</option>
+      <option value="musica">Música</option>
+      <option value="arte">Arte visual</option>
+      <option value="escenica">Escénicas</option>
+    </select>
+
+    <textarea name="bio" placeholder="Cuéntanos sobre ti (máx 300 caracteres)" maxlength="300" rows="4" required></textarea>
+    
+    <label for="foto">Sube una imagen o retrato</label>
+    <input type="file" name="foto" accept="image/*">
+
+    <button type="submit">Enviar solicitud</button>
+
+    <small class="legal">No usaremos tu información para nada fuera del colectivo.</small>
+  </form>
+</section>
+
+
+</body>
+</html>

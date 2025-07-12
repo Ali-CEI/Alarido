@@ -79,7 +79,7 @@
 
 .pasando{
     position: fixed;
-    bottom: 100px;
+    bottom: 80px;
     font-size: 1.5em;
     display: flex;
     background-color: var(--texto-2);
@@ -161,10 +161,6 @@ section.artistas{
     transform: translateY(0%);
 }
 
-.artista:nth-child(-n+3) {
-    opacity: 1;
-}
-
 .galeria-artistas p{
     font-size: 1.2em;
     line-height: 1;
@@ -217,17 +213,6 @@ section.artistas{
 
     /*FORMULARIO DE CONTRATACION*/
 /*.popup estilo en estilo.css con .tarjeta*/
-.presupuestar{
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-}
-
-.cerrar{
-    color: var(--color-1);
-    font-size: 2em;
-}
-
 form.contratar{
     display: grid;
     grid-template-columns: auto;

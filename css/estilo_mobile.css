@@ -68,20 +68,14 @@ h4{
     font-size: 4em;
 }
 
-.descrip.cabecera{
+.descrip.cabecera, .descrip.cabecera span{
     color: var(--color-1);
 }
 
-.descrip.cabecera span{
-    color: var(--texto-2);
-}
-
 .tarjeta-presentacion, .popup-contenido  {
-    width: 100%;
-    height: 100%;
-    padding: 30px;
     width: 90%;
     height: 90dvh;
+    padding: 30px;
     border-radius: 5%;
 }
 
