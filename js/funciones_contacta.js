@@ -122,6 +122,8 @@ function contratar() {
     const contratar = document.querySelectorAll(".btn.contratar");
     const popup = document.getElementById("popup")
 
+    if (contratar < 0) return;
+        
     contratar.forEach(contrato => {
         contrato.addEventListener("click", () => {
             popup.classList.add("desplegado");
@@ -133,12 +135,22 @@ function contratar() {
     cerrar.addEventListener("click", () => {
         popup.classList.remove("desplegado");
     });
+    });
+    };
 
-    });};
 
+ document.addEventListener('DOMContentLoaded', () => {
 
 //FUNCIONES
 elegir();
 fotoAli();
 pasando();
 contratar();
+
+if (window.location.hash === '#contratar') {
+    
+    const popup = document.getElementById("popup")
+    popup.classList.add("desplegado");  
+};
+});
+

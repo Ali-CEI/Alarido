@@ -10,6 +10,12 @@
     --height: 100dvh;
 }
 
+::-webkit-scrollbar {
+    display: none;
+    color: #298287;
+    width: 3px
+}
+
 body, html{ /*cuerpo de la pagina*/
     min-width: 320px;
     position: relative; /*posiciono para usar de referencia en el texto animado*/

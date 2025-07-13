@@ -191,6 +191,17 @@ function ancho() {
     }    
 }
 
+
+function contratarTarjeta() {
+   
+    const contratarTarjeta = document.querySelector(".btn.contratar");
+
+    contratarTarjeta.addEventListener("click", () => {
+        window.location.href = 'artistas.html#contratar';
+    });
+};
+
+contratarTarjeta();
 ancho();
 
 console.log("¡Hola! Este es un mensaje de consola para verificar que el script se ha cargado correctamente.");
