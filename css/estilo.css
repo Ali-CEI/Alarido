@@ -343,7 +343,7 @@ p{
 }
 
 .fondo.grid.oraciones.uno{ /*frases borrosas*/
-    top: 5%; 
+    top: 2%; 
 }
 
 .fondo.grid.oraciones.dos{
@@ -658,10 +658,6 @@ input.text-sim{
     font-size: 8em;
 }
     /*COLOCACION ORACIONES SEC-PROJECTOS*/
-.fondo.grid.oraciones.uno{
-    top: 2%;
-}
-
 .fondo.grid.oraciones.dos{
     top: 38%;
 }
