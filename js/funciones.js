@@ -155,11 +155,14 @@ for (let i = 0; i < imagenes.length; i++) {
 
                 if (persona.includes("Ali")) {
                     picture.style.alignItems = "end";
+                
+                }if (persona.includes("Carol")) {
+                    picture.style.alignItems = "flex-start";
+
+                }else{
+                    picture.style.alignItems = "center";
                 };
 
-                if (persona.includes("Carol")) {
-                    picture.style.alignItems = "flex-start";
-                };
         }});
 };
 //};  
