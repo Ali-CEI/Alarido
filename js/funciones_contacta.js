@@ -118,19 +118,19 @@ function pasando (){
 }
 
 function contratar() {
-   
     const contratar = document.querySelectorAll(".btn.contratar");
     const popup = document.getElementById("popup")
 
-    if (contratar < 0) return;
+    if (contratar <= 0) return;
         
     contratar.forEach(contrato => {
         contrato.addEventListener("click", () => {
             popup.classList.add("desplegado");
         });
 
-    
     const cerrar = document.querySelector(".cerrar");
+    
+    if (cerrar <= 0) return;
     
     cerrar.addEventListener("click", () => {
         popup.classList.remove("desplegado");
@@ -138,6 +138,19 @@ function contratar() {
     });
     };
 
+function rastro(){
+  document.addEventListener('mousemove', rastro => {
+    const punto = document.createElement('div');
+    punto.className = 'rastro';
+    punto.style.left = rastro.clientX + 'px';
+    punto.style.top = rastro.clientY + 'px';
+
+    document.body.appendChild(punto);
+    punto.addEventListener('animationend', () => {
+      punto.remove();
+    });
+  });
+  };
 
  document.addEventListener('DOMContentLoaded', () => {
 
@@ -146,6 +159,7 @@ elegir();
 fotoAli();
 pasando();
 contratar();
+rastro();
 
 if (window.location.hash === '#contratar') {
     
@@ -153,4 +167,3 @@ if (window.location.hash === '#contratar') {
     popup.classList.add("desplegado");  
 };
 });
-

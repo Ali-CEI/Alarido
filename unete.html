@@ -14,34 +14,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
   <script defer src="js/funciones_contacta.js"></script> <!--Link java-->
   <script defer src="js/funciones_generales.js"></script> <!--Link java-->
-
-<style>
-.form-unete input,
-.form-unete select,
-.form-unete textarea {
-  display: block;
-  width: 100%;
-  margin-bottom: 1em;
-  padding: 0.8em;
-  font-size: 1em;
-}
-
-.form-unete button {
-  background: black;
-  color: white;
-  padding: 0.8em 1.5em;
-  border: none;
-  cursor: pointer;
-  font-size: 1em;
-}
-
-.form-unete button:hover {
-  background: #333;
-}
-
-</style>
 
 </head>
 <body>
@@ -61,43 +36,44 @@
   </header>
 
   <div class="p-sec unete">
-    <div class="banner"><img src="img/grupo.JPG" alt=""></div>
-    <div class="unirse">
+  <!--<canvas id="myCanvas"></canvas>-->
+<div class="unirse">
     <div class="pp-contactar">
   <h1 class="contactar">¿Artista?</h1>
   <h4 class="subtitulo izq">Queremos oirte gritar</h4>
   <p class="izq">Rellena el formulario <span class="sub">[e intenta caernos bien]</span>.</p>
       </div>
 
-  <form class="form-unete" action="https://formsubmit.co/tucorreo@ejemplo.com" method="POST" enctype="multipart/form-data">
+  <form class="unete">
     <label for="nombre">Nombre</label>
-    <input type="text" name="nombre" placeholder="Nombre completo" required>
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre completo">
     <label for="pseudo">Pseudónimo</label>
-    <input type="text" name="pseudo" placeholder="Pseudónimo" required>
-        <label for="email">Email</label>
-    <input type="email" name="email" placeholder="Correo de contacto" required>
-    <input type="text" name="redes" placeholder="Instagram, web o portfolio">
+        <input type="text" id="pseudo" name="pseudo" placeholder="Pseudónimo">
+    <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Correo de contacto">
     
-    <select name="disciplina" required>
-      <option disabled selected>Tu disciplina artística</option>
-      <option value="poesia">Poesía</option>
-      <option value="musica">Música</option>
-      <option value="arte">Arte visual</option>
-      <option value="escenica">Escénicas</option>
-    </select>
+    <label for="redes">Disciplina artística</label>
+      <select name="disciplina">
+        <option disabled selected>Tu disciplina artística</option>
+        <option value="poesia">Poesía</option>
+        <option value="musica">Música</option>
+        <option value="arte">Arte visual</option>
+        <option value="escenica">Escénicas</option>
+      </select>
 
-    <textarea name="bio" placeholder="Cuéntanos sobre ti (máx 300 caracteres)" maxlength="300" rows="4" required></textarea>
+    <label for="redes">Links a tus trabajos</label>
+        <input type="text" id="redes" placeholder="Instagram, web o portfolio">
+
+    <textarea name="bio" placeholder="Cuéntanos sobre ti (máx 300 caracteres)" maxlength="300" rows="4"></textarea>
     
-    <label for="foto">Sube una imagen o retrato</label>
-    <input type="file" name="foto" accept="image/*">
+    <label for="photo">Sube una imagen o retrato</label>
+        <input type="file" id="photo" accept="image/*">
 
     <button type="submit" class="btn contratar">Enviar solicitud</button>
-
-    <small class="legal">No usaremos tu información para nada fuera del colectivo.</small>
   </form>
 
   <div class="newsletter">
-    <h3 class="text-subtitulo">Somos maja gente <span>[casi siempre].</span></h3>
+    <h3 class="text-subtitulo">Somos gente maja <span>[casi siempre].</span></h3>
     <h3 class="text-apuntarse">Apúntate a nuestra newsletter.</h3>
     <div class="cortina"></div>
     <form class="simulacion">
@@ -106,7 +82,6 @@
     </form>
     </div></div>
 </div>
-
 
 </body>
 </html>

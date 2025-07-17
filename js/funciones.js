@@ -143,9 +143,7 @@ for (let i = 0; i < imagenes.length; i++) {
         let persona = imagenes[i].getAttribute("alt");
          
         if(i == 5){
-            
-            /*contenedor.classList.add("visible");
-            tarjeta.innerHTML = "<canvas></canvas>";*/
+            window.location.href = 'unete.html#';
 
         }else{
             contenedor.classList.add("visible");
