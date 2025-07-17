@@ -159,7 +159,10 @@ elegir();
 fotoAli();
 pasando();
 contratar();
-rastro();
+
+if (window.location.pathname.includes("unete.html"))  {
+    rastro();
+};
 
 if (window.location.hash === '#contratar') {
     
