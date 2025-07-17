@@ -11,310 +11,393 @@
   <link href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap" rel="stylesheet"> <!--Link League Gothic-->
 
   <style>
-
-   *{
-    margin: 0;
-    padding: 0;
-    box-sizing:border-box;
+:root {
+  --black: #3a3a3a;
+  --white: #fff;
+  --green: #49b293;
 }
 
-body,html{ /*cuerpo de la pagina*/
-    min-width: 320px;
-    position: relative; /*posiciono para usar de referencia en el texto animado*/
-    scroll-behavior: smooth;
-    transition: background-color 0.5s 0.5s ease;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-:root{ /*base (raiz)*/
-    font-family: "league gothic", sans-serif;
-    --font-family: "league gothic", sans-serif;
-    --height: 100vh;
-    --width: 100vh;
-    --color-1: rgb(255, 251, 36);
-    --color-2: ;
-}
-div.vertical-rule{ /*linea vertical amarilla (elemento decoracion)*/
-    background-color:var(--color-1);
-    position: absolute;
-    left: 40%;
-    width: 1.5pt;
-    animation: crecimiento 4s linear 1s forwards; /*crece de arriba a abajo con 1s de delay y se queda*/
-    z-index: -2;
-}
-
-/*---------------SECCION PROJECTOS---------------*/
-.projectos{
-  position: relative;
-  padding-bottom: 20px;
-  display: flex;
-  flex-direction: column;
-}
-
-/*---------------FONDO PROJECTOS---------------*/
-.fondo_grid{ 
-    position: relative;
-    z-index: -3;
-    padding: 48px;
-}
-
-.frente_grid{
-    position: absolute;
-    text-align: right;
-    right: 0;
-    padding: 48px;
-}
-
-.fondo_grid.oraciones {
-    position: absolute;
-    width: 100%;
-    text-align: right;
-}
-
-.fondo_grid.oraciones.uno{
-    top: 5%;
-    border-bottom: 2pt solid rgb(255, 251, 36);
-}
-
-.fondo_grid.oraciones.dos{
-    top: 38%;
-    justify-self: center;
-}
-
-.fondo_grid.oraciones.tres{
-    top: 65%;
-    border-top: 2pt solid rgb(255, 251, 36);
-    text-align: left;
-}
-
-.descrip{
-    font-size: 8em;
-    text-transform: uppercase;
-    line-height: 0.9em;
-    mix-blend-mode: multiply;
-}
-
-.descrip-cabecera{
-    font-size: 10em;
-    color: var(--color-1);
-    line-height: 0.8em;
-    font-weight: 700;
-}
-
-.descrip span{
-    color: var(--color-1)
-}
-
-.blur{ /*texto borroso*/
-    filter:blur(4px);
-}
-
-/*---------------GALERIA PROJECTOS---------------*/
-.project-grid {
-    position:relative;
-    display: grid;
-    grid-template-rows: auto;
-    grid-auto-columns: 1fr;
-    grid-row-gap: 0em;
-    padding: 0 24px;
-}
-
-.element-grid {
-    margin-top: -3em;
-    position: relative;
-    overflow: hidden;
-    grid-area: span 1/span 4/span 1/span 4;
-    transition: color 0 1s ease-in-out;
-}
-
-.grid-img {
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-    align-self: center;
-    background-color: var(--color-1);
-}
-
-.grid-img img{
-  display: inline-block;
+img {
+  display: block;
   max-width: 100%;
-  vertical-align: middle;
-  mix-blend-mode: luminosity;
+  height: auto;
 }
 
-.grid-img img:hover{
-  mix-blend-mode: normal;
+ol {
+  list-style: none;
 }
 
-.grid-img-inner {
-    cursor: pointer;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    filter: brightness(100%) contrast(100%);
-    transform: translate(0px, 0px);
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-.element-grid-caption {
-    padding-top: 12px;
-    padding-left: 12px;
-    transition: color 1s 1s ease;
+body {
+  margin: 50px 0;
+  color: var(--black);
+  font: 1rem/1.3 sans-serif;
 }
 
-.texto-none {
-  color: var(--color-1);
+.author-archive {
+  padding: 1.5rem;
 }
 
-.element-grid-caption-none {
-    color: transparent;
-    padding: 0;
-    font-size: 0;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-
-.texto-blanco {
-  position: fixed;
-  display: inline-block !important;
-  bottom: 0;
-  color: white;
-  font-size: 6em  !important;
+h1 {
   text-align: center;
-  padding: 48px;
-  z-index: 40;
+  margin-bottom: 2rem;
 }
 
-.element-grid:nth-child(1) {
-  margin-top: 0;
+h1 a {
+  transition: all 0.1s;
 }
 
-.element-grid:nth-child(2) {
-  grid-area: 2/5/3/11;
+h1 a:hover {
+  background: var(--green);
+  color: var(--white);
 }
 
-.element-grid:nth-child(3) {
-  grid-area: 3/2/4/5;
+input[type="radio"] {
+  position: absolute;
+  left: -9999px;
 }
 
-.element-grid:nth-child(4) {
-  grid-area: 4/5/5/8;
+
+/* FILTERS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.filters {
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
-.element-grid:nth-child(5) {
-  grid-area: 5/8/6/12;
+.filters * {
+  display: inline-block;
 }
 
-.element-grid:nth-child(6) {
-  grid-area: 6/3/7/8;
+.filters label {
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.25rem;
+  border-radius: 2rem;
+  min-width: 50px;
+  line-height: normal;
+  cursor: pointer;
+  transition: all 0.1s;
 }
 
-.element-grid-caption p{
-  font-size: 1.8em;
+.filters label:hover {
+  background: var(--green);
+  color: var(--white);
 }
 
-.project-grid.galeria{
-  background-color: var(--color-1);
-  color: #ffffff;
+
+/* FILTERED ELEMENTS (POSTS)
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.posts {
+  display: grid;
+  grid-gap: 1.5rem;
+  grid-template-columns: repeat(4, 1fr);
 }
 
-.descrip span.oculto{
-  color: white;
+.posts .post {
+  background: #fafafa;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
+
+.posts .post-title {
+  font-size: 1.3rem;
+}
+
+.posts .post-title:hover {
+  text-decoration: underline;
+}
+
+.posts figcaption {
+  padding: 1rem;
+}
+
+.posts .post-categories {
+  margin-bottom: 0.75rem;
+  font-size: 0.75rem;
+}
+
+.posts .post-categories * {
+  display: inline-block;
+}
+
+.posts .post-categories li {
+  margin-bottom: 0.2rem;
+}
+
+.posts .post-categories a {
+  padding: 0.2rem 0.5rem;
+  border-radius: 1rem;
+  border: 1px solid;
+  line-height: normal;
+  transition: all 0.1s;
+}
+
+.posts .post-categories a:hover {
+  background: var(--green);
+  color: var(--white);
+}
+
+
+/* FILTERING RULES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+[value="All"]:checked ~ .filters [for="All"],
+[value="CSS"]:checked ~ .filters [for="CSS"],
+[value="musica"]:checked ~ .filters [for="musica"],
+[value="jQuery"]:checked ~ .filters [for="jQuery"],
+[value="WordPress"]:checked ~ .filters [for="WordPress"],
+[value="Slider"]:checked ~ .filters [for="Slider"],
+[value="fullPage.js"]:checked ~ .filters [for="fullPage.js"] {
+  background: var(--green);
+  color: var(--white);
+}
+
+[value="All"]:checked ~ .posts [data-category] {
+  display: block;
+}
+
+[value="CSS"]:checked ~ .posts .post:not([data-category~="CSS"]),
+[value="musica"]:checked ~ .posts .post:not([data-category~="musica"]),
+[value="jQuery"]:checked ~ .posts .post:not([data-category~="jQuery"]),
+[value="WordPress"]:checked ~ .posts .post:not([data-category~="WordPress"]),
+[value="Slider"]:checked ~ .posts .post:not([data-category~="Slider"]),
+[value="fullPage.js"]:checked ~ .posts .post:not([data-category~="fullPage.js"]) {
+  display: none;
+}
+
+
+/* FOOTER
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+footer {
+  font-size: 1rem;
+  padding: 0 1.5rem;
+  text-align: right;
+}
+
+footer span {
+  color: #e31b23;
+}
+
+
+/* MQ
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media screen and (max-width: 900px) {
+  .posts {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 650px) {
+  html {
+    font-size: 14px;
+  }
+
+  .posts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+</style>
 
   </style>
 </head>
 
 <body>
-  <div class="vertical-rule"></div><!--línea decorativa que carga progresivamente-->
-
-    <!--seccion projectos-->
-  <div class="projectos">
-  <div class="projectos cabecera">
-    <div class="fondo_grid">
-    <p class="descrip blur"><span class="oculto">por qué lo hacemos</span></p>
-      <p class="descrip blur"><span>No sabemos</span> que hacemos</p>
-      <p class="descrip blur"><span>pero</span> seguimos <span class="oculto">intentándolo</span></p>
-    </div>
-    <div class="frente_grid">
-      <p class="descrip-cabecera">esto es,</p>
-      <p class="descrip-cabecera">esto somos</p>
-    </div>
-  </div>
-
- <div class="projectos cuerpo">
-  <div class="fondo_grid oraciones uno">
-      <p class="descrip blur">La ternura</p>
-      <p class="descrip blur"><span class="oculto">pero </span>como <span>arma</span></p>
-    </div>
-    <div class="fondo_grid oraciones dos">
-      <p class="descrip blur"><span>El susurro </span></p>
-      <p class="descrip blur">al frente <span class="oculto"> el miedo </span></p>
-    </div>
-    <div class="fondo_grid oraciones tres">
-      <p class="descrip blur">La palabra</p>
-      <p class="descrip blur"><span class="oculto">pero </span>como <span>escudo</span></p>
-    </div>
-        <div class="project-grid">
-      <div class="element-grid">
-        <div class="grid-img">
-          <img class="grid-img-inner" loading="lazy" src="img/IMG_4308.jpg" alt="" href="#">
-        </div>
-        <div class="element-grid-caption">
-          <p class="p1 random-split text-prime" style="visibility: visible;">Descripción de la imagen</p>
-        </div>
-        <div class="element-grid-caption-none">
-          <p class="p1 random-split text-prime" style="visibility: visible;">Descripción de la imagen</p>
-        </div>
-      </div>
-      <div class="element-grid">
-        <div class="grid-img">
-          <img class="grid-img-inner" loading="lazy" src="img/IMG_4308.jpg" alt="" href="#">
-        </div>
-        <div class="element-grid-caption">
-          <p class="p1 random-split text-prime" style="visibility: visible;">Descripción de la imagen</p>
-        </div>
-      </div>
-      <div class="element-grid">
-        <div class="grid-img">
-          <img class="grid-img-inner" loading="lazy" src="img/IMG_4308.jpg" alt="" href="#">
-        </div>
-        <div class="element-grid-caption">
-          <p class="p1 random-split text-prime" style="visibility: visible;">Descripción de la imagen</p>
-        </div>
-      </div>
-      <div class="element-grid">
-        <div class="grid-img">
-          <img class="grid-img-inner" loading="lazy" src="img/IMG_4308.jpg" alt="" href="#">
-        </div>
-        <div class="element-grid-caption">
-          <p class="p1 random-split text-prime" style="visibility: visible;">Descripción de la imagen</p>
-        </div>
-      </div>
-            <div class="element-grid">
-        <div class="grid-img">
-          <img class="grid-img-inner" loading="lazy" src="img/IMG_4308.jpg" alt="" href="#">
-        </div>
-        <div class="element-grid-caption">
-          <p class="p1 random-split text-prime" style="visibility: visible;">Descripción de la imagen</p>
-        </div>
-      </div>
-            <div class="element-grid">
-        <div class="grid-img">
-          <img class="grid-img-inner" loading="lazy" src="img/IMG_4308.jpg" alt="" href="#">
-        </div>
-        <div class="element-grid-caption">
-          <p class="p1 random-split text-prime" style="visibility: visible;">Descripción de la imagen</p>
-        </div>
-      </div>
-      </div>
-
-  </div>
-  </div>
-
-  <div class="p-sec-intro">
-    <h2>Sobre mí</h2>
-    <p>Me apasiona crear experiencias web únicas y funcionales. Tengo experiencia en HTML, CSS, JavaScript y frameworks modernos.</p>
-  </div>
-
-
+  <section class="author-archive">
+<div class="container">
+<h1>Convocatorias</h1>
+<input id="Todas" checked="checked" name="categories" type="radio" value="Todas" /> <input id="CSS" name="categories" type="radio" value="CSS" /> <input id="musica" name="categories" type="radio" value="musica" /> <input id="jQuery" name="categories" type="radio" value="jQuery" /> <input id="WordPress" name="categories" type="radio" value="WordPress" /> <input id="Slider" name="categories" type="radio" value="Slider" /> <input id="fullPage.js" name="categories" type="radio" value="fullPage.js" />
+<ol class="filters">
+<li><label for="Todas">Todas</label></li>
+<li><label for="CSS">Contrataci&oacute;n</label></li>
+<li>   <label>Tipo de arte:
+      <select id="filtro-tipo" class="opciones">
+        <option value="">Todos</option>
+        <option value="poesia">Poesía</option>
+        <option value="musica">Música</option>
+        <option value="arte">Arte</option>
+      </select>
+    </label></li>
+<li><label for="jQuery">Proyectos generales</label></li>
+<li><label for="WordPress">Proyectos europeos</label></li>
+<li><label for="Slider">EjemploXXX1</label></li>
+<li><label for="fullPage.js">EjemploXX2</label></li>
+</ol>
+<ol class="posts">
+<li class="post" data-category="CSS musica">
+<article>
+<figure><a href="https://ucm.es/" target="_blank" rel="noopener"> <img src="https://www.ucm.es/file/probeta-accesoria?ver=n" alt="" width="850" height="567" /> </a>
+<figcaption>
+<ol class="post-categories">
+<li><a>Contrataci&oacute;n</a></li>
+<li><a>Transferencia</a>
+<ol>
+<li>Abierto hasta 23/07/2025</li>
+</ol>
+</li>
+</ol>
+<h2 class="post-title"><a href="https://www.ucm.es/pli51-25" target="_blank" rel="noopener">Convocatoria PLI 12/25</a></h2>
+</figcaption>
+</figure>
+</article>
+</li>
+<li class="post" data-category="CSS musica">
+<article>
+<figure><a href="https://ucm.es/" target="_blank" rel="noopener"> <img src="https://www.ucm.es/file/biblioteca-si?ver=n" alt="" width="850" height="565" /> </a>
+<figcaption>
+<ol class="post-categories">
+<li><a>Contrataci&oacute;n</a></li>
+<li><a>Transferencia</a></li>
+</ol>
+<h2 class="post-title"><a href="https://www.ucm.es/otri/financiacion-para-i-mas-d">Convocatorias de transferencia</a></h2>
+</figcaption>
+</figure>
+</article>
+</li>
+<li class="post" data-category="musica WordPress">
+<article>
+<figure><a href="https://ucm.es/"> <img src="https://www.ucm.es/file/visitante-marco?ver=n" alt="" width="320" height="173" /></a>
+<figcaption>
+<ol class="post-categories">
+<li><a>Transferencia</a></li>
+<li><a>Proyectos Europeos</a></li>
+</ol>
+<h2 class="post-title"><a href="https://oficinaeuropea.ucm.es/ayudas-revision-propuestas-erc">ERC PROYECTOS INNOVADORES</a></h2>
+</figcaption>
+</figure>
+</article>
+</li>
+<li class="post" data-category="CSS musica">
+<article>
+<figure><a href="https://ucm.es/" target="_blank" rel="noopener"> <img src="https://www.ucm.es/file/pexels-pixabay-159483?ver=n" alt="" width="854" height="558" /> </a>
+<figcaption>
+<ol class="post-categories">
+<li><a>Contrataci&oacute;n</a></li>
+<li><a>Transferencia</a></li>
+</ol>
+<h2 class="post-title"><a href="https://www.ucm.es/paii52-25">Convocatoria PAI UCM 12/25</a></h2>
+</figcaption>
+</figure>
+</article>
+</li>
+<li class="post" data-category="CSS">
+<article>
+<figure><a href="https://ucm.es/" target="_blank" rel="noopener"> <img src="https://www.ucm.es/file/biblioteca-6?ver=n" alt="" width="350" height="287" /> </a>
+<figcaption>
+<ol class="post-categories">
+<li><a>Contrataci&oacute;n</a></li>
+</ol>
+<h2><a href="https://www.ucm.es/ctpt64-24">Ayudas para Personal T&eacute;cnico de I+D+I - 2024</a></h2>
+</figcaption>
+</figure>
+</article>
+</li>
+<li class="post" data-category="CSS">
+<article>
+<figure><a href="https://ucm.es/" target="_blank" rel="noopener"> <img src="https://www.ucm.es/file/globo-atencion-servicios?ver=n" alt="" width="150" height="150" /> </a>
+<figcaption>
+<ol class="post-categories">
+<li><a>Contrataci&oacute;n</a></li>
+</ol>
+<h2><a href="https://www.ucm.es/ct45-25">Incentivaci&oacute;n a la atracci&oacute;n y consolidaci&oacute;n de talento investigador</a></h2>
+</figcaption>
+</figure>
+</article>
+</li>
+<li class="post" data-category="fullPage.js">
+<article>
+<figure><a href="https://ucm.es/"> <img src="https://www.ucm.es/file/premios-research?ver=n" alt="" width="850" height="567" /></a>
+<figcaption>
+<ol class="post-categories">
+<li><a>EjemploXX2</a></li>
+</ol>
+<h2 class="post-title"><a href="https://ucm.es/">Ejemplo</a></h2>
+</figcaption>
+</figure>
+</article>
+</li>
+<li class="post" data-category="CSS musica">
+<article>
+<figure><a href="https://ucm.es/"> <img src="https://www.ucm.es/file/pexels-pavel-danilyuk-8442618?ver=n" alt="" width="850" height="567" /></a>
+<figcaption>
+<ol class="post-categories">
+<li><a>Contrataci&oacute;n</a></li>
+<li><a>Transferencia</a></li>
+</ol>
+<h2 class="post-title"><a href="https://ucm.es/">Ejemplo</a></h2>
+</figcaption>
+</figure>
+</article>
+</li>
+<li class="post" data-category="jQuery CSS Slider">
+<article>
+<figure><a href="https://ucm.es/" target="_blank" rel="noopener"> <img src="https://www.ucm.es/file/hr-excellence-small-banner?ver=n" alt="" width="850" height="567" /> </a>
+<figcaption>
+<ol class="post-categories">
+<li><a>Proyectos generales</a></li>
+<li><a>Contrataci&oacute;n</a></li>
+<li><a>EjemploXX1</a></li>
+</ol>
+<h2 class="post-title"><a href="https://ucm.es/">Ejemplo</a></h2>
+</figcaption>
+</figure>
+</article>
+</li>
+<li class="post" data-category="jQuery CSS Slider">
+<article>
+<figure><a href="https://ucm.es/"> <img src="https://www.ucm.es/file/conocenos-piezas-si?ver=n" alt="" width="854" height="571" /></a>
+<figcaption>
+<ol class="post-categories">
+<li><a>Proyectos generales</a></li>
+<li><a>Contrataci&oacute;n</a></li>
+<li><a>EjemploXXX1</a></li>
+</ol>
+<h2 class="post-title"><a href="https://ucm.es/">Ejemplo</a></h2>
+</figcaption>
+</figure>
+</article>
+</li>
+<li class="post" data-category="CSS musica">
+<article>
+<figure><a href="https://ucm.es/"> <img src="https://www.ucm.es/file/estudiantes-charlando?ver=n" alt="" width="850" height="567" /></a>
+<figcaption>
+<ol class="post-categories">
+<li><a>Contrataci&oacute;n</a></li>
+<li><a>Transferencia</a></li>
+</ol>
+<h2 class="post-title"><a href="https://ucm.es/">Ejemplo</a></h2>
+</figcaption>
+</figure>
+</article>
+</li>
+<li class="post" data-category="jQuery fullPage.js">
+<article>
+<figure><a href="https://ucm.es/"> <img src="https://www.ucm.es/file/mirando-microscopio?ver=n" alt="" width="850" height="567" /></a>
+<figcaption>
+<ol class="post-categories">
+<li><a>Proyectos generales</a></li>
+<li><a>EjemploXX2</a></li>
+</ol>
+<h2 class="post-title"><a href="https://ucm.es/">Ejemplo</a></h2>
+</figcaption>
+</figure>
+</article>
+</li>
+</ol>
+</div>
+</section>
 
   <script>
 

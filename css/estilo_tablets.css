@@ -1,4 +1,5 @@
 @media screen and (max-width: 1024px){
+    /*Portada*/
 .introduccion{
     background-color: var(--texto-2);
     transition: all 1s ease;
@@ -83,11 +84,11 @@
     font-size: 9em;
 }
 
-    .descrip {
-      font-size: 6em;
-    }
+.descrip {
+    font-size: 6em;
+}
 
-    .tarjeta-presentacion {
+.tarjeta-presentacion {
     width: 90%;
     height: 80dvh;
 }
@@ -97,7 +98,7 @@
 
 
 @media screen and (max-width: 770px) {
-
+    /*Portada*/
 .p-sec{
     flex-direction: column-reverse;
     padding: 0 20px;
@@ -178,7 +179,7 @@
 }
 
 @media screen and (max-width: 720px) {
-   
+       /*Portada*/
 header{
     padding: 10px 40px;
     display:flex;
@@ -189,8 +190,6 @@ header{
 header a, header button{ /*enlace de la navegación*/
     font-size: 1em;
 }
-
-  /*PRIMERA SECCION DE LA PORTADA*/
   
 .primera-portada{ /*div global de la intro*/
     width: 100%;
@@ -236,10 +235,11 @@ header a, header button{ /*enlace de la navegación*/
     padding: 0;
 }
 
-
 /*---------------TARJETAS---------------*/
 .tarjeta.presentacion, .popup-contenido {
     width: 90%;
     justify-content: space-around;
 }
+
+
 }

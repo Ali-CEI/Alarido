@@ -7,9 +7,9 @@
 
   <title>Somos el alarido</title>
   <link rel="stylesheet" href="css/estilo.css">
+  <link rel="stylesheet" href="css/estilo_contacto.css">
   <link rel="stylesheet" href="css/estilo_tablets.css"> <!--Estilo para pantallas de menos de 1024px-->
   <link rel="stylesheet" href="css/estilo_mobile.css"> <!--Estilo para pantallas de menos de 480px-->
-  <link rel="stylesheet" href="css/estilo_contacto.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,13 +18,6 @@
   <script defer src="js/funciones_generales.js"></script> <!--Link java-->
 
 <style>
-    .unete-colectivo {
-  max-width: 600px;
-  margin: auto;
-  padding: 2em;
-  font-family: "Roboto", sans-serif;
-}
-
 .form-unete input,
 .form-unete select,
 .form-unete textarea {
@@ -67,12 +60,21 @@
     </nav>
   </header>
 
-<section class="unete-colectivo">
-  <h2>¿Eres artista? Súmate al alarido</h2>
-  <p>Buscamos artistas de cualquier disciplina que vibren con la palabra, la imagen o la acción.</p>
+  <div class="p-sec unete">
+    <div class="banner"><img src="img/grupo.JPG" alt=""></div>
+    <div class="unirse">
+    <div class="pp-contactar">
+  <h1 class="contactar">¿Artista?</h1>
+  <h4 class="subtitulo izq">Queremos oirte gritar</h4>
+  <p class="izq">Rellena el formulario <span class="sub">[e intenta caernos bien]</span>.</p>
+      </div>
 
   <form class="form-unete" action="https://formsubmit.co/tucorreo@ejemplo.com" method="POST" enctype="multipart/form-data">
+    <label for="nombre">Nombre</label>
     <input type="text" name="nombre" placeholder="Nombre completo" required>
+    <label for="pseudo">Pseudónimo</label>
+    <input type="text" name="pseudo" placeholder="Pseudónimo" required>
+        <label for="email">Email</label>
     <input type="email" name="email" placeholder="Correo de contacto" required>
     <input type="text" name="redes" placeholder="Instagram, web o portfolio">
     
@@ -89,11 +91,21 @@
     <label for="foto">Sube una imagen o retrato</label>
     <input type="file" name="foto" accept="image/*">
 
-    <button type="submit">Enviar solicitud</button>
+    <button type="submit" class="btn contratar">Enviar solicitud</button>
 
     <small class="legal">No usaremos tu información para nada fuera del colectivo.</small>
   </form>
-</section>
+
+  <div class="newsletter">
+    <h3 class="text-subtitulo">Somos maja gente <span>[casi siempre].</span></h3>
+    <h3 class="text-apuntarse">Apúntate a nuestra newsletter.</h3>
+    <div class="cortina"></div>
+    <form class="simulacion">
+        <input placeholder="Tu email aquí" class="text-sim" type="email" name="email">
+        <button class="suscripcion" type="submit">Enviar</button>
+    </form>
+    </div></div>
+</div>
 
 
 </body>

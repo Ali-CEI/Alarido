@@ -1,4 +1,4 @@
-/*Estilo de web CONTACTO + SOY (.html) + BUSCO(artistas.html)*/
+/*Estilo de web CONTACTO + SOY(unete.html) + BUSCO(artistas.html)*/
 .elige{
     height: 100dvh;
     width: 100%;
@@ -128,8 +128,21 @@ h1.contactar{
     color: var(--color-1);
 }
 
+h4.subtitulo{
+    font-size: 2em;
+    margin-top: -30px;
+}
+
+h4.subtitulo.izq, p.izq{
+    margin-left: 45px;
+}
+
 .pp-contactar p{
     margin-top: 10px;
+}
+
+.cursiva{
+    font-style: italic;
 }
 
     /*Secciones*/
@@ -168,6 +181,7 @@ section.artistas{
 
 .galeria-artistas picture{
     height: 300px;
+    width: 100%;
     margin-bottom: 1em;
     overflow: hidden;
     display: inline-block;
@@ -250,13 +264,33 @@ textarea {
     grid-column: 1 / -1;
 }
 
+div.banner{
+    flex-flow: column;
+    height: 100dvh;
+    max-width: 24.5rem;
+    display: flex;
+    position: relative;
+}
+
+div.banner img{
+    aspect-ratio: 394 / 400;
+    object-fit: cover;
+    width: 100%;
+    max-width: none;
+    position: relative;
+}
+
+.p-sec.unete{
+    animation: opacidad 1s forwards;
+    margin: 0;
+}
+
 /*---MEDIA RESPONSIVE---*/
 @media screen and (min-width: 1920px){
 .artista picture{
     width: 550px;
 }
 }
-
 
 @media screen and (max-width: 1024px){
 section.artistas{
@@ -287,9 +321,9 @@ section.artistas{
 
 @media screen and (max-width: 770px){
 .pasando{
-  flex-direction: column;
-  text-align: center;
-  bottom: 60px;
+    flex-direction: column;
+    text-align: center;
+    bottom: 60px;
 }
 }
 
@@ -306,7 +340,5 @@ section.artistas{
 .enlaces{
       justify-content: space-evenly;
 }
-
-
 }
 
