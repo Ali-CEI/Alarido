@@ -537,7 +537,7 @@ h3.titulo-popup{
     overflow: hidden;
     display: flex;
     justify-content: center;
-    align-items: start;
+    align-items: center;
 }
 
 .tarjeta picture img{

@@ -152,6 +152,14 @@ for (let i = 0; i < imagenes.length; i++) {
 
             let TextoParrafo = bio[i].innerText; // Obtiene el texto del párrafo más cercano
             parrafo.innerText = TextoParrafo;
+
+                if (persona.includes("Ali")) {
+                    picture.style.alignItems = "end";
+                };
+
+                if (persona.includes("Carol")) {
+                    picture.style.alignItems = "flex-start";
+                };
         }});
 };
 //};  
