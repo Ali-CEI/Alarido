@@ -178,10 +178,8 @@ for (let i = 0; i < imagenes.length; i++) {
   });
 
   /*----- Modifica el cuadro final y las oraciones de la seccion de projectos"*/
-function ancho() {
+/*function ancho() {
 const cuadro = document.querySelector(".element-grid-img-int.vacia");
-const oraciones = document.querySelectorAll(".fondo.grid.oraciones");
-const projectos = document.querySelector(".projectos");
 const medidasCuadro = imagenes[4].getBoundingClientRect();
 
     const altoCuadro = medidasCuadro.height;
@@ -198,7 +196,7 @@ const medidasCuadro = imagenes[4].getBoundingClientRect();
         cuadro.style.height = x + "px";
         cuadro.style.width = "100%";
     }    
-}
+}*/
 
 
 function contratarTarjeta() {
@@ -211,6 +209,6 @@ function contratarTarjeta() {
 };
 
 contratarTarjeta();
-ancho();
+/*ancho();*/
 
 console.log("¡Hola! Este es un mensaje de consola para verificar que el script se ha cargado correctamente.");
