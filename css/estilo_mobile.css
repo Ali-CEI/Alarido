@@ -159,6 +159,6 @@ h4.subtitulo {
 @media screen and (max-width: 320px) {/*ñapo para iphone de mi hermana*/
 body, html{ /*cuerpo de la pagina*/
     min-width: 250px;
-    font-size: 0.8em;
+    font-size: 0.7em;
 }
 }
