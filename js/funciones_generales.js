@@ -25,19 +25,19 @@ function actualizarFondo() {
 
 if (localStorage.getItem('oscuro') === 'activado') {
   activarOscuro();
-    modoOscuro.innerHTML = window.innerWidth < 770 ? "&#x263C;" : "modo: &#x263C;";
+    modoOscuro.innerHTML = window.innerWidth <= 770 ? "&#x263C;" : "modo: &#x263C;";
 }else {
   desactivarOscuro();
-    modoOscuro.innerHTML = window.innerWidth < 770 ? "&#9679;" : "modo: &#9679;";
+    modoOscuro.innerHTML = window.innerWidth <= 770 ? "&#9679;" : "modo: &#9679;";
 };
 
 modoOscuro.addEventListener('click', () => {
   if (body.classList.contains('dark')) {
     desactivarOscuro();
-    modoOscuro.innerHTML = window.innerWidth < 770 ? "&#9679;" : "modo: &#9679;";
+    modoOscuro.innerHTML = window.innerWidth <= 770 ? "&#9679;" : "modo: &#9679;";
   } else {
     activarOscuro();
-    modoOscuro.innerHTML = window.innerWidth < 770 ? "&#x263C;" : "modo: &#x263C;";
+    modoOscuro.innerHTML = window.innerWidth <= 770 ? "&#x263C;" : "modo: &#x263C;";
     }});
 
 
@@ -82,11 +82,11 @@ const simulacion = document.querySelector(".simulacion");
 if (!form) return;
 
  form.addEventListener('mouseenter', ()  => {
-    if (window.innerWidth < 350) {
+    if (window.innerWidth < 376) {
     form.style.transform = "translateY(-4.5em)";
-    simulacion.style.transform = "translateY(-2.3em)";
+    simulacion.style.transform = "translateY(-2.5em)";
 
-  } else if (window.innerWidth < 770) {
+  } else if (window.innerWidth < 771) {
     form.style.transform = "translateY(-3.7em)";
       simulacion.style.transform = "translateY(-1.9em)";
 
@@ -101,16 +101,16 @@ if (!form) return;
     
 
 cierre.addEventListener("mouseleave", () => {
-      if (window.innerWidth < 350) {
+      if (window.innerWidth < 376) {
     form.style.transform = "translateY(-3.3em)";
     simulacion.style.transform = "translateY(-2.7em)";
-  } else if (window.innerWidth < 770) {
-    form.style.transform = "translateY(-2.3em)";
+      } else if (window.innerWidth < 771) {
+    form.style.transform = "translateY(-2.7em)";
     simulacion.style.transform = "translateY(-0.7em)";
-  } else {
+      } else {
     form.style.transform = "translateY(-2.1em)";
     simulacion.style.transform = "translateY(-0.7em)";
-  }
+    }
     
     simulacion.style.opacity = "0";
 });

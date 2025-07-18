@@ -97,6 +97,17 @@ picture img{
 }
 
 
+@media screen and (max-width: 375px) { /*Iphone SE*/
+    .newsletter {
+        font-size: 1.7em;
+    }
+
+    .text-apuntarse{
+        transform: translateY(-3.3em);
+}
+}
+
+
 @media screen and (max-width: 350px) {
     /*Portada*/
 .descrip, .descrip.cierre {
@@ -115,7 +126,7 @@ h4.text-p{
     font-size: 1em;
 }
 
-    /*Portada*/
+    /*Newsletter*/
 .text-apuntarse{
     transform: translateY(-3.3em);
 }

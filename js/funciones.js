@@ -127,7 +127,7 @@ for (let i = 0; i < imagenes.length; i++) {
                 body.style.backgroundColor = '#000'; //si está en modo oscuro, el fondo vuelve a ser el del body
             
             } else {
-                body.style.backgroundColor = '#ffffff';
+                body.style.backgroundColor = 'var(--texto-2)';
             };
 
         imagenes[5].style.backgroundColor = 'var(--color-1)';
@@ -178,18 +178,18 @@ for (let i = 0; i < imagenes.length; i++) {
   });
 
   /*----- Modifica el cuadro final y las oraciones de la seccion de projectos"*/
+function ancho() {
 const cuadro = document.querySelector(".element-grid-img-int.vacia");
 const oraciones = document.querySelectorAll(".fondo.grid.oraciones");
 const projectos = document.querySelector(".projectos");
 const medidasCuadro = imagenes[4].getBoundingClientRect();
 
-function ancho() {
     const altoCuadro = medidasCuadro.height;
     const anchoCuadro = medidasCuadro.width;
     const widthCuadro = cuadro.getBoundingClientRect();
     const anchoRect = widthCuadro.width;
 
-    if (window.innerWidth < 720) {
+    if (window.innerWidth < 721) {
         cuadro.style.height = medidasCuadro.height + "px";
         cuadro.style.width = "100%";
 
