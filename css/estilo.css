@@ -515,6 +515,7 @@ svg{ /*ojo en svg*/
 
 .pres{ /*en presupuesto*/
     display: flex;
+    visibility: visible;
     justify-content: space-between;
     align-items: baseline;
     cursor: pointer;
