@@ -391,6 +391,10 @@ section.artistas{
     text-align: center;
     bottom: 60px;
 }
+
+.unirse{
+    width:90%;
+}
 }
 
 @media screen and (max-width: 640px){
