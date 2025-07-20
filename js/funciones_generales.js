@@ -87,7 +87,7 @@ if (!form) return;
     simulacion.style.transform = "translateY(-2.5em)";
 
   } else if (window.innerWidth < 771) {
-    form.style.transform = "translateY(-3.9emem)";
+    form.style.transform = "translateY(-3.9em)";
       simulacion.style.transform = "translateY(-1.9em)";
 
   } else {
