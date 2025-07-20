@@ -54,7 +54,12 @@ const amores = FGrupo.querySelectorAll(".descrip.cabecera");
         pocos.remove();
         amores[2].remove();
         amores[1].innerText = "¿nos quieres?";
-        amores[1].style.color = "#ffffff";
+
+        if(window.innerWidth > 770){
+            amores[1].style.color = "var(--color-2)";
+        }else{
+           amores[1].style.color = "#ffffff"; 
+        }
     });
 
                     /*----- JS DE LA SECCIÓN DE PROJECTOS -----*/
@@ -174,29 +179,7 @@ for (let i = 0; i < imagenes.length; i++) {
         textosDescrip.forEach(texto => {
             texto.style.visibility = 'visible'; //quiero que todas sean visibles
     });
-
   });
-
-  /*----- Modifica el cuadro final y las oraciones de la seccion de projectos"*/
-/*function ancho() {
-const cuadro = document.querySelector(".element-grid-img-int.vacia");
-const medidasCuadro = imagenes[4].getBoundingClientRect();
-
-    const altoCuadro = medidasCuadro.height;
-    const anchoCuadro = medidasCuadro.width;
-    const widthCuadro = cuadro.getBoundingClientRect();
-    const anchoRect = widthCuadro.width;
-
-    if (window.innerWidth < 721) {
-        cuadro.style.height = medidasCuadro.height + "px";
-        cuadro.style.width = "100%";
-
-    } else {
-        const x = altoCuadro * anchoRect / anchoCuadro; //variable para que sea proporcional el alto del cuadro
-        cuadro.style.height = x + "px";
-        cuadro.style.width = "100%";
-    }    
-}*/
 
 
 function contratarTarjeta() {
