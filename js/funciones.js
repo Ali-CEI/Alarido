@@ -54,7 +54,7 @@ const amores = FGrupo.querySelectorAll(".descrip.cabecera");
         pocos.remove();
         amores[2].remove();
         amores[1].innerText = "¿nos quieres?";
-        amores[1].style.color = "var(--color-2)";
+        amores[1].style.color = "#ffffff";
     });
 
                     /*----- JS DE LA SECCIÓN DE PROJECTOS -----*/

@@ -135,6 +135,10 @@
     z-index: 9;
 }
 
+.descrip.cabecera, .descrip.cabecera span {
+    color: #ffffff;
+}
+
 /*---------------GALERIA PROJECTOS---------------*/
 .project-grid {
     display: flex;
