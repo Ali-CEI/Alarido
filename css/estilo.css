@@ -361,13 +361,14 @@ p{
     line-height: .8em;
 }
 
-.descrip span, .descrip.cabecera {
+.descrip span {
     color: var(--color-1);
 }
 
 .descrip.cabecera {
     font-weight: 700;
     text-transform: lowercase;
+    color: var(--texto-2);
 }
 
 .descrip.cabecera span{
