@@ -87,7 +87,7 @@ if (!form) return;
     simulacion.style.transform = "translateY(-2.5em)";
 
   } else if (window.innerWidth < 771) {
-    form.style.transform = "translateY(-3.7em)";
+    form.style.transform = "translateY(-3.9emem)";
       simulacion.style.transform = "translateY(-1.9em)";
 
   } else {
@@ -108,7 +108,7 @@ cierre.addEventListener("mouseleave", () => {
     form.style.transform = "translateY(-2.7em)";
     simulacion.style.transform = "translateY(-0.7em)";
       } else {
-    form.style.transform = "translateY(-2.1em)";
+    form.style.transform = "translateY(-2.25em)";
     simulacion.style.transform = "translateY(-0.7em)";
     }
     

@@ -631,7 +631,7 @@ h3.titulo-popup{
     z-index: 1;
     position: absolute;
     bottom: 0;
-    transform: translateY(-2.1em);
+    transform: translateY(-2.25em);
     transition: transform .2s linear;
 }
 
