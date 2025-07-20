@@ -365,14 +365,14 @@ p{
     color: var(--color-1);
 }
 
-.descrip.cabecera {
+.descrip.cabecera, .descrip.cabecera span {
     font-weight: 700;
     text-transform: lowercase;
-    color: var(--texto-2);
+    color: var(--color-2);
 }
 
 .descrip.cabecera span{
-    color: var(--color-2);
+    color: var(--texto-2);
 }
 
 .descrip span.oculto{ /*palabras que se muestran al volverse de color el fondo*/
