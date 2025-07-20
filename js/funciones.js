@@ -71,7 +71,8 @@ const titulo = document.querySelector(".titulo-popup");
 const parrafo = document.querySelector(".tarjeta p");
 const bio = document.querySelectorAll(".element-grid-texto p.bio");
 const picture = document.querySelector("picture");
-const nav = document.querySelector("header")
+const grafico = document.querySelector(".tarjeta .grafico");
+const nav = document.querySelector("header");
 const svgs = document.querySelectorAll("svg");
 const clicks = document.querySelectorAll(".haz-click");
 
@@ -167,7 +168,10 @@ for (let i = 0; i < imagenes.length; i++) {
                 }else{
                     picture.style.alignItems = "center";
                 };
-
+            
+                if(window.innerHeight > window.innerWidth){
+                    grafico.style.height = "60%";
+                }
         }});
 };
 //};  
