@@ -54,7 +54,7 @@ entrada.forEach(entrada => {
       observar.unobserve(entrada.target); // solo activarlo una vez
     }
   });
-}, { threshold: 0.3 }); //porcentaje de visibilidad del elemento en el viewport
+}, { threshold: 0.2 }); //porcentaje de visibilidad del elemento en el viewport
 
 fotos.forEach(foto => o.observe(foto));
 

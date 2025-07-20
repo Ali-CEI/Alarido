@@ -135,7 +135,7 @@
     z-index: 9;
 }
 
-.descrip.cabecera, .descrip.cabecera span {
+.frente.grupo .descrip.cabecera, .frente.grupo .descrip.cabecera span {
     color: #ffffff;
 }
 
