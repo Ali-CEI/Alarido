@@ -5,12 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <link rel="stylesheet" href="css/estilo_pruebas.css">
-      <link rel="preconnect" href="https://fonts.googleapis.com"> 
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap" rel="stylesheet"> <!--Link League Gothic-->
-
-  <style>
+    <style>
 :root {
   --black: #3a3a3a;
   --white: #fff;
@@ -155,7 +150,7 @@ input[type="radio"] {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 [value="All"]:checked ~ .filters [for="All"],
 [value="CSS"]:checked ~ .filters [for="CSS"],
-[value="musica"]:checked ~ .filters [for="musica"],
+[value="JavaScript"]:checked ~ .filters [for="JavaScript"],
 [value="jQuery"]:checked ~ .filters [for="jQuery"],
 [value="WordPress"]:checked ~ .filters [for="WordPress"],
 [value="Slider"]:checked ~ .filters [for="Slider"],
@@ -169,7 +164,7 @@ input[type="radio"] {
 }
 
 [value="CSS"]:checked ~ .posts .post:not([data-category~="CSS"]),
-[value="musica"]:checked ~ .posts .post:not([data-category~="musica"]),
+[value="JavaScript"]:checked ~ .posts .post:not([data-category~="JavaScript"]),
 [value="jQuery"]:checked ~ .posts .post:not([data-category~="jQuery"]),
 [value="WordPress"]:checked ~ .posts .post:not([data-category~="WordPress"]),
 [value="Slider"]:checked ~ .posts .post:not([data-category~="Slider"]),
@@ -210,50 +205,36 @@ footer span {
 }
 
 </style>
-
-  </style>
 </head>
-
 <body>
-  <section class="author-archive">
+    
+    <section class="author-archive">
 <div class="container">
 <h1>Convocatorias</h1>
-<input id="Todas" checked="checked" name="categories" type="radio" value="Todas" /> <input id="CSS" name="categories" type="radio" value="CSS" /> <input id="musica" name="categories" type="radio" value="musica" /> <input id="jQuery" name="categories" type="radio" value="jQuery" /> <input id="WordPress" name="categories" type="radio" value="WordPress" /> <input id="Slider" name="categories" type="radio" value="Slider" /> <input id="fullPage.js" name="categories" type="radio" value="fullPage.js" />
+<input id="Todas" checked="checked" name="categories" type="radio" value="Todas" /> <input id="CSS" name="categories" type="radio" value="CSS" /> <input id="JavaScript" name="categories" type="radio" value="JavaScript" /> <input id="jQuery" name="categories" type="radio" value="jQuery" /> <input id="WordPress" name="categories" type="radio" value="WordPress" /> <input id="Slider" name="categories" type="radio" value="Slider" /> <input id="fullPage.js" name="categories" type="radio" value="fullPage.js" />
 <ol class="filters">
 <li><label for="Todas">Todas</label></li>
 <li><label for="CSS">Contrataci&oacute;n</label></li>
-<li>   <label>Tipo de arte:
-      <select id="filtro-tipo" class="opciones">
-        <option value="">Todos</option>
-        <option value="poesia">Poesía</option>
-        <option value="musica">Música</option>
-        <option value="arte">Arte</option>
-      </select>
-    </label></li>
+<li><label for="JavaScript">Transferencia</label></li>
 <li><label for="jQuery">Proyectos generales</label></li>
 <li><label for="WordPress">Proyectos europeos</label></li>
 <li><label for="Slider">EjemploXXX1</label></li>
 <li><label for="fullPage.js">EjemploXX2</label></li>
 </ol>
 <ol class="posts">
-<li class="post" data-category="CSS musica">
+<li class="post" data-category="CSS JavaScript">
 <article>
 <figure><a href="https://ucm.es/" target="_blank" rel="noopener"> <img src="https://www.ucm.es/file/probeta-accesoria?ver=n" alt="" width="850" height="567" /> </a>
 <figcaption>
 <ol class="post-categories">
-<li><a>Contrataci&oacute;n</a></li>
-<li><a>Transferencia</a>
-<ol>
-<li>Abierto hasta 23/07/2025</li>
-</ol>
-</li>
+<li><a>Contrataci&oacute;n</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<em><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</strong></em><em><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Abierto hasta 23/07/2025</strong></em></li>
 </ol>
 <h2 class="post-title"><a href="https://www.ucm.es/pli51-25" target="_blank" rel="noopener">Convocatoria PLI 12/25</a></h2>
 </figcaption>
 </figure>
 </article>
 </li>
-<li class="post" data-category="CSS musica">
+<li class="post" data-category="CSS JavaScript">
 <article>
 <figure><a href="https://ucm.es/" target="_blank" rel="noopener"> <img src="https://www.ucm.es/file/biblioteca-si?ver=n" alt="" width="850" height="565" /> </a>
 <figcaption>
@@ -266,7 +247,7 @@ footer span {
 </figure>
 </article>
 </li>
-<li class="post" data-category="musica WordPress">
+<li class="post" data-category="JavaScript WordPress">
 <article>
 <figure><a href="https://ucm.es/"> <img src="https://www.ucm.es/file/visitante-marco?ver=n" alt="" width="320" height="173" /></a>
 <figcaption>
@@ -279,7 +260,7 @@ footer span {
 </figure>
 </article>
 </li>
-<li class="post" data-category="CSS musica">
+<li class="post" data-category="CSS JavaScript">
 <article>
 <figure><a href="https://ucm.es/" target="_blank" rel="noopener"> <img src="https://www.ucm.es/file/pexels-pixabay-159483?ver=n" alt="" width="854" height="558" /> </a>
 <figcaption>
@@ -328,7 +309,7 @@ footer span {
 </figure>
 </article>
 </li>
-<li class="post" data-category="CSS musica">
+<li class="post" data-category="CSS JavaScript">
 <article>
 <figure><a href="https://ucm.es/"> <img src="https://www.ucm.es/file/pexels-pavel-danilyuk-8442618?ver=n" alt="" width="850" height="567" /></a>
 <figcaption>
@@ -369,7 +350,7 @@ footer span {
 </figure>
 </article>
 </li>
-<li class="post" data-category="CSS musica">
+<li class="post" data-category="CSS JavaScript">
 <article>
 <figure><a href="https://ucm.es/"> <img src="https://www.ucm.es/file/estudiantes-charlando?ver=n" alt="" width="850" height="567" /></a>
 <figcaption>
@@ -398,103 +379,6 @@ footer span {
 </ol>
 </div>
 </section>
-
-  <script>
-
-
-/*function animateHorizontalRules() {
-    document.querySelectorAll('.vertical-rule').forEach((el) => {
-      gsap.set(el, { width: "0%", visibility: "visible" });
-      ScrollTrigger.create({
-        trigger: el,
-        start: "top bottom",
-        once: true,
-        onEnter: () => {
-          gsap.to(el, {
-            width: "100%",
-            duration: 3,
-            ease: "power4.out"
-          });
-        }
-      });
-    });
-  }*/
-  function initAnimations() {
-    revealTruthText();
-    revealLongTruthText();
-    revealBigLogoText();
-    animateHorizontalRules();
-    animateVerticalRules();
-    initGridAnimations();
-    revealRandomSplit();
-  }
-
-
-  function animateVerticalRules() {
-    document.querySelectorAll('.vertical-rule').forEach((el) => {
-      gsap.set(el, { height: "0%", visibility: "visible" });
-      ScrollTrigger.create({
-        trigger: el,
-        start: "top bottom",
-        once: true,
-        onEnter: () => {
-          gsap.to(el, {
-            height: "100%",
-            duration: 8,
-            ease: "power4.out"
-          });
-        }
-      });
-    });
-  }
-
-    const cargas = document.querySelectorAll(img);
-
-    window.addEventListener("scroll", () => {
-      cargas.forEach(carga => carga.style.height = window.innerHeight + "px");
-    });
-
-  /*------- CAMBIA FONDO A AMARILLO AL COLOCAR EL CURSOR SOBRE KA IMAGEN DE PROJECTOS -------*/
-    document.addEventListener('DOMContentLoaded', () => {
-    
-    const imgs = document.querySelectorAll();
-    //const descripcion = document.querySelector('.element-grid-caption');
-
-    imgs.forEach(img => {
-      let timeoutId;
-
-      img.addEventListener('mouseenter', () => {
-        document.body.style.backgroundColor = 'yellow';
-        //descripcion.setAtribute("style","visibility: hidden;");
-    
-      });
-
-      img.addEventListener('mouseleave', () => {
-        document.body.style.backgroundColor = 'white';
-        for (let i = 0; i < descripcion.length; i++) {
-          //descripcion[i].style.visibility = 'hidden';
-            }
-
-  });
-  });
-  });
-
-    const navegacion = document.querySelector("button .grid");
-    const botones = document.querySelectorAll("button");
-
-/*
-for(let i = 0; i < botones.length; i++){
-    botones[i].addEventListener("click", function(){
-        navegacion.className = i == 0 ? "desplegado" : "";
-    });
-}*/
-
-botones.forEach(boton => {
-    boton.addEventListener("click", () => navegacion.classList.toggle("desplegado"));
-    });
-
-console.log("mensaje de prueba");
-  </script>
 
 </body>
 </html>

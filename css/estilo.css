@@ -63,7 +63,7 @@ header a, header button{
     font-size: 1.5em;
 }
 
-header a{ 
+header a { 
     cursor: pointer;
     text-decoration: none;
 }
@@ -583,7 +583,7 @@ h3.titulo-popup{
     text-align: center;
 }
 
-.cierre a{
+.cierre a, .f-contactar a{
     cursor:pointer;
     color: var(--color-1);
     text-transform: lowercase;
