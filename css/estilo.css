@@ -513,11 +513,13 @@ svg{ /*ojo en svg*/
     overflow: hidden;
 }
 
-.pres{
+.pres{ /*en presupuesto*/
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     cursor: pointer;
+    position: relative;
+    top: 0;
 }
 
 .cerrar{
