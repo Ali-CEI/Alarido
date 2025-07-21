@@ -87,10 +87,6 @@ for (let a = 0; a < alinearArtistas.length; a++) {
     alinearArtistas[a].style.bottom = "130px";
     alinearArtistas[a].style.position = "relative";
   };
-  if (altTexto.includes("Hacher")) {
-    alinearArtistas[a].style.bottom = "70px";
-    alinearArtistas[a].style.position = "relative";
-  };
 };
     if(window.innerWidth < 770){
         if (altTexto.includes("Carol")) {

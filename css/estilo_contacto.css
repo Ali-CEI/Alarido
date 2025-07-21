@@ -209,11 +209,6 @@ section.artistas{
   transition: opacity .4s ease .2s, transform .4s ease .2s;
 }
 
-section.poesia:nth-child(1) div.artista:nth-child(-n + 3){
-  opacity: 1;
-  transform: translateY(0%);
-}
-
 .artista .descrip{
     font-size: 5em;
 }
@@ -273,7 +268,6 @@ section.poesia:nth-child(1) div.artista:nth-child(-n + 3){
     color: var(--texto-1);
 }
 
-
     /*FORMULARIO DE CONTRATACION*/
 /*.popup estilo en estilo.css con .tarjeta*/
 form.contratar, form.unete{
@@ -324,11 +318,6 @@ textarea {
 }
 
 /*UNETE*/
-.p-sec.unete{
-    animation: opacidad 1s forwards;
-    margin: 0;
-}
-
 form.unete{
     gap: 0;
 }
@@ -360,6 +349,13 @@ form.unete{
 @media screen and (min-width: 1920px){
 .artista picture{
     width: 550px;
+}
+}
+
+@media screen and (min-width: 1024px) {
+section.poesia:nth-child(1) div.artista:nth-child(-n + 3){
+    opacity: 1;
+    transform: translateY(0%);
 }
 }
 

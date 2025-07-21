@@ -89,17 +89,24 @@ picture img{
     position: relative;
 }
 
-
-
 /*WEB ARTISTAS*/
+h1.contactar{
+    font-size: 6em;
+}
 
+h4.subtitulo.izq, p.izq {
+    margin-left: 30px;
+}
 
+.galeria-artistas p, .unirse p {
+    font-size: 0.9em;
+}
 }
 
 
 @media screen and (max-width: 375px) { /*Iphone SE*/
     .newsletter {
-        font-size: 1.7em;
+        font-size: 1.7em, ;
     }
 
     .text-apuntarse{
@@ -137,7 +144,7 @@ h4.text-p{
 
     /*Artistas*/
 h1.contactar {
-    font-size: 6em;
+    font-size: 5em;
 }
 
 h4.subtitulo {

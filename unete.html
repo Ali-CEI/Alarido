@@ -35,42 +35,42 @@
     </nav>
   </header>
 
-  <div class="p-sec unete">
-  <!--<canvas id="myCanvas"></canvas>-->
-<div class="unirse">
-    <div class="pp-contactar">
-  <h1 class="contactar">¿Artista?</h1>
-  <h4 class="subtitulo izq">Queremos oirte gritar</h4>
-  <p class="izq">Rellena el formulario <span class="sub">[e intenta caernos bien]</span>.</p>
+  <div class="p-sec cierre">
+    <div class="unirse">
+      <div class="pp-contactar">
+        <h1 class="contactar">¿Artista?</h1>
+        <h4 class="subtitulo izq">Queremos oirte gritar</h4>
+          <p class="izq">Rellena el formulario <span class="sub">[e intenta caernos bien]</span>.</p>
       </div>
 
-  <form class="unete">
-    <label for="nombre">Nombre</label>
-        <input type="text" id="nombre" name="nombre" placeholder="Nombre completo">
-    <label for="pseudo">Pseudónimo</label>
-        <input type="text" id="pseudo" name="pseudo" placeholder="Pseudónimo">
-    <label for="email">Email</label>
-        <input type="email" id="email" placeholder="Correo de contacto">
+      <form class="unete">
+          <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre completo">
+          <label for="pseudo">Pseudónimo</label>
+            <input type="text" id="pseudo" name="pseudo" placeholder="Pseudónimo">
+          <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Correo de contacto">
+          <label for="redes">Disciplina artística</label>
+            <select name="disciplina">
+              <option disabled selected>Tu disciplina artística</option>
+              <option value="poesia">Poesía</option>
+              <option value="musica">Música</option>
+              <option value="arte">Arte visual</option>
+              <option value="escenica">Escénicas</option>
+            </select>
+
+          <label for="redes">Links a tus trabajos</label>
+            <input type="text" id="redes" placeholder="Instagram, web o portfolio">
+
+          <textarea name="bio" placeholder="Cuéntanos sobre ti (máx 300 caracteres)" maxlength="300" rows="4"></textarea>
     
-    <label for="redes">Disciplina artística</label>
-      <select name="disciplina">
-        <option disabled selected>Tu disciplina artística</option>
-        <option value="poesia">Poesía</option>
-        <option value="musica">Música</option>
-        <option value="arte">Arte visual</option>
-        <option value="escenica">Escénicas</option>
-      </select>
+          <label for="photo">Sube una imagen o retrato</label>
+            <input type="file" id="photo" accept="image/*">
 
-    <label for="redes">Links a tus trabajos</label>
-        <input type="text" id="redes" placeholder="Instagram, web o portfolio">
+          <button type="submit" class="btn contratar">Enviar solicitud</button>
+      </form>
+    </div>
 
-    <textarea name="bio" placeholder="Cuéntanos sobre ti (máx 300 caracteres)" maxlength="300" rows="4"></textarea>
-    
-    <label for="photo">Sube una imagen o retrato</label>
-        <input type="file" id="photo" accept="image/*">
-
-    <button type="submit" class="btn contratar">Enviar solicitud</button>
-  </form>
 
   <div class="newsletter">
     <h3 class="text-subtitulo">Somos gente maja <span>[casi siempre].</span></h3>
@@ -81,7 +81,6 @@
         <button class="suscripcion" type="submit">Enviar</button>
     </form>
     </div></div>
-</div>
 
 </body>
 </html>
