@@ -209,6 +209,11 @@ section.artistas{
   transition: opacity .4s ease .2s, transform .4s ease .2s;
 }
 
+section.poesia:nth-child(1) div.artista:nth-child(-n + 3){
+  opacity: 1;
+  transform: translateY(0%);
+}
+
 .artista .descrip{
     font-size: 5em;
 }
@@ -367,6 +372,11 @@ section.artistas{
 
 .artista{
   display: flex;
+}
+
+section.poesia:nth-child(1) div.artista:nth-child(1){
+  opacity: 1;
+  transform: translateY(0%);
 }
 
 .galeria-artistas picture{
