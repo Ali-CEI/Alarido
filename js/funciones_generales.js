@@ -81,26 +81,34 @@ const simulacion = document.querySelector(".simulacion");
 
 if (!form) return;
 
- form.addEventListener('mouseenter', ()  => {
+if (window.innerWidth < 1024) { /*doy por hecho que es vertical*/
+ form.addEventListener('click', ()  => {
     if (window.innerWidth < 376) {
     form.style.transform = "translateY(-4.5em)";
     simulacion.style.transform = "translateY(-2.5em)";
 
   } else if (window.innerWidth < 771) {
     form.style.transform = "translateY(-3.9em)";
-      simulacion.style.transform = "translateY(-1.9em)";
+    simulacion.style.transform = "translateY(-1.9em)";
+  }else{
+    form.style.transform = "translateY(-3.3em)";
+    simulacion.style.transform = "translateY(-1.9em)";
+  }
+    simulacion.style.opacity = "1";
+});
 
-  } else {
+} else {
+   form.addEventListener('mouseenter', ()  => {
     form.style.transform = "translateY(-3.3em)";
     simulacion.style.transform = "translateY(-1.9em)";
 
-  }
-    simulacion.style.opacity = "1";
-    
-});
+  });
+
+simulacion.style.opacity = "1";    
+}
     
 
-cierre.addEventListener("mouseleave", () => {
+cierre.addEventListener("mouseleave", () => { //si no es vertical no se cierra
       if (window.innerWidth < 376) {
     form.style.transform = "translateY(-3.3em)";
     simulacion.style.transform = "translateY(-2.7em)";

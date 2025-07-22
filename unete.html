@@ -51,8 +51,9 @@
             <input type="text" id="pseudo" name="pseudo" placeholder="Pseudónimo">
           <label for="email">Email</label>
             <input type="email" id="email" placeholder="Correo de contacto">
-          <label for="redes">Disciplina artística</label>
-            <select name="disciplina">
+
+          <label for="dis-artistica">Disciplina artística</label>
+            <select name="disciplina" id="dis-artistica">
               <option disabled selected>Tu disciplina artística</option>
               <option value="poesia">Poesía</option>
               <option value="musica">Música</option>
@@ -62,8 +63,9 @@
 
           <label for="redes">Links a tus trabajos</label>
             <input type="text" id="redes" placeholder="Instagram, web o portfolio">
-
-          <textarea name="bio" placeholder="Cuéntanos sobre ti (máx 300 caracteres)" maxlength="300" rows="4"></textarea>
+          
+          <label for="bio">Links a tus trabajos</label>
+            <textarea name="bio" id="bio" placeholder="Cuéntanos sobre ti (máx 300 caracteres)" maxlength="300" rows="4"></textarea>
     
           <label for="photo">Sube una imagen o retrato</label>
             <input type="file" id="photo" accept="image/*">
