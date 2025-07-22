@@ -261,7 +261,7 @@ h4{ /*parrafos primera seccion*/
     }
 
 h4.text-p span.sub, p span.sub{ /*tachado palabras primera seccion*/
-    display: block;
+    display: inline-block;
 }
 
 h4.text-p span.sub:hover, p span.sub:hover{ /*tachado palabras primera seccion*/
