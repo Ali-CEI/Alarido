@@ -106,12 +106,19 @@ h4.subtitulo.izq, p.izq {
 
 @media screen and (max-width: 375px) { /*Iphone SE*/
 .newsletter{
-    font-size: 1em;
+    font-size: 1.6em;
 }
 
-    .text-apuntarse{
-        transform: translateY(-3.3em);
+.text-apuntarse{
+    transform: translateY(-3.3em);
 }
+
+.text-subtitulo {
+    text-align: center;
+    display: inline-block;
+    font-size: 1.17em;
+}
+
 }
 
 
