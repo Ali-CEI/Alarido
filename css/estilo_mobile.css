@@ -105,9 +105,9 @@ h4.subtitulo.izq, p.izq {
 
 
 @media screen and (max-width: 375px) { /*Iphone SE*/
-    .newsletter {
-        font-size: 1.7em;
-    }
+.newsletter{
+    font-size: 1.6em;
+}
 
     .text-apuntarse{
         transform: translateY(-3.3em);
@@ -138,7 +138,7 @@ h4.text-p{
     transform: translateY(-3.3em);
 }
 
-.newsletter, input.text-sim{
+input.text-sim{
     font-size: 1.6em;
 }
 
