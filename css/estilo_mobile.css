@@ -89,6 +89,12 @@ picture img{
     position: relative;
 }
 
+
+.text-subtitulo, .text-subtitulo span {
+    text-align: center;
+    display: inline-block;
+}
+
 /*WEB ARTISTAS*/
 h1.contactar{
     font-size: 6em;
@@ -111,12 +117,6 @@ h4.subtitulo.izq, p.izq {
 
 .text-apuntarse{
     transform: translateY(-3.3em);
-}
-
-.text-subtitulo {
-    text-align: center;
-    display: inline-block;
-    font-size: 1.17em;
 }
 
 }
