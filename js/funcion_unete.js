@@ -16,8 +16,5 @@ function rastro(){
   });
   };
 
- document.addEventListener('DOMContentLoaded', () => {//invocar al cargar
 
     rastro();
-
-});
