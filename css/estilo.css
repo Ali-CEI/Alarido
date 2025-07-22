@@ -9,15 +9,6 @@ html, body, form, fieldset, p, div, h1, h2, h3, h4, h5, h6 { /*pruebo esta regla
     -webkit-text-size-adjust:none;
 }
 
-
-.league-gothic * {
-  font-family: "League Gothic", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-variation-settings: "wdth" 100;
-}
-
 :root{ /*base*/
     font-family: "league gothic", sans-serif;
     --height: 100dvh;

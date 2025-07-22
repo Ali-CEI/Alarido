@@ -1,20 +1,33 @@
-    /**/
+    /*FUNCIONES COMNUNES A TODAS LAS PAGINAS*/
+
+/*
+Incluye:
+- modo oscuro
+- cambio en el nombre de la pagina en funcion de si esta o no activa la pestaña
+- lineas que crecen en la pantalla
+- seccion de newsletter con que escucha en funcion de hover o click
+*/
+
+
 /*programa el modo oscuro*/
 const modoOscuro = document.getElementById('modoOscuro');
 const body = document.body;
 
-const activarOscuro = () => {
+/*cambia fondo a oscuro añadiendo clase al body*/
+const activarOscuro = () => { 
   body.classList.add('dark');
   localStorage.setItem('oscuro', 'activado');
   actualizarFondo(); 
 };
 
-const desactivarOscuro = () => {
+/*cambia fondo a claro*/
+const desactivarOscuro = () => { 
   body.classList.remove('dark');
   localStorage.setItem('oscuro', 'desactivado');
   actualizarFondo(); 
 };
 
+/*actualiza el fondo*/
 function actualizarFondo() {
   if (body.classList.contains('dark')) {
     body.style.backgroundColor = '#000';
@@ -23,7 +36,7 @@ function actualizarFondo() {
   }
 }
 
-if (localStorage.getItem('oscuro') === 'activado') {
+if (localStorage.getItem('oscuro') === 'activado') { /*cambia el icono del boton de modo oscuro/claro*/
   activarOscuro();
     modoOscuro.innerHTML = window.innerWidth <= 770 ? "&#x263C;" : "modo: &#x263C;";
 }else {
@@ -31,7 +44,8 @@ if (localStorage.getItem('oscuro') === 'activado') {
     modoOscuro.innerHTML = window.innerWidth <= 770 ? "&#9679;" : "modo: &#9679;";
 };
 
-modoOscuro.addEventListener('click', () => {
+modoOscuro.addEventListener('click', () => { 
+  /*actualiza la web al pulsar el boton (no detectaría si no el cambio porque no se refresca automáticamente)*/
   if (body.classList.contains('dark')) {
     desactivarOscuro();
     modoOscuro.innerHTML = window.innerWidth <= 770 ? "&#9679;" : "modo: &#9679;";
@@ -61,7 +75,8 @@ function actualizarBarra(barra) { //función que añade la animación a las barr
   barra.classList.add('animacion');
 }
 
-const observer = new IntersectionObserver((entrada, observar) => { //constante que "observa" la ventana del navegador
+//constante que "observa" la ventana del navegador
+const observer = new IntersectionObserver((entrada, observar) => { 
 entrada.forEach(entrada => { 
     if (entrada.isIntersecting) {
       actualizarBarra(entrada.target); //invoca la función
@@ -73,19 +88,21 @@ entrada.forEach(entrada => {
 /*que el "observer" funcione para cada linea horizontal*/
 barras.forEach(barra => observer.observe(barra));
 
+//fncion para la newsletter
 function formulario() {
 
 const form = document.querySelector('.text-apuntarse');
 const cierre = document.querySelector('.newsletter');
 const simulacion = document.querySelector(".simulacion");
 
-if (!form) return;
+if (!form) return; //para que no pare el script en la pag de contacto (no tiene newsletter)
 
 if (window.innerWidth < 1024) { /*doy por hecho que es vertical*/
  form.addEventListener('click', ()  => {
       simulacion.style.opacity = "1";
 
-    if (window.innerWidth < 376) {
+    //adapta al transform en funcion del tamaño de la tipografia para que quede cubierta la frase
+    if (window.innerWidth < 376) { 
     form.style.transform = "translateY(-4.5em)";
     simulacion.style.transform = "translateY(-2.5em)";
 
@@ -123,7 +140,7 @@ cierre.addEventListener("mouseleave", () => { //si no es vertical no se cierra
     simulacion.style.opacity = "0";
 });
 
-simulacion.addEventListener('submit', function(event) {
+simulacion.addEventListener('submit', function(event) {/*mensaje a la consola porque el formulario no funciona*/
     event.preventDefault();
     console.log("Menos mal que no funciona. ¿Apuntándote a otra [m̷i̷e̷r̷d̷a̷] que vas a dejar sin leer?",
       "Esperamos que, al menos, no nos mandes a SPAM.");

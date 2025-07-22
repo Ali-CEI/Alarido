@@ -5,23 +5,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Somos el alarido</title>
+  <!--Titulo activo. Cambia con js cuando la pestaña esta descativada-->
+  <title>Somos el alarido</title> 
+
+  <!--CSS-->
   <link rel="stylesheet" href="css/estilo.css">
-  <link rel="stylesheet" href="css/estilo_contacto.css">
   <link rel="stylesheet" href="css/estilo_tablets.css"> <!--Estilo para pantallas de menos de 1024px-->
   <link rel="stylesheet" href="css/estilo_mobile.css"> <!--Estilo para pantallas de menos de 480px-->
-  
+  <link rel="stylesheet" href="css/estilo_contacto.css">  <!--Estilo contactos-->
+
+  <!--typo League en Google Fonts-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.typekit.net/ytv7mnt.css">
+
+  <!--typo League en Adobe-->
+  <link rel="stylesheet" href="https://use.typekit.net/ytv7mnt.css"> 
   
+  <!--JAVASCRIPT-->
+  <script defer src="js/funciones_generales.js"></script> <!--Link java comun a todas las paginas-->
   <script defer src="js/funciones_contacta.js"></script> <!--Link java-->
-  <script defer src="js/funciones_generales.js"></script> <!--Link java-->
 
 </head>
 <body>
 
+  <!--menu navegacion-->
   <header>
     <h1><a href="index.html">alarido</a></h1>
     <nav>
@@ -36,16 +44,18 @@
     </nav>
   </header>
 
-  <div class="elige">
-
-    <div class="vertical-linea"></div>
-
+ <!--seccion para elegir contacto en funcion de si eres artista o contratante-->
+ <div class="elige">
+  <div class="vertical-linea"></div>   <!--linea decoracion que parte la pantalla en dos-->
+  
     <div class="matrix">
+       <!--si entras desde ordenador o dispositivos grandes-->
       <div class="ordena">
       <a href="unete.html" class="descrip pildoras">Soy artista</a>
        <a href="artistas.html" class="descrip pildoras">Busco artista</a>
       </div>
 
+      <!--si entras desde movil o dispositivos pequeños-->
       <div class="responsive">
         <div class="pantal">
           <a href="unete.html" class="descrip pildoras">Soy</a>
@@ -55,15 +65,12 @@
       </div>
     </div>
 
+    <!--solicitar mas info-->
     <div class="pasando">
       <h4>solo pasaba por <span class="aqui">aquí</span></h4>
       <h4 class="mas">&nbsp;y quiero <span class="info">&#8594;&nbsp;<a href="mailto:aliabasc@alumnos.cei.es">más información</a>&nbsp;&#8592;</span></h4>
     </div>
-
-    </div>
-
-
-
+  </div>
 
 </body>
 </html>

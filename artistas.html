@@ -5,22 +5,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Somos el alarido</title>
+    <title>Somos el alarido</title>  <!--Titulo activo. Cambia con js cuando la pestaña esta descativada-->
+
+  <!--CSS-->
   <link rel="stylesheet" href="css/estilo.css">
-  <link rel="stylesheet" href="css/estilo_contacto.css">
   <link rel="stylesheet" href="css/estilo_tablets.css"> <!--Estilo para pantallas de menos de 1024px-->
   <link rel="stylesheet" href="css/estilo_mobile.css"> <!--Estilo para pantallas de menos de 480px-->
+  <link rel="stylesheet" href="css/estilo_contacto.css">  <!--Estilo contactos-->
 
+  <!--typo League en Google Fonts-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.typekit.net/ytv7mnt.css">
+
+  <!--typo League en Adobe-->
+  <link rel="stylesheet" href="https://use.typekit.net/ytv7mnt.css"> 
   
+  <!--JAVASCRIPT-->
+  <script defer src="js/funciones_generales.js"></script> <!--Link java comun a todas las paginas-->
   <script defer src="js/funciones_contacta.js"></script> <!--Link java-->
-  <script defer src="js/funciones_generales.js"></script> <!--Link java-->
+
 </head>
 <body>
 
+  <!--menu navegacion-->
   <header>
     <h1><a href="index.html">alarido</a></h1>
     <nav>
@@ -35,6 +43,7 @@
     </nav>
   </header>
 
+  <!--intro seccion contacto-->
   <div class="p-sec contacto">
     <div class="pp-contactar">
         <h1 class="contactar">Contacta</h1>
@@ -43,12 +52,16 @@
         <p>Somos artistas de todas las disciplinas y especialidades, con diferentes niveles de experiencia, pero iguales ganas. ¡Haz tu <span class="cursiva">match</span>!</p>
       </div>
 
+    <!--añadir aqui un filtro en funcion de las categorias:
+    artisticas/género/edad/localidad...-->
+
+    <!--galeria de artistas-->
     <div class="galeria-artistas">
       <section class="poesia">
-        <h2 class="expresiones ">poesía</h2> 
+        <h2 class="expresiones ">poesía</h2> <!--titulo disciplina artistica-->
         <section class="artistas poesia">
         
-        <div class="artista">
+        <div class="artista"> <!--tarjeta de artista-->
           <picture>
             <img src="img/Cris-Rivero_2.JPG" alt="Foto de Cris Rivero">
           </picture>
@@ -231,13 +244,16 @@
     </section>
     </section>
 
+    <!--secion contacto (resolucion dudas)-->
     <div class="f-contactar">
       <h1 class="contactar">¿Perdido?</h1>
       <h4 class="subtitulo izq">Si no sabes lo que buscas...</h4>
       <p class="izq">No te preocupes, <a href="mailto:aliabasc@alumnos.cei.es">contacta</a> y te ayudamos.</p>
+      <!--añadir a futuro un cuestionario o minujuego que te aconseje al final-->
     </div>
   </div>
 
+  <!--seccion newsletter-->
   <div class="newsletter">
     <h3 class="text-subtitulo">Somos gente maja <span>[casi siempre].</span></h3>
     <h3 class="text-apuntarse">Apúntate a nuestra newsletter.</h3>
@@ -249,7 +265,7 @@
     </div>
   </div>
 
-
+  <!--formulario para la contratación. Oculto hasta que pinchas el botón-->
   <div id="popup" class="popup">
   <div class="popup-contenido">
     <div class="pres">
@@ -350,10 +366,8 @@
 
     <button class="btn contratar" type="submit">Enviar</button>
   </form>
-    </div>
   </div>
-
-
+  </div>
 
 </body>
 </html>

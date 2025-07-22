@@ -5,23 +5,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Somos el alarido</title>
+  <!--Titulo activo. Cambia con js cuando la pestaña esta descativada-->
+  <title>Somos el alarido</title> 
+
+  <!--CSS-->
   <link rel="stylesheet" href="css/estilo.css">
-  <link rel="stylesheet" href="css/estilo_contacto.css">
   <link rel="stylesheet" href="css/estilo_tablets.css"> <!--Estilo para pantallas de menos de 1024px-->
   <link rel="stylesheet" href="css/estilo_mobile.css"> <!--Estilo para pantallas de menos de 480px-->
+  <link rel="stylesheet" href="css/estilo_contacto.css">  <!--Estilo contactos-->
 
+  <!--typo League en Google Fonts-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.typekit.net/ytv7mnt.css">
+
+  <!--typo League en Adobe-->
+  <link rel="stylesheet" href="https://use.typekit.net/ytv7mnt.css"> 
   
+  <!--JAVASCRIPT-->
+  <script defer src="js/funciones_generales.js"></script> <!--Link java comun a todas las paginas-->
   <script defer src="js/funciones_contacta.js"></script> <!--Link java-->
-  <script defer src="js/funciones_generales.js"></script> <!--Link java-->
 
 </head>
 <body>
 
+  <!--navegador-->
   <header>
     <h1><a href="index.html">alarido</a></h1>
     <nav>
@@ -36,14 +44,18 @@
     </nav>
   </header>
 
+  <!--seccion de artistas para unirse-->
   <div class="p-sec cierre">
-    <div class="unirse">
+
+    <!--contexto para artistas-->
+    <div class="unirse">   
       <div class="pp-contactar">
         <h1 class="contactar">¿Artista?</h1>
         <h4 class="subtitulo izq">Queremos oirte gritar</h4>
           <p class="izq">Rellena el formulario <span class="sub">[e intenta caernos bien].</span></p>
       </div>
 
+      <!--formulario de contacto-->
       <form class="unete">
           <label for="nombre">Nombre</label>
             <input type="text" id="nombre" name="nombre" placeholder="Nombre completo">
@@ -74,16 +86,17 @@
       </form>
     </div>
 
-
-  <div class="newsletter">
-    <h3 class="text-subtitulo">Somos gente maja <span>[casi siempre].</span></h3>
-    <h3 class="text-apuntarse">Apúntate a nuestra newsletter.</h3>
-    <div class="cortina"></div>
-    <form class="simulacion">
+  <!--seccion newsletter-->
+    <div class="newsletter">
+      <h3 class="text-subtitulo">Somos gente maja <span>[casi siempre].</span></h3>
+      <h3 class="text-apuntarse">Apúntate a nuestra newsletter.</h3>
+      <div class="cortina"></div>
+      <form class="simulacion">
         <input placeholder="Tu email aquí" class="text-sim" type="email" name="email">
         <button class="suscripcion" type="submit">Enviar</button>
-    </form>
-    </div></div>
+      </form>
+    </div>
+  </div>
 
 </body>
 </html>
