@@ -83,6 +83,8 @@ if (!form) return;
 
 if (window.innerWidth < 1024) { /*doy por hecho que es vertical*/
  form.addEventListener('click', ()  => {
+      simulacion.style.opacity = "1";
+
     if (window.innerWidth < 376) {
     form.style.transform = "translateY(-4.5em)";
     simulacion.style.transform = "translateY(-2.5em)";
@@ -94,17 +96,15 @@ if (window.innerWidth < 1024) { /*doy por hecho que es vertical*/
     form.style.transform = "translateY(-3.3em)";
     simulacion.style.transform = "translateY(-1.9em)";
   }
-    simulacion.style.opacity = "1";
 });
 
 } else {
    form.addEventListener('mouseenter', ()  => {
     form.style.transform = "translateY(-3.3em)";
     simulacion.style.transform = "translateY(-1.9em)";
-
+    simulacion.style.opacity = "1";    
   });
 
-simulacion.style.opacity = "1";    
 }
     
 
