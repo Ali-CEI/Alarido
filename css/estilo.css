@@ -251,6 +251,10 @@ h4{ /*parrafos primera seccion*/
         100% { opacity: 1; }
     }
 
+h4.text-p span.sub, p span.sub{ /*tachado palabras primera seccion*/
+    display: block;
+}
+
 h4.text-p span.sub:hover, p span.sub:hover{ /*tachado palabras primera seccion*/
     text-decoration-line: line-through;
     color: var(--color-1);

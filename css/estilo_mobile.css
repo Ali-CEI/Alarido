@@ -80,7 +80,7 @@ h4{
 
 .tarjeta p.biografia{
     padding-top: 10px;
-    font-size: 0.7em;
+    font-size: .7em;
 }
 
 picture img{
@@ -99,14 +99,14 @@ h4.subtitulo.izq, p.izq {
 }
 
 .galeria-artistas p, .unirse p {
-    font-size: 0.9em;
+    font-size: .9em;
 }
 }
 
 
 @media screen and (max-width: 375px) { /*Iphone SE*/
     .newsletter {
-        font-size: 1.7em, ;
+        font-size: 1.7em;
     }
 
     .text-apuntarse{
@@ -166,6 +166,6 @@ h4.subtitulo {
 @media screen and (max-width: 250px) {/*ñapo para iphone de mi hermana*/
 body, html{ /*cuerpo de la pagina*/
     min-width: 250px;
-    font-size: 0.7em;
+    font-size: .7em;
 }
 }
