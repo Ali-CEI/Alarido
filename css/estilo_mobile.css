@@ -106,7 +106,7 @@ h4.subtitulo.izq, p.izq {
 
 @media screen and (max-width: 375px) { /*Iphone SE*/
 .newsletter{
-    font-size: 1.3em;
+    font-size: 1em;
 }
 
     .text-apuntarse{
