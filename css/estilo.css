@@ -643,11 +643,11 @@ h3.titulo-popup{
     bottom: 0;
     transform: translateY(-2.25em);
     transition: transform .2s linear;
+    color: var(--color-1);
 }
 
 .newsletter .text-subtitulo span{
   color: var(--color-1);
-
 }
 
 input.text-sim{
